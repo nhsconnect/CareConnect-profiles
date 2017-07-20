@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-EthnicCategory-1"/>
+		<meta>
+		<lastUpdated value="2015-11-01T10:00:00"/>
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1" />
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+		<valueUri value="http://www.datadictionary.nhs.uk/data_dictionary/data_field_notes/p/pds/pds_ethnic_category_code_de.asp?shownav=0"/>
+	</extension>
+	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-EthnicCategory-1"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.2.1.3.2.4.16.6"/>
+	</identifier>
+	<version value="1.0.0"/>
+	<name value="Care Connect Ethnic Category"/>
+	<status value="active"/>
+	<date value="2015-11-01T10:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="The vocabulary describes the ethnic category which the patient regards as their own, designed to be used with later versions of PDS. It is an extension of the ETHNIC CATEGORY CODE described in the NHS Data Model and Dictionary for England."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+		</include>
+	</compose>
+</ValueSet>

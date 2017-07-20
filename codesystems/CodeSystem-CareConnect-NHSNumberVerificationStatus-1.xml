@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-NHSNumberVerificationStatus-1"/>
+	<url value="https://fhir.hl7.org.uk/CareConnect-NHSNumberVerificationStatus-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect NHS Number Verification Status"/>
+	<status value="active"/>
+	<date value="2015-10-27T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="NHS number verification status.  This valueset is comprised of codes from NHS Data Dictionary: NHS Number Status Indicator Code."/>
+	<caseSensitive value="true"/>
+	<valueSet value="https://fhir.hl7.org.uk/ValueSet/CareConnect-NHSNumberVerificationStatus-1"/>
+	<content value="complete"/>
+	<concept>
+		<code value="01"/>
+		<display value="Number present and verified"/>
+	</concept>
+	<concept>
+		<code value="02"/>
+		<display value="Number present but not traced"/>
+	</concept>
+	<concept>
+		<code value="03"/>
+		<display value="Trace required"/>
+	</concept>
+	<concept>
+		<code value="04"/>
+		<display value="Trace attempted - No match or multiple match found"/>
+	</concept>
+	<concept>
+		<code value="05"/>
+		<display value="Trace needs to be resolved - (NHS number or patient detail conflict)"/>
+	</concept>
+	<concept>
+		<code value="06"/>
+		<display value="Trace in progress"/>
+	</concept>
+	<concept>
+		<code value="07"/>
+		<display value="Number not present and trace not required"/>
+	</concept>
+	<concept>
+		<code value="08"/>
+		<display value="Trace postponed (baby under six weeks old)"/>
+	</concept>
+</CodeSystem>

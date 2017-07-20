@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-TreatmentCategory-1"/>
+	<meta>
+		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
+	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Treatment Category"/>
+	<status value="active"/>
+	<date value="2016-08-03T00:00:00+01:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A vocabulary that identifies the treatment category for this patient."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="https://fhir.hl7.org.uk/CareConnect-TreatmentCategory-1"/>
+		</include>
+	</compose>
+</ValueSet>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-RegistrationStatus-1"/>
+	<meta>
+		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1" />
+	</extension>
+	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationStatus-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Registration Status"/>
+	<status value="active"/>
+	<date value="2016-08-03T00:00:00+01:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A vocabulary that identifies the status of registration for a patient at the healthcare organisation."/>
+		<copyright value="Copyright © 2016 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="https://fhir.hl7.org.uk/CareConnect-RegistrationStatus-1"/>
+		</include>
+	</compose>
+</ValueSet>

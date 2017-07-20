@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-MedicationFlag-1"/>
+	<meta>
+		<lastUpdated value="2016-01-13T00:00:00+00:00"/>
+	</meta>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
+	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationFlag-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Medication Flag"/>
+	<status value="active"/>
+	<date value="2016-08-03T00:00:00+01:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="List of detail codes for flagged medication issues."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="https://fhir.hl7.org.uk/CareConnect-MedicationFlag-1"/>
+		</include>
+	</compose>
+</ValueSet>
