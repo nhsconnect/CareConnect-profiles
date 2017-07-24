@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-24T09:53:43.267+01:00" />
+    <lastUpdated value="2017-07-24T11:42:44.343+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="5" />
   </extension>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="CareConnect-Patient-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
