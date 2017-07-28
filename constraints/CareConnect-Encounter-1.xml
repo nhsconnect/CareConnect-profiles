@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:19:38.345+01:00" />
+    <lastUpdated value="2017-07-28T08:42:38.51+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -4121,10 +4121,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Priority" />
         </extension>
-        <strength value="preferred" />
+        <strength value="example" />
         <description value="Indicates the urgency of the encounter." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/encounter-priority" />
+          <reference value="http://hl7.org/fhir/ValueSet/v3-ActPriority" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -16071,18 +16071,6 @@
       </extension>
       <path value="Encounter.type.coding.display" />
       <min value="1" />
-    </element>
-    <element id="Encounter.priority">
-      <path value="Encounter.priority" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="Priority" />
-        </extension>
-        <strength value="preferred" />
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/encounter-priority" />
-        </valueSetReference>
-      </binding>
     </element>
     <element id="Encounter.subject">
       <path value="Encounter.subject" />
