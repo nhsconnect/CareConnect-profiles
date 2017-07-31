@@ -6,7 +6,7 @@
 		<valueInteger value="1"/>
 	</extension>
 	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AllergySeverity-1"/>
-	<version value="1.0.0"/>
+	<version value="1.1.0"/>
 	<name value="Care Connect Allergy Severity"/>
 	<status value="active"/>
 	<publisher value="HL7 UK"/>
@@ -25,11 +25,11 @@
 			</concept>
 			<concept>
 				<code value="24484000"/>
-				<display value="Mild (qualifier value)"/>
+				<display value="Severe (severity modifier) (qualifier value)"/>
 			</concept>
 			<concept>
-				<code value="255604002"/>
-				<display value="Severe (severity modifier) (qualifier value)"/>
+				<code value="442452003"/>
+				<display value="Life threatening severity (qualifier value)"/>
 			</concept>
 			<concept>
 				<code value="399166001"/>

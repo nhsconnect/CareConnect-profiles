@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-03-08T09:33:05.689+00:00" />
+    <lastUpdated value="2017-07-31T10:07:29.51+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Medication-Flag-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-Medication-Flag-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
@@ -325,7 +325,7 @@
       <path value="Flag.extension" />
       <name value="medication" />
       <short value="Associated medication" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="Associated medication." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1587,7 +1587,7 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <strength value="example" />
+        <strength value="required" />
         <description value="A general category for flags for filtering/display purposes." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/flag-category" />
@@ -3160,7 +3160,6 @@
     <element>
       <path value="Flag.extension" />
       <name value="medication" />
-      <short value="Associated medication" />
       <min value="1" />
       <type>
         <code value="Extension" />
@@ -3185,6 +3184,9 @@
     <element>
       <path value="Flag.category" />
       <min value="1" />
+      <binding>
+        <strength value="required" />
+      </binding>
     </element>
     <element>
       <path value="Flag.category.coding" />

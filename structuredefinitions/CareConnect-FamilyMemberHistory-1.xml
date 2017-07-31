@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-11T13:04:55.418+01:00" />
+    <lastUpdated value="2017-07-31T09:26:34.832+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-FamilyMemberHistory-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-FamilyMemberHistory-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
@@ -3152,18 +3152,18 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-      </type>
-      <type>
-        <code value="Reference" />
         <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
       </type>
       <type>
         <code value="string" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5636,6 +5636,24 @@
           <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-AdministrativeGender-1" />
         </valueSetReference>
       </binding>
+    </element>
+    <element>
+      <path value="FamilyMemberHistory.note.author[x]" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Patient-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Practitioner-1" />
+      </type>
     </element>
     <element>
       <path value="FamilyMemberHistory.condition.code.coding" />
