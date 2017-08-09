@@ -13,7 +13,7 @@
 			</targetReference>
 			<group>
 				<source value="http://hl7.org/fhir/v3/MaritalStatus"/>
-				<target value="ttps://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1"/>
+				<target value="https://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1"/>
 				<element>
 					<code value="U"/>
 					<target>
@@ -66,7 +66,7 @@
 			</group>
 			<group>
 				<source value="http://hl7.org/fhir/v3/NullFlavor"/>
-				<target value="ttps://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1"/>
+				<target value="https://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1"/>
 				<element>
 					<codeSystem value="http://hl7.org/fhir/v3/NullFlavor"/>
 					<code value="UNK"/>
