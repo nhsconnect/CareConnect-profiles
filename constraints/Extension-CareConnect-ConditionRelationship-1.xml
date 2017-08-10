@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:25:02.277+01:00" />
+    <lastUpdated value="2017-08-10T15:03:52.69+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ConditionRelationship-1" />
   <version value="0.0.1" />
@@ -314,7 +314,9 @@
       <binding>
         <strength value="required" />
         <description value="A set of codes specifying the kind of relationship that exists with a target condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionRelationship-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionRelationship-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -823,7 +825,9 @@
       <binding>
         <strength value="required" />
         <description value="A set of codes specifying the kind of relationship that exists with a target condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionRelationship-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionRelationship-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Extension.extension:target">

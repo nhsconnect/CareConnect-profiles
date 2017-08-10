@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-17T11:12:58.216+01:00" />
+    <lastUpdated value="2017-08-10T15:12:07.431+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -4213,7 +4213,9 @@
         </extension>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device)." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -10660,7 +10662,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -11585,7 +11589,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing method." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -14714,7 +14720,9 @@
       <binding>
         <strength value="required" />
         <description value="A unit of time (units from UCUM)." />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/units-of-time" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/units-of-time" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -16438,8 +16446,6 @@
     <element id="MedicationRequest.extension:supplyType">
       <path value="MedicationRequest.extension" />
       <sliceName value="supplyType" />
-      <short value="Medication supply type" />
-      <definition value="Medication supply type." />
       <min value="1" />
       <max value="1" />
       <type>
@@ -16450,10 +16456,6 @@
     <element id="MedicationRequest.extension:flag">
       <path value="MedicationRequest.extension" />
       <sliceName value="flag" />
-      <short value="Flags related to the patient's medications" />
-      <definition value="Flags related to the patient's medications." />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlag-1" />
@@ -16519,7 +16521,9 @@
         </extension>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device)." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="MedicationRequest.subject">
@@ -16696,7 +16700,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element>
@@ -16756,7 +16762,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing method." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element>
@@ -16859,7 +16867,9 @@
       <binding>
         <strength value="required" />
         <description value="A unit of time (units from UCUM)." />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/units-of-time" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/units-of-time" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="MedicationRequest.dispenseRequest.performer">

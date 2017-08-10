@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:24:41.932+01:00" />
+    <lastUpdated value="2017-08-10T15:03:02.385+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ConditionEpisode-1" />
   <version value="0.0.1" />
@@ -194,7 +194,9 @@
       <binding>
         <strength value="required" />
         <description value="Specifies the episodicity of a condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodicity-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodicity-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -226,7 +228,9 @@
       <binding>
         <strength value="required" />
         <description value="Specifies the episodicity of a condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodicity-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodicity-1" />
+        </valueSetReference>
       </binding>
     </element>
   </differential>
