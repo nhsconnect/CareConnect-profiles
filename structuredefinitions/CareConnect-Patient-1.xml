@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-24T11:42:44.343+01:00" />
+    <lastUpdated value="2017-08-10T11:44:41.637+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="5" />
@@ -520,7 +520,9 @@
       <binding>
         <strength value="required" />
         <description value="The residential status of the patient" />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ResidentialStatus-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ResidentialStatus-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -564,7 +566,9 @@
       <binding>
         <strength value="required" />
         <description value="The treatment category of the patient" />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -14700,10 +14704,15 @@
     <element>
       <path value="Patient.extension" />
       <name value="residentialStatus" />
+      <short value="The residential status of the patient " />
+      <definition value="The residential status of the patient. For example if this patient is a UK resident." />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-ResidentialStatus-1" />
       </type>
+      <isModifier value="false" />
     </element>
     <element>
       <path value="Patient.extension" />

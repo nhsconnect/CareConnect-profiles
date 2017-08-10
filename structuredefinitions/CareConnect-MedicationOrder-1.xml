@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-08T11:33:03.645+01:00" />
+    <lastUpdated value="2017-08-10T11:15:12.717+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1" />
   <version value="1.0.0" />
@@ -324,7 +324,7 @@
       <path value="MedicationOrder.extension" />
       <name value="reason" />
       <short value="Reason or indication for writing the prescription" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="Reason resource added/performed/given." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -362,7 +362,7 @@
       <path value="MedicationOrder.extension" />
       <name value="supplyType" />
       <short value="Medication supply type" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="Medication supply type." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -400,7 +400,7 @@
       <path value="MedicationOrder.extension" />
       <name value="statement" />
       <short value="Medication Statement link" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="Medication Statement link." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -438,7 +438,7 @@
       <path value="MedicationOrder.extension" />
       <name value="flag" />
       <short value="Flags related to the patient's medications" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="Flags related to the patient's medications." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -2386,7 +2386,7 @@
       <path value="MedicationOrder.reasonEnded.coding.extension" />
       <name value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="The SNOMED CT Description ID for the display." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -3395,7 +3395,9 @@
       <binding>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device)." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -4202,7 +4204,7 @@
       <path value="MedicationOrder.dosageInstruction.additionalInstructions.coding.extension" />
       <name value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="The SNOMED CT Description ID for the display." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -6367,7 +6369,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -6472,7 +6476,7 @@
       <path value="MedicationOrder.dosageInstruction.route.coding.extension" />
       <name value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="The SNOMED CT Description ID for the display." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -7268,7 +7272,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing method." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -7373,7 +7379,7 @@
       <path value="MedicationOrder.dosageInstruction.method.coding.extension" />
       <name value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="The SNOMED CT Description ID for the display." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -9142,7 +9148,7 @@
       <path value="MedicationOrder.dispenseRequest.quantity.extension" />
       <name value="quantityText" />
       <short value="Quantity representation" />
-      <definition value="Optional Extensions Element - found in all resources." />
+      <definition value="Quantity representation." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -11087,7 +11093,6 @@
     <element>
       <path value="MedicationOrder.extension" />
       <name value="supplyType" />
-      <short value="Medication supply type" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -11098,7 +11103,6 @@
     <element>
       <path value="MedicationOrder.extension" />
       <name value="statement" />
-      <short value="Medication Statement link" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -11108,7 +11112,6 @@
     <element>
       <path value="MedicationOrder.extension" />
       <name value="flag" />
-      <short value="Flags related to the patient's medications" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationFlag-1" />
@@ -11160,7 +11163,6 @@
     <element>
       <path value="MedicationOrder.reasonEnded.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -11222,7 +11224,9 @@
       <binding>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device)." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element>
@@ -11257,7 +11261,6 @@
     <element>
       <path value="MedicationOrder.dosageInstruction.additionalInstructions.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -11299,7 +11302,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element>
@@ -11312,7 +11317,6 @@
     <element>
       <path value="MedicationOrder.dosageInstruction.route.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -11351,7 +11355,9 @@
       <binding>
         <strength value="preferred" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing method." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationDosageMethod-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element>
@@ -11364,7 +11370,6 @@
     <element>
       <path value="MedicationOrder.dosageInstruction.method.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -11410,7 +11415,6 @@
     <element>
       <path value="MedicationOrder.dispenseRequest.quantity.extension" />
       <name value="quantityText" />
-      <short value="Quantity representation" />
       <max value="1" />
       <type>
         <code value="Extension" />

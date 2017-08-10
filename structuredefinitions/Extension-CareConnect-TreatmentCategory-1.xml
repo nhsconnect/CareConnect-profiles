@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-03-16T10:48:00.175+00:00" />
+    <lastUpdated value="2017-08-10T10:48:32.077+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
@@ -49,7 +49,9 @@
       <binding>
         <strength value="required" />
         <description value="The treatment category of the patient" />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -214,7 +216,9 @@
       <binding>
         <strength value="required" />
         <description value="The treatment category of the patient" />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-TreatmentCategory-1" />
+        </valueSetReference>
       </binding>
     </element>
     <element>
