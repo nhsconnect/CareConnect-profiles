@@ -314,7 +314,7 @@
       <binding>
         <strength value="required" />
         <description value="A set of codes specifying the kind of relationship that exists with a target condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionRelationship-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionRelationship-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -823,7 +823,7 @@
       <binding>
         <strength value="required" />
         <description value="A set of codes specifying the kind of relationship that exists with a target condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionRelationship-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionRelationship-1" />
       </binding>
     </element>
     <element id="Extension.extension:target">

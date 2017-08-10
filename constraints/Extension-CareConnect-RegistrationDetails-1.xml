@@ -502,7 +502,7 @@
         <strength value="required" />
         <description value="Registration Type" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationType-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-RegistrationType-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -695,7 +695,7 @@
       <binding>
         <strength value="required" />
         <description value="Registration Status" />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationStatus-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-RegistrationStatus-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -937,7 +937,7 @@
         <strength value="required" />
         <description value="Registration Type" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationType-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-RegistrationType-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -965,7 +965,7 @@
       <binding>
         <strength value="required" />
         <description value="Registration Status" />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-RegistrationStatus-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-RegistrationStatus-1" />
       </binding>
     </element>
     <element id="Extension.url">

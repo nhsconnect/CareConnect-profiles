@@ -3684,7 +3684,7 @@
       <binding>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes an encounter between a care professional and the patient (or patient's record)." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-EncounterType-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EncounterType-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -16030,7 +16030,7 @@
       <binding>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes an encounter between a care professional and the patient (or patient's record)." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-EncounterType-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EncounterType-1" />
       </binding>
     </element>
     <element>

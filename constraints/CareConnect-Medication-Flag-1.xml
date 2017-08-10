@@ -2240,7 +2240,7 @@
         <strength value="extensible" />
         <description value="Detail codes identifying specific flagged issues." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationFlag-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationFlag-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -2494,7 +2494,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/CareConnect-MedicationFlag-1" />
+      <fixedUri value="https://fhir.hl7.org.uk/STU3/CareConnect-MedicationFlag-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3755,7 +3755,7 @@
         </extension>
         <strength value="extensible" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MedicationFlag-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationFlag-1" />
         </valueSetReference>
       </binding>
     </element>
@@ -3766,7 +3766,7 @@
     <element id="Flag.code.coding.system">
       <path value="Flag.code.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.hl7.org.uk/CareConnect-MedicationFlag-1" />
+      <fixedUri value="https://fhir.hl7.org.uk/STU3/CareConnect-MedicationFlag-1" />
     </element>
     <element id="Flag.code.coding.version">
       <path value="Flag.code.coding.version" />

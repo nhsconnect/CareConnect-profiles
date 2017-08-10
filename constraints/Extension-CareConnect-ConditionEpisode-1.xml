@@ -194,7 +194,7 @@
       <binding>
         <strength value="required" />
         <description value="Specifies the episodicity of a condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionEpisodicity-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodicity-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -226,7 +226,7 @@
       <binding>
         <strength value="required" />
         <description value="Specifies the episodicity of a condition." />
-        <valueSetUri value="https://fhir.hl7.org.uk/ValueSet/CareConnect-ConditionEpisodicity-1" />
+        <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodicity-1" />
       </binding>
     </element>
   </differential>
