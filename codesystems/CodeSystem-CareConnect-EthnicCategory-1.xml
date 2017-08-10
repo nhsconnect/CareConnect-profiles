@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-EthnicCategory-1"/>
-	<url value="https://fhir.hl7.org.uk/CareConnect-EthnicCategory-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-EthnicCategory-1"/>
 	<version value="1.0.0"/>
 	<name value="Care Connect Ethnic Category"/>
 	<status value="active"/>
@@ -9,7 +9,7 @@
 	<publisher value="HL7 UK"/>
 	<description value="The vocabulary describes the ethnic category which the patient regards as their own, designed to be used with later versions of PDS. It is an extension of the ETHNIC CATEGORY CODE described in the NHS Data Model and Dictionary for England."/>
 	<caseSensitive value="true"/>
-	<valueSet value="https://fhir.hl7.org.uk/ValueSet/CareConnect-EthnicCategory-1"/>
+	<valueSet value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EthnicCategory-1"/>
 	<content value="complete"/>
 	<concept>
 		<code value="A"/>

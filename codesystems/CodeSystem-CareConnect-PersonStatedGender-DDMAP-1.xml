@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-PersonStatedGender-DDMAP-1"/>
-	<url value="https://fhir.hl7.org.uk/CareConnect-PersonStatedGender-DDMAP-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CareConnect-PersonStatedGender-DDMAP-1"/>
 	<version value="1.0.0"/>
 	<name value="Person Stated Gender Code NHS Data Model and Dictionary"/>
 	<status value="draft"/>
 	<date value="2016-08-03T00:00:00+01:00"/>
 	<description value="The gender of a person used for administrative purposes."/>
 	<caseSensitive value="true"/>
-	<valueSet value="https://fhir.hl7.org.uk/ValueSet/CareConnect-PersonStatedGender-DDMAP-1"/>
+	<valueSet value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-PersonStatedGender-DDMAP-1"/>
 	<content value="complete"/>
 	<concept>
 		<code value="1"/>

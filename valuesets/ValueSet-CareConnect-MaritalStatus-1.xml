@@ -6,14 +6,14 @@
 			<name value="NHS Data Model and Dictionary Mapping"/>
 			<status value="draft"/>
 			<sourceReference>
-				<reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MaritalStatus-1"/>
+				<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-1"/>
 			</sourceReference>
 			<targetReference>
-				<reference value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MaritalStatus-DDMAP-1"/>
+				<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-DDMAP-1"/>
 			</targetReference>
 			<group>
 				<source value="http://hl7.org/fhir/v3/MaritalStatus"/>
-				<target value="https://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1"/>
+				<target value="https://fhir.hl7.org.uk/STU3/CareConnect-MaritalStatus-DDMAP-1"/>
 				<element>
 					<code value="U"/>
 					<target>
@@ -66,7 +66,7 @@
 			</group>
 			<group>
 				<source value="http://hl7.org/fhir/v3/NullFlavor"/>
-				<target value="https://fhir.hl7.org.uk/CareConnect-MaritalStatus-DDMAP-1"/>
+				<target value="https://fhir.hl7.org.uk/STU3/CareConnect-MaritalStatus-DDMAP-1"/>
 				<element>
 					<codeSystem value="http://hl7.org/fhir/v3/NullFlavor"/>
 					<code value="UNK"/>
@@ -92,7 +92,7 @@
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
 		<valueCode value="pa"/>
 	</extension>
-	<url value="https://fhir.hl7.org.uk/ValueSet/CareConnect-MaritalStatus-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-1"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:2.16.840.1.113883.4.642.3.28"/>
