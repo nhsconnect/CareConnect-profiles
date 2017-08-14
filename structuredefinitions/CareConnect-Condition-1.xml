@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-10T11:24:16.822+01:00" />
+    <lastUpdated value="2017-08-14T09:21:09.357+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-Condition-1" />
   <version value="1.1.0" />
@@ -2999,7 +2999,7 @@
       <short value="complaint | symptom | finding | diagnosis | problem | need" />
       <definition value="A category assigned to the condition." />
       <comments value="The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Condition.category" />
@@ -7249,7 +7249,6 @@
     <element>
       <path value="Condition.code.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -7275,7 +7274,6 @@
     <element>
       <path value="Condition.category" />
       <short value="complaint | symptom | finding | diagnosis | problem | need" />
-      <min value="1" />
       <binding>
         <strength value="extensible" />
         <valueSetReference>
@@ -7331,7 +7329,6 @@
       <name value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display." />
       <definition value="Optional Extensions Element - found in all resources." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -7375,7 +7372,6 @@
     <element>
       <path value="Condition.stage.summary.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -7436,7 +7432,6 @@
     <element>
       <path value="Condition.bodySite.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-10T11:14:21.085+01:00" />
+    <lastUpdated value="2017-08-14T09:19:56.035+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationStatement-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-MedicationStatement-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
@@ -415,7 +415,7 @@
     </element>
     <element>
       <path value="MedicationStatement.extension" />
-      <name value="quantityDispensed" />
+      <name value="quantityToSupply" />
       <short value="Amount of medication to supply per dispense" />
       <definition value="Amount of medication to supply per dispense." />
       <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
@@ -7685,7 +7685,7 @@
     </element>
     <element>
       <path value="MedicationStatement.extension" />
-      <name value="quantityDispensed" />
+      <name value="quantityToSupply" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -7704,6 +7704,9 @@
     <element>
       <path value="MedicationStatement.extension" />
       <name value="repeatInformation" />
+      <short value="Medication repeat information" />
+      <definition value="Medication repeat information." />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -7778,7 +7781,6 @@
     <element>
       <path value="MedicationStatement.reasonNotTaken.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -7881,7 +7883,6 @@
     <element>
       <path value="MedicationStatement.dosage.route.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -7934,7 +7935,6 @@
     <element>
       <path value="MedicationStatement.dosage.method.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
