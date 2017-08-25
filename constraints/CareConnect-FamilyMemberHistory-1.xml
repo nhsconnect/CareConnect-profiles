@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:20:28.72+01:00" />
+    <lastUpdated value="2017-08-25T14:08:15.271+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -3388,9 +3388,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT">
       <path value="FamilyMemberHistory.relationship.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -3443,7 +3443,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding.id">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.id">
       <path value="FamilyMemberHistory.relationship.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3472,7 +3472,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.extension">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.extension">
       <path value="FamilyMemberHistory.relationship.coding.extension" />
       <slicing>
         <discriminator>
@@ -3521,7 +3521,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.relationship.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -3564,7 +3564,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.system">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.system">
       <path value="FamilyMemberHistory.relationship.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -3607,7 +3607,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.version">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.version">
       <path value="FamilyMemberHistory.relationship.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -3648,7 +3648,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.code">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.code">
       <path value="FamilyMemberHistory.relationship.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -3690,7 +3690,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.display">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3735,7 +3735,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding.userSelected">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.userSelected">
       <path value="FamilyMemberHistory.relationship.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -4980,7 +4980,6 @@
       </type>
       <type>
         <code value="string" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
@@ -5733,9 +5732,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT">
       <path value="FamilyMemberHistory.condition.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -5788,7 +5787,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding.id">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.id">
       <path value="FamilyMemberHistory.condition.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -5817,7 +5816,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.extension">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.extension">
       <path value="FamilyMemberHistory.condition.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -5866,7 +5865,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.condition.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -5909,7 +5908,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.system">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.system">
       <path value="FamilyMemberHistory.condition.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -5952,7 +5951,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.version">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.version">
       <path value="FamilyMemberHistory.condition.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -5993,7 +5992,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.code">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.code">
       <path value="FamilyMemberHistory.condition.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -6035,7 +6034,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.display">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -6080,7 +6079,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding.userSelected">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.userSelected">
       <path value="FamilyMemberHistory.condition.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -6651,9 +6650,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT">
       <path value="FamilyMemberHistory.condition.outcome.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -6706,7 +6705,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding.id">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.id">
       <path value="FamilyMemberHistory.condition.outcome.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -6735,7 +6734,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.extension">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.extension">
       <path value="FamilyMemberHistory.condition.outcome.coding.extension" />
       <slicing>
         <discriminator>
@@ -6784,7 +6783,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.condition.outcome.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -6827,7 +6826,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.system">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.system">
       <path value="FamilyMemberHistory.condition.outcome.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -6870,7 +6869,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.version">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.version">
       <path value="FamilyMemberHistory.condition.outcome.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -6911,7 +6910,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.code">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.code">
       <path value="FamilyMemberHistory.condition.outcome.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -6953,7 +6952,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.display">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -6998,7 +6997,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding.userSelected">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.userSelected">
       <path value="FamilyMemberHistory.condition.outcome.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -7289,7 +7288,14 @@
       </type>
       <type>
         <code value="string" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -7459,9 +7465,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT">
       <path value="FamilyMemberHistory.relationship.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -7474,7 +7480,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.relationship.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -7483,20 +7489,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.system">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.system">
       <path value="FamilyMemberHistory.relationship.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.version">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.version">
       <path value="FamilyMemberHistory.relationship.coding.version" />
       <max value="0" />
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.code">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.code">
       <path value="FamilyMemberHistory.relationship.coding.code" />
       <min value="1" />
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:SNOMED CT.display">
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -7545,7 +7551,6 @@
       </type>
       <type>
         <code value="string" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
@@ -7567,9 +7572,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT">
       <path value="FamilyMemberHistory.condition.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -7582,7 +7587,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.condition.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -7591,20 +7596,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.system">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.system">
       <path value="FamilyMemberHistory.condition.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.version">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.version">
       <path value="FamilyMemberHistory.condition.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.code">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.code">
       <path value="FamilyMemberHistory.condition.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="FamilyMemberHistory.condition.code.coding:SNOMED CT.display">
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -7622,9 +7627,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT">
       <path value="FamilyMemberHistory.condition.outcome.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -7637,7 +7642,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.condition.outcome.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -7646,20 +7651,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.system">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.system">
       <path value="FamilyMemberHistory.condition.outcome.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.version">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.version">
       <path value="FamilyMemberHistory.condition.outcome.coding.version" />
       <max value="0" />
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.code">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.code">
       <path value="FamilyMemberHistory.condition.outcome.coding.code" />
       <min value="1" />
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:SNOMED CT.display">
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -7674,7 +7679,14 @@
       </type>
       <type>
         <code value="string" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
     </element>
   </differential>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-17T09:44:08.508+01:00" />
+    <lastUpdated value="2017-08-25T14:48:17.367+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlag-1" />
   <version value="0.0.1" />
@@ -171,8 +171,8 @@
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
-      <short value="MedicationFlag reference" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <short value="Medication Flag reference" />
+      <definition value="Medication Flag reference." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -183,7 +183,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-Flag-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-Flag-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -216,10 +216,11 @@
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
-      <short value="MedicationFlag reference" />
+      <short value="Medication Flag reference" />
+      <definition value="Medication Flag reference." />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-Flag-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-Flag-1" />
       </type>
     </element>
   </differential>

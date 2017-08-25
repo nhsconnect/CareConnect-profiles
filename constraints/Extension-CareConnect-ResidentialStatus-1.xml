@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-19T10:04:00.634+01:00" />
+    <lastUpdated value="2017-08-25T15:29:03.429+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ResidentialStatus-1" />
   <version value="0.0.1" />
@@ -170,7 +170,7 @@
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <short value="The residential status of the patient. " />
+      <short value="The residential status of the patient " />
       <definition value="The residential status of the patient. For example if this patient is a UK resident." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="1" />
@@ -222,7 +222,7 @@
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <short value="The residential status of the patient. " />
+      <short value="The residential status of the patient " />
       <definition value="The residential status of the patient. For example if this patient is a UK resident." />
       <min value="1" />
       <type>

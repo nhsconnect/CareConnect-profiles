@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:21:03.666+01:00" />
+    <lastUpdated value="2017-08-25T14:01:50.858+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -2696,9 +2696,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT">
+    <element id="Flag.code.coding:snomedCT">
       <path value="Flag.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="SNOMED CT representation identifying specific flagged issues" />
       <definition value="SNOMED CT representation identifying specific flagged issues." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -2751,7 +2751,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Flag.code.coding.id">
+    <element id="Flag.code.coding:snomedCT.id">
       <path value="Flag.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2780,7 +2780,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.extension">
+    <element id="Flag.code.coding:snomedCT.extension">
       <path value="Flag.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -2829,7 +2829,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Flag.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Flag.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -2872,7 +2872,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.system">
+    <element id="Flag.code.coding:snomedCT.system">
       <path value="Flag.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -2915,7 +2915,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.version">
+    <element id="Flag.code.coding:snomedCT.version">
       <path value="Flag.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -2956,7 +2956,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.code">
+    <element id="Flag.code.coding:snomedCT.code">
       <path value="Flag.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -2998,7 +2998,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.display">
+    <element id="Flag.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3043,7 +3043,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Flag.code.coding.userSelected">
+    <element id="Flag.code.coding:snomedCT.userSelected">
       <path value="Flag.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -4123,9 +4123,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Flag.code.coding:SNOMED CT">
+    <element id="Flag.code.coding:snomedCT">
       <path value="Flag.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="SNOMED CT representation identifying specific flagged issues" />
       <definition value="SNOMED CT representation identifying specific flagged issues." />
       <max value="1" />
@@ -4140,7 +4140,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Flag.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Flag.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -4149,20 +4149,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Flag.code.coding:SNOMED CT.system">
+    <element id="Flag.code.coding:snomedCT.system">
       <path value="Flag.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Flag.code.coding:SNOMED CT.version">
+    <element id="Flag.code.coding:snomedCT.version">
       <path value="Flag.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="Flag.code.coding:SNOMED CT.code">
+    <element id="Flag.code.coding:snomedCT.code">
       <path value="Flag.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Flag.code.coding:SNOMED CT.display">
+    <element id="Flag.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

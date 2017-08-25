@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-19T09:57:38.807+01:00" />
+    <lastUpdated value="2017-08-25T14:39:53.917+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-EthnicCategory-1" />
   <version value="0.0.1" />
@@ -193,7 +193,7 @@
       </constraint>
       <binding>
         <strength value="required" />
-        <description value="registrationDetails" />
+        <description value="A code classifying the person's ethnicity." />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EthnicCategory-1" />
         </valueSetReference>
@@ -229,7 +229,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <description value="registrationDetails" />
+        <description value="A code classifying the person's ethnicity." />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EthnicCategory-1" />
         </valueSetReference>

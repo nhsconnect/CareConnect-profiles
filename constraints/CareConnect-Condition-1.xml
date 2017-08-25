@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:20:00.904+01:00" />
+    <lastUpdated value="2017-08-25T15:36:36.24+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -352,13 +352,13 @@
     <element id="Condition.extension:episode">
       <path value="Condition.extension" />
       <sliceName value="episode" />
-      <short value="The episodicity status of a condition" />
+      <short value="Episodicity of condition" />
       <definition value="Episodicity of condition." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -3475,9 +3475,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT">
+    <element id="Condition.code.coding:snomedCT">
       <path value="Condition.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -3530,7 +3530,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Condition.code.coding.id">
+    <element id="Condition.code.coding:snomedCT.id">
       <path value="Condition.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3559,7 +3559,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.extension">
+    <element id="Condition.code.coding:snomedCT.extension">
       <path value="Condition.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -3608,7 +3608,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Condition.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Condition.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="Optional Extensions Element" />
@@ -3651,7 +3651,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.system">
+    <element id="Condition.code.coding:snomedCT.system">
       <path value="Condition.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -3694,7 +3694,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.version">
+    <element id="Condition.code.coding:snomedCT.version">
       <path value="Condition.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -3735,7 +3735,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.code">
+    <element id="Condition.code.coding:snomedCT.code">
       <path value="Condition.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -3777,7 +3777,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.display">
+    <element id="Condition.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3822,7 +3822,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Condition.code.coding.userSelected">
+    <element id="Condition.code.coding:snomedCT.userSelected">
       <path value="Condition.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -4402,9 +4402,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT">
+    <element id="Condition.bodySite.coding:snomedCT">
       <path value="Condition.bodySite.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -4457,7 +4457,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding.id">
+    <element id="Condition.bodySite.coding:snomedCT.id">
       <path value="Condition.bodySite.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4486,7 +4486,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.extension">
+    <element id="Condition.bodySite.coding:snomedCT.extension">
       <path value="Condition.bodySite.coding.extension" />
       <slicing>
         <discriminator>
@@ -4535,7 +4535,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Condition.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Condition.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="Optional Extensions Element" />
@@ -4578,7 +4578,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.system">
+    <element id="Condition.bodySite.coding:snomedCT.system">
       <path value="Condition.bodySite.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -4621,7 +4621,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.version">
+    <element id="Condition.bodySite.coding:snomedCT.version">
       <path value="Condition.bodySite.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -4662,7 +4662,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.code">
+    <element id="Condition.bodySite.coding:snomedCT.code">
       <path value="Condition.bodySite.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -4704,7 +4704,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.display">
+    <element id="Condition.bodySite.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -4749,7 +4749,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Condition.bodySite.coding.userSelected">
+    <element id="Condition.bodySite.coding:snomedCT.userSelected">
       <path value="Condition.bodySite.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -6392,9 +6392,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT">
+    <element id="Condition.stage.summary.coding:snomedCT">
       <path value="Condition.stage.summary.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -6447,7 +6447,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding.id">
+    <element id="Condition.stage.summary.coding:snomedCT.id">
       <path value="Condition.stage.summary.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -6476,7 +6476,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.extension">
+    <element id="Condition.stage.summary.coding:snomedCT.extension">
       <path value="Condition.stage.summary.coding.extension" />
       <slicing>
         <discriminator>
@@ -6525,7 +6525,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Condition.stage.summary.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Condition.stage.summary.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -6568,7 +6568,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.system">
+    <element id="Condition.stage.summary.coding:snomedCT.system">
       <path value="Condition.stage.summary.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -6611,7 +6611,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.version">
+    <element id="Condition.stage.summary.coding:snomedCT.version">
       <path value="Condition.stage.summary.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -6652,7 +6652,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.code">
+    <element id="Condition.stage.summary.coding:snomedCT.code">
       <path value="Condition.stage.summary.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -6694,7 +6694,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.display">
+    <element id="Condition.stage.summary.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -6739,7 +6739,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Condition.stage.summary.coding.userSelected">
+    <element id="Condition.stage.summary.coding:snomedCT.userSelected">
       <path value="Condition.stage.summary.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -8276,8 +8276,10 @@
     <element id="Condition.extension:episode">
       <path value="Condition.extension" />
       <sliceName value="episode" />
-      <short value="The episodicity status of a condition" />
-      <max value="1" />
+      <short value="Episodicity of condition" />
+      <definition value="Episodicity of condition." />
+      <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ConditionEpisode-1" />
@@ -8366,7 +8368,6 @@
       <sliceName value="snomedCTDescriptionID" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -8402,9 +8403,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:SNOMED CT">
+    <element id="Condition.code.coding:snomedCT">
       <path value="Condition.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -8418,31 +8419,30 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Condition.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Condition.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Condition.code.coding:SNOMED CT.system">
+    <element id="Condition.code.coding:snomedCT.system">
       <path value="Condition.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.code.coding:SNOMED CT.version">
+    <element id="Condition.code.coding:snomedCT.version">
       <path value="Condition.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="Condition.code.coding:SNOMED CT.code">
+    <element id="Condition.code.coding:snomedCT.code">
       <path value="Condition.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Condition.code.coding:SNOMED CT.display">
+    <element id="Condition.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -8460,9 +8460,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT">
+    <element id="Condition.bodySite.coding:snomedCT">
       <path value="Condition.bodySite.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -8475,31 +8475,30 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Condition.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Condition.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.system">
+    <element id="Condition.bodySite.coding:snomedCT.system">
       <path value="Condition.bodySite.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.version">
+    <element id="Condition.bodySite.coding:snomedCT.version">
       <path value="Condition.bodySite.coding.version" />
       <max value="0" />
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.code">
+    <element id="Condition.bodySite.coding:snomedCT.code">
       <path value="Condition.bodySite.coding.code" />
       <min value="1" />
     </element>
-    <element id="Condition.bodySite.coding:SNOMED CT.display">
+    <element id="Condition.bodySite.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -8548,9 +8547,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT">
+    <element id="Condition.stage.summary.coding:snomedCT">
       <path value="Condition.stage.summary.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
     </element>
     <element>
       <path value="Condition.stage.summary.coding.extension" />
@@ -8562,29 +8561,28 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Condition.stage.summary.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Condition.stage.summary.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.system">
+    <element id="Condition.stage.summary.coding:snomedCT.system">
       <path value="Condition.stage.summary.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.version">
+    <element id="Condition.stage.summary.coding:snomedCT.version">
       <path value="Condition.stage.summary.coding.version" />
       <max value="0" />
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.code">
+    <element id="Condition.stage.summary.coding:snomedCT.code">
       <path value="Condition.stage.summary.coding.code" />
       <min value="1" />
     </element>
-    <element id="Condition.stage.summary.coding:SNOMED CT.display">
+    <element id="Condition.stage.summary.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

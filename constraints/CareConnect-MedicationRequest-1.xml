@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-10T15:12:07.431+01:00" />
+    <lastUpdated value="2017-08-25T14:04:43.459+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -6912,7 +6912,6 @@
       </type>
       <type>
         <code value="string" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
@@ -7699,9 +7698,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -7754,7 +7753,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding.id">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.id">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -7783,7 +7782,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.extension">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.extension">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.extension" />
       <slicing>
         <discriminator>
@@ -7832,7 +7831,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -7875,7 +7874,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.system">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.system">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -7918,7 +7917,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.version">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.version">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -7959,7 +7958,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.code">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.code">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -8001,7 +8000,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.display">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -8046,7 +8045,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding.userSelected">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.userSelected">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -10633,9 +10632,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT">
       <path value="MedicationRequest.dosageInstruction.route.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -10695,7 +10694,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding.id">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.id">
       <path value="MedicationRequest.dosageInstruction.route.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -10724,7 +10723,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.extension">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.extension">
       <path value="MedicationRequest.dosageInstruction.route.coding.extension" />
       <slicing>
         <discriminator>
@@ -10773,7 +10772,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.route.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -10816,7 +10815,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.system">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.system">
       <path value="MedicationRequest.dosageInstruction.route.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -10859,7 +10858,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.version">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.version">
       <path value="MedicationRequest.dosageInstruction.route.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -10900,7 +10899,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.code">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.code">
       <path value="MedicationRequest.dosageInstruction.route.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -10942,7 +10941,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.display">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -10987,7 +10986,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding.userSelected">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.userSelected">
       <path value="MedicationRequest.dosageInstruction.route.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -11560,9 +11559,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT">
       <path value="MedicationRequest.dosageInstruction.method.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -11622,7 +11621,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding.id">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.id">
       <path value="MedicationRequest.dosageInstruction.method.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -11651,7 +11650,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.extension">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.extension">
       <path value="MedicationRequest.dosageInstruction.method.coding.extension" />
       <slicing>
         <discriminator>
@@ -11700,7 +11699,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -11743,7 +11742,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.system">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.system">
       <path value="MedicationRequest.dosageInstruction.method.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -11786,7 +11785,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.version">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.version">
       <path value="MedicationRequest.dosageInstruction.method.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -11827,7 +11826,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.code">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.code">
       <path value="MedicationRequest.dosageInstruction.method.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -11869,7 +11868,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.display">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -11914,7 +11913,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding.userSelected">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.userSelected">
       <path value="MedicationRequest.dosageInstruction.method.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -12845,9 +12844,8 @@
         <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration" />
-      <sliceName value="SimpleQuantity" />
       <short value="Upper limit on medication per administration" />
       <definition value="Upper limit on medication per administration." />
       <comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg." />
@@ -12904,7 +12902,7 @@
         <map value="not supported" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.id">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.id">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -12933,7 +12931,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.extension">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.extension">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration.extension" />
       <slicing>
         <discriminator>
@@ -12982,7 +12980,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.value">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.value">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -13020,7 +13018,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.comparator">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.comparator">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -13070,7 +13068,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.unit">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -13111,7 +13109,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.system">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.system">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -13150,7 +13148,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration:SimpleQuantity.code">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerAdministration.code">
       <path value="MedicationRequest.dosageInstruction.maxDosePerAdministration.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -13188,9 +13186,8 @@
         <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime" />
-      <sliceName value="SimpleQuantity" />
       <short value="Upper limit on medication per lifetime of the patient" />
       <definition value="Upper limit on medication per lifetime of the patient." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
@@ -13247,7 +13244,7 @@
         <map value="not supported" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.id">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.id">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -13276,7 +13273,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.extension">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.extension">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime.extension" />
       <slicing>
         <discriminator>
@@ -13325,7 +13322,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.value">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.value">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -13363,7 +13360,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.comparator">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.comparator">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -13413,7 +13410,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.unit">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -13454,7 +13451,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.system">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.system">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -13493,7 +13490,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime:SimpleQuantity.code">
+    <element id="MedicationRequest.dosageInstruction.maxDosePerLifetime.code">
       <path value="MedicationRequest.dosageInstruction.maxDosePerLifetime.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -13991,9 +13988,8 @@
         <map value="repeatNumber" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity">
+    <element id="MedicationRequest.dispenseRequest.quantity">
       <path value="MedicationRequest.dispenseRequest.quantity" />
-      <sliceName value="SimpleQuantity" />
       <short value="Amount of medication to supply per dispense" />
       <definition value="The amount that is to be dispensed for one fill." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
@@ -14056,7 +14052,7 @@
         <map value="quantity" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.id">
+    <element id="MedicationRequest.dispenseRequest.quantity.id">
       <path value="MedicationRequest.dispenseRequest.quantity.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -14085,7 +14081,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.extension">
+    <element id="MedicationRequest.dispenseRequest.quantity.extension">
       <path value="MedicationRequest.dispenseRequest.quantity.extension" />
       <slicing>
         <discriminator>
@@ -14215,7 +14211,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.comparator">
+    <element id="MedicationRequest.dispenseRequest.quantity.comparator">
       <path value="MedicationRequest.dispenseRequest.quantity.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -16608,7 +16604,6 @@
       </type>
       <type>
         <code value="string" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <type>
         <code value="Reference" />
@@ -16638,9 +16633,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -16653,7 +16648,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -16662,20 +16657,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.system">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.system">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.version">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.version">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.version" />
       <max value="0" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.code">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.code">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.code" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:SNOMED CT.display">
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -16693,9 +16688,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT">
       <path value="MedicationRequest.dosageInstruction.route.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
       <binding>
         <strength value="preferred" />
@@ -16715,7 +16710,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.route.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -16724,20 +16719,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.system">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.system">
       <path value="MedicationRequest.dosageInstruction.route.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.version">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.version">
       <path value="MedicationRequest.dosageInstruction.route.coding.version" />
       <max value="0" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.code">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.code">
       <path value="MedicationRequest.dosageInstruction.route.coding.code" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.route.coding:SNOMED CT.display">
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -16755,9 +16750,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT">
       <path value="MedicationRequest.dosageInstruction.method.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
       <binding>
         <strength value="preferred" />
@@ -16777,7 +16772,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -16786,20 +16781,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.system">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.system">
       <path value="MedicationRequest.dosageInstruction.method.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.version">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.version">
       <path value="MedicationRequest.dosageInstruction.method.coding.version" />
       <max value="0" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.code">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.code">
       <path value="MedicationRequest.dosageInstruction.method.coding.code" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dosageInstruction.method.coding:SNOMED CT.display">
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-17T13:58:52.088+01:00" />
+    <lastUpdated value="2017-08-25T15:06:54.781+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatementLastIssueDate-1" />
   <version value="0.0.1" />
@@ -171,7 +171,7 @@
       <path value="Extension.valueDateTime" />
       <sliceName value="valueDateTime" />
       <short value="The date a prescription was last issued" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <definition value="The date a prescription was last issued." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -215,6 +215,7 @@
       <path value="Extension.valueDateTime" />
       <sliceName value="valueDateTime" />
       <short value="The date a prescription was last issued" />
+      <definition value="The date a prescription was last issued." />
       <type>
         <code value="dateTime" />
       </type>

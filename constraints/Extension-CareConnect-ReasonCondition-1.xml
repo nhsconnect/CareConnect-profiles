@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:30:42.072+01:00" />
+    <lastUpdated value="2017-08-25T15:21:45.51+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonCondition-1" />
   <version value="0.0.1" />
@@ -172,8 +172,8 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Value of extension" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <short value="Reason resource added/performed/given" />
+      <definition value="Reason resource added/performed/given." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="1" />
       <max value="1" />
@@ -219,6 +219,8 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+      <short value="Reason resource added/performed/given" />
+      <definition value="Reason resource added/performed/given." />
       <min value="1" />
       <type>
         <code value="CodeableConcept" />

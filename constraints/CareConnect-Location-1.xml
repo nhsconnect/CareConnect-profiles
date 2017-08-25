@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:19:26.657+01:00" />
+    <lastUpdated value="2017-08-25T14:09:09.153+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -1639,9 +1639,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code">
+    <element id="Location.identifier:odsSiteCode">
       <path value="Location.identifier" />
-      <sliceName value="ODS Site Code" />
+      <sliceName value="odsSiteCode" />
       <short value="ODS Site code to identify the organisation at site level" />
       <definition value="ODS Site code to identify the organisation at site level." />
       <requirements value="Organization label locations in registries, need to keep track of those." />
@@ -1689,7 +1689,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Location.identifier.id">
+    <element id="Location.identifier:odsSiteCode.id">
       <path value="Location.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -1718,7 +1718,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.extension">
+    <element id="Location.identifier:odsSiteCode.extension">
       <path value="Location.identifier.extension" />
       <slicing>
         <discriminator>
@@ -1767,7 +1767,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code.use">
+    <element id="Location.identifier:odsSiteCode.use">
       <path value="Location.identifier.use" />
       <short value="usual | official | temp | secondary (If known)" />
       <definition value="The purpose of this identifier." />
@@ -1816,7 +1816,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code.type">
+    <element id="Location.identifier:odsSiteCode.type">
       <path value="Location.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -1879,7 +1879,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.id">
+    <element id="Location.identifier:odsSiteCode.type.id">
       <path value="Location.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -1908,7 +1908,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.extension">
+    <element id="Location.identifier:odsSiteCode.type.extension">
       <path value="Location.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -1957,7 +1957,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding">
+    <element id="Location.identifier:odsSiteCode.type.coding">
       <path value="Location.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -2011,7 +2011,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.id">
+    <element id="Location.identifier:odsSiteCode.type.coding.id">
       <path value="Location.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2040,7 +2040,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.extension">
+    <element id="Location.identifier:odsSiteCode.type.coding.extension">
       <path value="Location.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -2089,7 +2089,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.system">
+    <element id="Location.identifier:odsSiteCode.type.coding.system">
       <path value="Location.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -2131,7 +2131,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.version">
+    <element id="Location.identifier:odsSiteCode.type.coding.version">
       <path value="Location.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -2172,7 +2172,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.code">
+    <element id="Location.identifier:odsSiteCode.type.coding.code">
       <path value="Location.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -2214,7 +2214,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.display">
+    <element id="Location.identifier:odsSiteCode.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2259,7 +2259,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.userSelected">
+    <element id="Location.identifier:odsSiteCode.type.coding.userSelected">
       <path value="Location.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -2301,7 +2301,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.text">
+    <element id="Location.identifier:odsSiteCode.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2346,7 +2346,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code.system">
+    <element id="Location.identifier:odsSiteCode.system">
       <path value="Location.identifier.system" />
       <short value="ODS Code" />
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
@@ -2393,7 +2393,7 @@
         <map value="./IdentifierType" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code.value">
+    <element id="Location.identifier:odsSiteCode.value">
       <path value="Location.identifier.value" />
       <short value="The ODS Site code name, to reflect the code used" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
@@ -2438,7 +2438,7 @@
         <map value="./Value" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code.period">
+    <element id="Location.identifier:odsSiteCode.period">
       <path value="Location.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -2494,7 +2494,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.id">
+    <element id="Location.identifier:odsSiteCode.period.id">
       <path value="Location.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2523,7 +2523,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.extension">
+    <element id="Location.identifier:odsSiteCode.period.extension">
       <path value="Location.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -2572,7 +2572,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.start">
+    <element id="Location.identifier:odsSiteCode.period.start">
       <path value="Location.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -2610,7 +2610,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.end">
+    <element id="Location.identifier:odsSiteCode.period.end">
       <path value="Location.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -2649,7 +2649,7 @@
         <map value="./high" />
       </mapping>
     </element>
-    <element id="Location.identifier:ODS Site Code.assigner">
+    <element id="Location.identifier:odsSiteCode.assigner">
       <path value="Location.identifier.assigner" />
       <short value="Organization that issued id (may be just text)" />
       <definition value="Organization that issued/manages the identifier." />
@@ -2702,7 +2702,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.id">
+    <element id="Location.identifier:odsSiteCode.assigner.id">
       <path value="Location.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2731,7 +2731,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.extension">
+    <element id="Location.identifier:odsSiteCode.assigner.extension">
       <path value="Location.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -2780,7 +2780,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.reference">
+    <element id="Location.identifier:odsSiteCode.assigner.reference">
       <path value="Location.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -2814,7 +2814,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.identifier">
+    <element id="Location.identifier:odsSiteCode.assigner.identifier">
       <path value="Location.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -2859,7 +2859,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.display">
+    <element id="Location.identifier:odsSiteCode.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2945,7 +2945,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Location.identifier.id">
+    <element id="Location.identifier:localIdentifier.id">
       <path value="Location.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2974,7 +2974,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.extension">
+    <element id="Location.identifier:localIdentifier.extension">
       <path value="Location.identifier.extension" />
       <slicing>
         <discriminator>
@@ -3023,7 +3023,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.use">
+    <element id="Location.identifier:localIdentifier.use">
       <path value="Location.identifier.use" />
       <short value="usual | official | temp | secondary (If known)" />
       <definition value="The purpose of this identifier." />
@@ -3072,7 +3072,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Location.identifier.type">
+    <element id="Location.identifier:localIdentifier.type">
       <path value="Location.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -3135,7 +3135,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.id">
+    <element id="Location.identifier:localIdentifier.type.id">
       <path value="Location.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3164,7 +3164,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.extension">
+    <element id="Location.identifier:localIdentifier.type.extension">
       <path value="Location.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -3213,7 +3213,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding">
+    <element id="Location.identifier:localIdentifier.type.coding">
       <path value="Location.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -3267,7 +3267,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.id">
+    <element id="Location.identifier:localIdentifier.type.coding.id">
       <path value="Location.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3296,7 +3296,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.extension">
+    <element id="Location.identifier:localIdentifier.type.coding.extension">
       <path value="Location.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -3345,7 +3345,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.system">
+    <element id="Location.identifier:localIdentifier.type.coding.system">
       <path value="Location.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -3387,7 +3387,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.version">
+    <element id="Location.identifier:localIdentifier.type.coding.version">
       <path value="Location.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -3428,7 +3428,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.code">
+    <element id="Location.identifier:localIdentifier.type.coding.code">
       <path value="Location.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -3470,7 +3470,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.display">
+    <element id="Location.identifier:localIdentifier.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3515,7 +3515,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.coding.userSelected">
+    <element id="Location.identifier:localIdentifier.type.coding.userSelected">
       <path value="Location.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -3557,7 +3557,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Location.identifier.type.text">
+    <element id="Location.identifier:localIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3694,7 +3694,7 @@
         <map value="./Value" />
       </mapping>
     </element>
-    <element id="Location.identifier.period">
+    <element id="Location.identifier:localIdentifier.period">
       <path value="Location.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -3750,7 +3750,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.id">
+    <element id="Location.identifier:localIdentifier.period.id">
       <path value="Location.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3779,7 +3779,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.extension">
+    <element id="Location.identifier:localIdentifier.period.extension">
       <path value="Location.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -3828,7 +3828,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.start">
+    <element id="Location.identifier:localIdentifier.period.start">
       <path value="Location.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -3866,7 +3866,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Location.identifier.period.end">
+    <element id="Location.identifier:localIdentifier.period.end">
       <path value="Location.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -3958,7 +3958,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.id">
+    <element id="Location.identifier:localIdentifier.assigner.id">
       <path value="Location.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3987,7 +3987,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.extension">
+    <element id="Location.identifier:localIdentifier.assigner.extension">
       <path value="Location.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -4036,7 +4036,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.reference">
+    <element id="Location.identifier:localIdentifier.assigner.reference">
       <path value="Location.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -4070,7 +4070,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.identifier">
+    <element id="Location.identifier:localIdentifier.assigner.identifier">
       <path value="Location.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -4115,7 +4115,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Location.identifier.assigner.display">
+    <element id="Location.identifier:localIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -8024,37 +8024,37 @@
         <rules value="openAtEnd" />
       </slicing>
     </element>
-    <element id="Location.identifier:ODS Site Code">
+    <element id="Location.identifier:odsSiteCode">
       <path value="Location.identifier" />
-      <sliceName value="ODS Site Code" />
+      <sliceName value="odsSiteCode" />
       <short value="ODS Site code to identify the organisation at site level" />
       <definition value="ODS Site code to identify the organisation at site level." />
       <max value="1" />
     </element>
-    <element id="Location.identifier:ODS Site Code.use">
+    <element id="Location.identifier:odsSiteCode.use">
       <path value="Location.identifier.use" />
       <max value="0" />
     </element>
-    <element id="Location.identifier:ODS Site Code.type">
+    <element id="Location.identifier:odsSiteCode.type">
       <path value="Location.identifier.type" />
       <max value="0" />
     </element>
-    <element id="Location.identifier:ODS Site Code.system">
+    <element id="Location.identifier:odsSiteCode.system">
       <path value="Location.identifier.system" />
       <short value="ODS Code" />
       <min value="1" />
       <fixedUri value="https://fhir.nhs.uk/Id/ods-site-code" />
     </element>
-    <element id="Location.identifier:ODS Site Code.value">
+    <element id="Location.identifier:odsSiteCode.value">
       <path value="Location.identifier.value" />
       <short value="The ODS Site code name, to reflect the code used" />
       <min value="1" />
     </element>
-    <element id="Location.identifier:ODS Site Code.period">
+    <element id="Location.identifier:odsSiteCode.period">
       <path value="Location.identifier.period" />
       <max value="0" />
     </element>
-    <element id="Location.identifier:ODS Site Code.assigner">
+    <element id="Location.identifier:odsSiteCode.assigner">
       <path value="Location.identifier.assigner" />
       <max value="0" />
     </element>

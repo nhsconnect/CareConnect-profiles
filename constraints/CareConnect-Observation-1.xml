@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:21:32.037+01:00" />
+    <lastUpdated value="2017-08-25T14:06:37.813+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo" />
@@ -2538,9 +2538,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT">
+    <element id="Observation.category.coding:snomedCT">
       <path value="Observation.category.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -2593,7 +2593,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.category.coding.id">
+    <element id="Observation.category.coding:snomedCT.id">
       <path value="Observation.category.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2622,7 +2622,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.extension">
+    <element id="Observation.category.coding:snomedCT.extension">
       <path value="Observation.category.coding.extension" />
       <slicing>
         <discriminator>
@@ -2671,7 +2671,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.category.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.category.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -2714,7 +2714,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.system">
+    <element id="Observation.category.coding:snomedCT.system">
       <path value="Observation.category.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -2757,7 +2757,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.version">
+    <element id="Observation.category.coding:snomedCT.version">
       <path value="Observation.category.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -2798,7 +2798,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.code">
+    <element id="Observation.category.coding:snomedCT.code">
       <path value="Observation.category.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -2840,7 +2840,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.display">
+    <element id="Observation.category.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2885,7 +2885,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.category.coding.userSelected">
+    <element id="Observation.category.coding:snomedCT.userSelected">
       <path value="Observation.category.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -3479,9 +3479,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT">
+    <element id="Observation.code.coding:snomedCT">
       <path value="Observation.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -3534,7 +3534,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.code.coding.id">
+    <element id="Observation.code.coding:snomedCT.id">
       <path value="Observation.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3563,7 +3563,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.extension">
+    <element id="Observation.code.coding:snomedCT.extension">
       <path value="Observation.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -3612,7 +3612,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -3655,7 +3655,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.system">
+    <element id="Observation.code.coding:snomedCT.system">
       <path value="Observation.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -3698,7 +3698,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.version">
+    <element id="Observation.code.coding:snomedCT.version">
       <path value="Observation.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -3739,7 +3739,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.code">
+    <element id="Observation.code.coding:snomedCT.code">
       <path value="Observation.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -3781,7 +3781,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.display">
+    <element id="Observation.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3826,7 +3826,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.code.coding.userSelected">
+    <element id="Observation.code.coding:snomedCT.userSelected">
       <path value="Observation.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -6484,9 +6484,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT">
+    <element id="Observation.bodySite.coding:snomedCT">
       <path value="Observation.bodySite.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -6539,7 +6539,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding.id">
+    <element id="Observation.bodySite.coding:snomedCT.id">
       <path value="Observation.bodySite.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -6568,7 +6568,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.extension">
+    <element id="Observation.bodySite.coding:snomedCT.extension">
       <path value="Observation.bodySite.coding.extension" />
       <slicing>
         <discriminator>
@@ -6617,7 +6617,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -6660,7 +6660,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.system">
+    <element id="Observation.bodySite.coding:snomedCT.system">
       <path value="Observation.bodySite.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -6703,7 +6703,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.version">
+    <element id="Observation.bodySite.coding:snomedCT.version">
       <path value="Observation.bodySite.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -6744,7 +6744,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.code">
+    <element id="Observation.bodySite.coding:snomedCT.code">
       <path value="Observation.bodySite.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -6786,7 +6786,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.display">
+    <element id="Observation.bodySite.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -6831,7 +6831,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.bodySite.coding.userSelected">
+    <element id="Observation.bodySite.coding:snomedCT.userSelected">
       <path value="Observation.bodySite.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -7407,9 +7407,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT">
+    <element id="Observation.method.coding:snomedCT">
       <path value="Observation.method.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -7462,7 +7462,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.method.coding.id">
+    <element id="Observation.method.coding:snomedCT.id">
       <path value="Observation.method.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -7491,7 +7491,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.extension">
+    <element id="Observation.method.coding:snomedCT.extension">
       <path value="Observation.method.coding.extension" />
       <slicing>
         <discriminator>
@@ -7540,7 +7540,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -7583,7 +7583,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.system">
+    <element id="Observation.method.coding:snomedCT.system">
       <path value="Observation.method.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -7626,7 +7626,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.version">
+    <element id="Observation.method.coding:snomedCT.version">
       <path value="Observation.method.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -7667,7 +7667,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.code">
+    <element id="Observation.method.coding:snomedCT.code">
       <path value="Observation.method.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -7709,7 +7709,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.display">
+    <element id="Observation.method.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -7754,7 +7754,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.method.coding.userSelected">
+    <element id="Observation.method.coding:snomedCT.userSelected">
       <path value="Observation.method.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -8509,9 +8509,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity">
+    <element id="Observation.referenceRange.low">
       <path value="Observation.referenceRange.low" />
-      <sliceName value="SimpleQuantity" />
       <short value="Low Range, if relevant" />
       <definition value="The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is &gt;=5 - &lt;=9).   If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is &lt;=2.3)." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
@@ -8571,7 +8570,7 @@
         <map value="value:IVL_PQ.low" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.id">
+    <element id="Observation.referenceRange.low.id">
       <path value="Observation.referenceRange.low.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -8600,7 +8599,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.extension">
+    <element id="Observation.referenceRange.low.extension">
       <path value="Observation.referenceRange.low.extension" />
       <slicing>
         <discriminator>
@@ -8649,7 +8648,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.value">
+    <element id="Observation.referenceRange.low.value">
       <path value="Observation.referenceRange.low.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -8687,7 +8686,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.comparator">
+    <element id="Observation.referenceRange.low.comparator">
       <path value="Observation.referenceRange.low.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -8737,7 +8736,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.unit">
+    <element id="Observation.referenceRange.low.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -8778,7 +8777,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.system">
+    <element id="Observation.referenceRange.low.system">
       <path value="Observation.referenceRange.low.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -8817,7 +8816,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.low:SimpleQuantity.code">
+    <element id="Observation.referenceRange.low.code">
       <path value="Observation.referenceRange.low.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -8855,9 +8854,8 @@
         <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity">
+    <element id="Observation.referenceRange.high">
       <path value="Observation.referenceRange.high" />
-      <sliceName value="SimpleQuantity" />
       <short value="High Range, if relevant" />
       <definition value="The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is &gt;=5 - &lt;=9).   If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is &gt;= 2.3)." />
       <comment value="The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator." />
@@ -8917,7 +8915,7 @@
         <map value="value:IVL_PQ.high" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.id">
+    <element id="Observation.referenceRange.high.id">
       <path value="Observation.referenceRange.high.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -8946,7 +8944,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.extension">
+    <element id="Observation.referenceRange.high.extension">
       <path value="Observation.referenceRange.high.extension" />
       <slicing>
         <discriminator>
@@ -8995,7 +8993,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.value">
+    <element id="Observation.referenceRange.high.value">
       <path value="Observation.referenceRange.high.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -9033,7 +9031,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.comparator">
+    <element id="Observation.referenceRange.high.comparator">
       <path value="Observation.referenceRange.high.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -9083,7 +9081,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.unit">
+    <element id="Observation.referenceRange.high.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -9124,7 +9122,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.system">
+    <element id="Observation.referenceRange.high.system">
       <path value="Observation.referenceRange.high.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -9163,7 +9161,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.high:SimpleQuantity.code">
+    <element id="Observation.referenceRange.high.code">
       <path value="Observation.referenceRange.high.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -10387,9 +10385,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity">
+    <element id="Observation.referenceRange.age.low">
       <path value="Observation.referenceRange.age.low" />
-      <sliceName value="SimpleQuantity" />
       <short value="Low limit" />
       <definition value="The low limit. The boundary is inclusive." />
       <comment value="If the low element is missing, the low boundary is not known." />
@@ -10450,7 +10447,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.id">
+    <element id="Observation.referenceRange.age.low.id">
       <path value="Observation.referenceRange.age.low.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -10479,7 +10476,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.extension">
+    <element id="Observation.referenceRange.age.low.extension">
       <path value="Observation.referenceRange.age.low.extension" />
       <slicing>
         <discriminator>
@@ -10528,7 +10525,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.value">
+    <element id="Observation.referenceRange.age.low.value">
       <path value="Observation.referenceRange.age.low.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -10566,7 +10563,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.comparator">
+    <element id="Observation.referenceRange.age.low.comparator">
       <path value="Observation.referenceRange.age.low.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -10616,7 +10613,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.unit">
+    <element id="Observation.referenceRange.age.low.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -10657,7 +10654,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.system">
+    <element id="Observation.referenceRange.age.low.system">
       <path value="Observation.referenceRange.age.low.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -10696,7 +10693,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.low:SimpleQuantity.code">
+    <element id="Observation.referenceRange.age.low.code">
       <path value="Observation.referenceRange.age.low.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -10734,9 +10731,8 @@
         <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity">
+    <element id="Observation.referenceRange.age.high">
       <path value="Observation.referenceRange.age.high" />
-      <sliceName value="SimpleQuantity" />
       <short value="High limit" />
       <definition value="The high limit. The boundary is inclusive." />
       <comment value="If the high element is missing, the high boundary is not known." />
@@ -10797,7 +10793,7 @@
         <map value="./high" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.id">
+    <element id="Observation.referenceRange.age.high.id">
       <path value="Observation.referenceRange.age.high.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -10826,7 +10822,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.extension">
+    <element id="Observation.referenceRange.age.high.extension">
       <path value="Observation.referenceRange.age.high.extension" />
       <slicing>
         <discriminator>
@@ -10875,7 +10871,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.value">
+    <element id="Observation.referenceRange.age.high.value">
       <path value="Observation.referenceRange.age.high.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -10913,7 +10909,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.comparator">
+    <element id="Observation.referenceRange.age.high.comparator">
       <path value="Observation.referenceRange.age.high.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="Not allowed to be used in this context" />
@@ -10963,7 +10959,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.unit">
+    <element id="Observation.referenceRange.age.high.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -11004,7 +11000,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.system">
+    <element id="Observation.referenceRange.age.high.system">
       <path value="Observation.referenceRange.age.high.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -11043,7 +11039,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.referenceRange.age.high:SimpleQuantity.code">
+    <element id="Observation.referenceRange.age.high.code">
       <path value="Observation.referenceRange.age.high.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -12227,9 +12223,9 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT">
+    <element id="Observation.component.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
@@ -12282,7 +12278,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding.id">
+    <element id="Observation.component.code.coding:snomedCT.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -12311,7 +12307,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.extension">
+    <element id="Observation.component.code.coding:snomedCT.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -12360,7 +12356,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.component.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.component.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <short value="The SNOMED CT Description ID for the display" />
@@ -12403,7 +12399,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.system">
+    <element id="Observation.component.code.coding:snomedCT.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -12446,7 +12442,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.version">
+    <element id="Observation.component.code.coding:snomedCT.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -12487,7 +12483,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.code">
+    <element id="Observation.component.code.coding:snomedCT.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -12529,7 +12525,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.display">
+    <element id="Observation.component.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -12574,7 +12570,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component.code.coding.userSelected">
+    <element id="Observation.component.code.coding:snomedCT.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -13880,9 +13876,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.category.coding:SNOMED CT">
+    <element id="Observation.category.coding:snomedCT">
       <path value="Observation.category.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -13895,7 +13891,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.category.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.category.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -13904,20 +13900,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Observation.category.coding:SNOMED CT.system">
+    <element id="Observation.category.coding:snomedCT.system">
       <path value="Observation.category.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.category.coding:SNOMED CT.version">
+    <element id="Observation.category.coding:snomedCT.version">
       <path value="Observation.category.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.category.coding:SNOMED CT.code">
+    <element id="Observation.category.coding:snomedCT.code">
       <path value="Observation.category.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.category.coding:SNOMED CT.display">
+    <element id="Observation.category.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -13935,9 +13931,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:SNOMED CT">
+    <element id="Observation.code.coding:snomedCT">
       <path value="Observation.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -13950,7 +13946,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -13959,20 +13955,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Observation.code.coding:SNOMED CT.system">
+    <element id="Observation.code.coding:snomedCT.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.code.coding:SNOMED CT.version">
+    <element id="Observation.code.coding:snomedCT.version">
       <path value="Observation.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.code.coding:SNOMED CT.code">
+    <element id="Observation.code.coding:snomedCT.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.code.coding:SNOMED CT.display">
+    <element id="Observation.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14039,9 +14035,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT">
+    <element id="Observation.bodySite.coding:snomedCT">
       <path value="Observation.bodySite.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -14054,7 +14050,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -14063,20 +14059,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.system">
+    <element id="Observation.bodySite.coding:snomedCT.system">
       <path value="Observation.bodySite.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.version">
+    <element id="Observation.bodySite.coding:snomedCT.version">
       <path value="Observation.bodySite.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.code">
+    <element id="Observation.bodySite.coding:snomedCT.code">
       <path value="Observation.bodySite.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.bodySite.coding:SNOMED CT.display">
+    <element id="Observation.bodySite.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14094,9 +14090,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.method.coding:SNOMED CT">
+    <element id="Observation.method.coding:snomedCT">
       <path value="Observation.method.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -14109,7 +14105,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -14118,20 +14114,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Observation.method.coding:SNOMED CT.system">
+    <element id="Observation.method.coding:snomedCT.system">
       <path value="Observation.method.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.method.coding:SNOMED CT.version">
+    <element id="Observation.method.coding:snomedCT.version">
       <path value="Observation.method.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.method.coding:SNOMED CT.code">
+    <element id="Observation.method.coding:snomedCT.code">
       <path value="Observation.method.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.method.coding:SNOMED CT.display">
+    <element id="Observation.method.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14164,9 +14160,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT">
+    <element id="Observation.component.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
-      <sliceName value="SNOMED CT" />
+      <sliceName value="snomedCT" />
       <max value="1" />
     </element>
     <element>
@@ -14179,7 +14175,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.extension:snomedCTDescriptionID">
+    <element id="Observation.component.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.component.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
       <max value="1" />
@@ -14188,20 +14184,20 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.system">
+    <element id="Observation.component.code.coding:snomedCT.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.version">
+    <element id="Observation.component.code.coding:snomedCT.version">
       <path value="Observation.component.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.code">
+    <element id="Observation.component.code.coding:snomedCT.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.component.code.coding:SNOMED CT.display">
+    <element id="Observation.component.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>

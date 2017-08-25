@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:30:38.932+01:00" />
+    <lastUpdated value="2017-08-25T15:21:16.746+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ProbabilityOfRecurrence-1" />
   <version value="0.0.1" />
@@ -171,7 +171,7 @@
       <path value="Extension.valueString" />
       <sliceName value="valueString" />
       <short value="The probability of the reaction (allergic, adverse, intolerant) occurring" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <definition value="The probability of the reaction (allergic, adverse, intolerant) occurring." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -215,6 +215,7 @@
       <path value="Extension.valueString" />
       <sliceName value="valueString" />
       <short value="The probability of the reaction (allergic, adverse, intolerant) occurring" />
+      <definition value="The probability of the reaction (allergic, adverse, intolerant) occurring." />
       <type>
         <code value="string" />
       </type>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-17T13:52:22.168+01:00" />
+    <lastUpdated value="2017-08-25T15:08:28.894+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatementQuantity-1" />
   <version value="0.0.1" />
@@ -291,7 +291,7 @@
       <path value="Extension.extension.valueQuantity" />
       <sliceName value="valueQuantity" />
       <short value="Amount of medication to supply per dispense" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <definition value="Amount of medication to supply per dispense." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="1" />
       <max value="1" />
@@ -478,7 +478,7 @@
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <short value="Quantity representation" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <definition value="Quantity representation." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="1" />
       <max value="1" />
@@ -717,6 +717,7 @@
       <path value="Extension.extension.valueQuantity" />
       <sliceName value="valueQuantity" />
       <short value="Amount of medication to supply per dispense" />
+      <definition value="Amount of medication to supply per dispense." />
       <min value="1" />
       <type>
         <code value="Quantity" />
@@ -738,6 +739,7 @@
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <short value="Quantity representation" />
+      <definition value="Quantity representation." />
       <min value="1" />
       <type>
         <code value="string" />
