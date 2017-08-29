@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-LanguageAbilityProficiency-1"/>
-	<meta>
-		<lastUpdated value="2016-08-03T00:00:00+01:00"/>
-	</meta>
-	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-		<valueInteger value="1"/>
-	</extension>	
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-LanguageAbilityProficiency-1"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -17,8 +11,8 @@
 	<status value="active"/>
 	<date value="2016-08-03T00:00:00+01:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="A valueset to describe the level of proficiency in communicating a language."/>
-		<copyright value="Copyright © 2016 HL7 UK"/>
+	<description value="A valueset to identify the level of proficiency in communicating a language."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
 	<compose>
 		<include>
 			<system value="https://fhir.hl7.org.uk/STU3/CareConnect-LanguageAbilityProficiency-1"/>

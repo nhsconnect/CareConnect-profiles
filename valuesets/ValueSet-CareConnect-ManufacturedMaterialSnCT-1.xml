@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-ManufacturedMaterialSnCT-1"/>
-		<meta>
-		<lastUpdated value="2016-08-30T00:00:00+00:00"/>
-	</meta>
-	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-		<valueInteger value="1" />
-	</extension>
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
