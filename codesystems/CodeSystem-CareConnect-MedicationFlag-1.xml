@@ -5,11 +5,11 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Medication Flag"/>
 	<status value="active"/>
-	<date value="2016-01-13T00:00:00+00:00"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="List of detail codes for flagged medication issues."/>
+	<description value="A CodeSystem to identify detail codes for flagged medication issues."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
 	<caseSensitive value="true"/>
-	<valueSet value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationFlag-1"/>
 	<content value="complete"/>
 	<concept>
 		<code value="do-not-discontinue"/>

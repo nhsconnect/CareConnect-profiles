@@ -1,96 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-MaritalStatus-1"/>
-	<contained>
-		<ConceptMap>
-			<name value="NHS Data Model and Dictionary Mapping"/>
-			<status value="draft"/>
-			<sourceReference>
-				<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-1"/>
-			</sourceReference>
-			<targetReference>
-				<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-DDMAP-1"/>
-			</targetReference>
-			<group>
-				<source value="http://hl7.org/fhir/v3/MaritalStatus"/>
-				<target value="https://fhir.hl7.org.uk/STU3/CareConnect-MaritalStatus-DDMAP-1"/>
-				<element>
-					<code value="U"/>
-					<target>
-						<code value="S"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-				<element>
-					<code value="D"/>
-					<target>
-						<code value="D"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-				<element>
-					<code value="L"/>
-					<target>
-						<code value="P"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-				<element>
-					<code value="M"/>
-					<target>
-						<code value="M"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-				<element>
-					<code value="S"/>
-					<target>
-						<code value="S"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-				<element>
-					<code value="U"/>
-					<target>
-						<code value="S"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-				<element>
-					<code value="W"/>
-					<target>
-						<code value="W"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-			</group>
-			<group>
-				<source value="http://hl7.org/fhir/v3/NullFlavor"/>
-				<target value="https://fhir.hl7.org.uk/STU3/CareConnect-MaritalStatus-DDMAP-1"/>
-				<element>
-					<codeSystem value="http://hl7.org/fhir/v3/NullFlavor"/>
-					<code value="UNK"/>
-					<target>
-						<code value="N"/>
-						<equivalence value="equivalent"/>
-					</target>
-				</element>
-			</group>
-		</ConceptMap>
-	</contained>
 	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-map">
 		<valueReference>
-			<reference value="#map"/>
+			<reference value="https://fhir.hl7.org.uk/STU3/ConceptMap/CareConnect-MaritalStatus-1"/>
 		</valueReference>
 	</extension>
-	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status">
-		<valueString value="Informative"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+		<valueUri value="http://hl7.org/fhir/ValueSet/marital-status"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+		<valueCode value="pa"/>
 	</extension>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 		<valueInteger value="5"/>
 	</extension>
-	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-		<valueCode value="pa"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-ballot-status">
+		<valueString value="Informative"/>
 	</extension>
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-1"/>
 	<identifier>
@@ -99,19 +25,18 @@
 	</identifier>
 	<version value="3.0.1"/>
 	<name value="Marital Status Codes"/>
-	<status value="draft"/>
-	<experimental value="true"/>
-	<date value="2017-04-19T07:44:43+10:00"/>
-	<publisher value="FHIR Project team"/>
+	<status value="active"/>
+	<date value="2017-04-19T07:44:47+10:00"/>
+	<publisher value="HL7 (FHIR Project)"/>
 	<contact>
 		<telecom>
 			<system value="url"/>
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-	<description value="This value set defines the set of codes that can be used to indicate the marital status
-   of a person."/>
-	<immutable value="true"/>
+	<description value="This value set defines the set of codes that can be used to indicate the marital status of a person."/>
+	<copyright value="Copyright © HL7.org 2011+"/>
+	<extensible value="true"/>
 	<compose>
 		<include>
 			<system value="http://hl7.org/fhir/v3/MaritalStatus"/>
@@ -120,6 +45,7 @@
 			<system value="http://hl7.org/fhir/v3/NullFlavor"/>
 			<concept>
 				<code value="UNK"/>
+				<display value="unknown"/>
 			</concept>
 		</include>
 	</compose>

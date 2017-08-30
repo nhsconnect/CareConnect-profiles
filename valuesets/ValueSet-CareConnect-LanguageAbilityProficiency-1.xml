@@ -9,9 +9,9 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Language Ability Proficiency"/>
 	<status value="active"/>
-	<date value="2016-08-03T00:00:00+01:00"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="A valueset to identify the level of proficiency in communicating a language."/>
+	<description value="A ValueSet to identify the level of proficiency in communicating a language."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
 	<compose>
 		<include>

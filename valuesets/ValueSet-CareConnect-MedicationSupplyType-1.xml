@@ -5,24 +5,24 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Medication Supply Type"/>
 	<status value="active"/>
-	<date value="2016-08-29T00:00:00+00:00"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="A ValueSet to identify the legal/contractual nature of a prescription."/>
+	<description value="A code from the SNOMED Clinical Terminology UK coding system that identifies the legal/contractual nature of a prescription."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>
 			<concept>
-				<code value="394823007"/>
-				<display value="NHS Prescription"/>
+				<code value="930811000000109"/>
+				<display value="NHS prescription"/>
 			</concept>
 			<concept>
 				<code value="394824001"/>
-				<display value="Private Prescription"/>
+				<display value="Private prescription"/>
 			</concept>
 			<concept>
 				<code value="394825000"/>
-				<display value="ACBS Prescription"/>
+				<display value="ACBS prescription"/>
 			</concept>
 			<concept>
 				<code value="394826004"/>
@@ -30,7 +30,7 @@
 			</concept>
 			<concept>
 				<code value="394827008"/>
-				<display value="Personal Administration"/>
+				<display value="Personal administration"/>
 			</concept>
 		</include>
 	</compose>

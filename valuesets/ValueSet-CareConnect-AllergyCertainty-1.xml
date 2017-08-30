@@ -5,7 +5,7 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Allergy Certainty"/>
 	<status value="active"/>
-	<date value="2016-08-03T00:00:00+01:00"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
@@ -22,11 +22,11 @@
 			</concept>
 			<concept>
 				<code value="255545003"/>
-				<display value="Definite (qualifier value)"/>
+				<display value="Definite"/>
 			</concept>
 			<concept>
 				<code value="410605003"/>
-				<display value="(Confirmed present (qualifier value))"/>
+				<display value="Confirmed present"/>
 			</concept>
 		</include>
 	</compose>

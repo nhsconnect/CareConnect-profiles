@@ -5,7 +5,7 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Allergy Severity"/>
 	<status value="active"/>
-	<date value="2016-08-03T00:00:00+01:00"/>
+	<date value="2017-08-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the severity of an allergy."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
@@ -14,23 +14,23 @@
 			<system value="http://snomed.info/sct"/>
 			<concept>
 				<code value="255604002"/>
-				<display value="Mild (qualifier value)"/>
+				<display value="Mild"/>
 			</concept>
 			<concept>
 				<code value="6736007"/>
-				<display value="Moderate (severity modifier) (qualifier value)"/>
+				<display value="Moderate"/>
 			</concept>
 			<concept>
 				<code value="24484000"/>
-				<display value="Severe (severity modifier) (qualifier value)"/>
+				<display value="Severe"/>
 			</concept>
 			<concept>
 				<code value="442452003"/>
-				<display value="Life threatening severity (qualifier value)"/>
+				<display value="Life threatening severity"/>
 			</concept>
 			<concept>
 				<code value="399166001"/>
-				<display value="Fatal (qualifier value)"/>
+				<display value="Fatal"/>
 			</concept>
 		</include>
 	</compose>
