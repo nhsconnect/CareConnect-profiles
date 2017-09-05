@@ -6,7 +6,7 @@
 			<reference value="https://fhir.hl7.org.uk/STU3/ConceptMap/AdministrativeGender-1"/>
 		</valueReference>
 	</extension>
-		<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
+	<extension url="http://hl7.org/fhir/StructureDefinition/valueset-sourceReference">
 		<valueUri value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
 	</extension>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
@@ -43,6 +43,22 @@
 	<compose>
 		<include>
 			<system value="http://hl7.org/fhir/administrative-gender"/>
+			<concept>
+				<code value="male"/>
+				<display value="Male"/>
+			</concept>
+			<concept>
+				<code value="female"/>
+				<display value="Female"/>
+			</concept>
+			<concept>
+				<code value="other"/>
+				<display value="Other"/>
+			</concept>
+			<concept>
+				<code value="unknown"/>
+				<display value="Unknown"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>
