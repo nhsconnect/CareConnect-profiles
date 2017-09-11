@@ -17,23 +17,23 @@
 			<system value="http://snomed.info/sct"/>
 			<concept>
 				<code value="255604002"/>
-				<display value="Mild (qualifier value)"/>
+				<display value="Mild"/>
 			</concept>
 			<concept>
 				<code value="6736007"/>
-				<display value="Moderate (severity modifier) (qualifier value)"/>
+				<display value="Moderate"/>
 			</concept>
 			<concept>
 				<code value="24484000"/>
-				<display value="Severe (severity modifier) (qualifier value)"/>
+				<display value="Severe"/>
 			</concept>
 			<concept>
 				<code value="442452003"/>
-				<display value="Life threatening severity (qualifier value)"/>
+				<display value="Life threatening severity"/>
 			</concept>
 			<concept>
 				<code value="399166001"/>
-				<display value="Fatal (qualifier value)"/>
+				<display value="Fatal"/>
 			</concept>
 		</include>
 	</compose>

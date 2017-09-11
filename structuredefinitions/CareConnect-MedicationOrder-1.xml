@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-10T11:15:12.717+01:00" />
+    <lastUpdated value="2017-09-11T10:12:11.135+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/StructureDefinition/CareConnect-MedicationOrder-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-MedicationOrder-1" />
   <status value="active" />
   <publisher value="HL7 UK" />
@@ -2391,7 +2391,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -11261,7 +11261,6 @@
     <element>
       <path value="MedicationOrder.dosageInstruction.additionalInstructions.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -11317,7 +11316,6 @@
     <element>
       <path value="MedicationOrder.dosageInstruction.route.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
@@ -11370,7 +11368,6 @@
     <element>
       <path value="MedicationOrder.dosageInstruction.method.coding.extension" />
       <name value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-coding-sctdescid" />
