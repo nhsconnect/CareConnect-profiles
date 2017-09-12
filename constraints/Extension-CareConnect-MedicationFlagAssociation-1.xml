@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-12T15:30:49.747+01:00" />
+    <lastUpdated value="2017-09-12T15:39:40.696+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlagAssociation-1" />
   <version value="0.0.1" />
@@ -218,7 +218,7 @@
       <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlagAssociation-1" />
     </element>
     <element id="Extension.value[x]:valueReference">
-      <path value="Extension.value[x]" />
+      <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
       <short value="Medication reference" />
       <definition value="Medication reference." />
