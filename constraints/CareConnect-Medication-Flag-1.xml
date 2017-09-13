@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-12T15:40:00.205+01:00" />
+    <lastUpdated value="2017-09-13T09:38:34.624+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -2008,7 +2008,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://hl7.org/fhir/ValueSet/flag-category" />
+      <fixedUri value="http://hl7.org/fhir/flag-category" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3747,10 +3747,6 @@
     <element id="Flag.extension:medication">
       <path value="Flag.extension" />
       <sliceName value="medication" />
-      <short value="Associated medication" />
-      <definition value="Associated medication." />
-      <min value="1" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlagAssociation-1" />
@@ -3789,7 +3785,7 @@
     <element id="Flag.category.coding.system">
       <path value="Flag.category.coding.system" />
       <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/flag-category" />
+      <fixedUri value="http://hl7.org/fhir/flag-category" />
     </element>
     <element id="Flag.category.coding.version">
       <path value="Flag.category.coding.version" />
