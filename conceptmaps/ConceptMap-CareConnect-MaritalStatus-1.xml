@@ -16,7 +16,7 @@
 	</targetReference>
 	<group>
 		<source value="http://hl7.org/fhir/v3/MaritalStatus"/>
-		<target value="https://fhir.hl7.org.uk/STU3/NHSDataDictionary-PersonMaritalStatus-1"/>
+		<target value="https://fhir.hl7.org.uk/STU3/CodeSystem/NHSDataDictionary-PersonMaritalStatus-1"/>
 		<element>
 			<code value="U"/>
 			<display value="unmarried"/>
@@ -74,7 +74,7 @@
 	</group>
 	<group>
 		<source value="http://hl7.org/fhir/v3/NullFlavor"/>
-		<target value="https://fhir.hl7.org.uk/STU3/NHSDataDictionary-PersonMaritalStatus-1"/>
+		<target value="https://fhir.hl7.org.uk/STU3/CodeSystem/NHSDataDictionary-PersonMaritalStatus-1"/>
 		<element>
 			<code value="UNK"/>
 			<display value="unknown"/>
