@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T14:05:37.145+01:00" />
+    <lastUpdated value="2017-10-18T14:10:54.531+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
@@ -382,9 +382,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationStatement.extension:quantityDispensed">
+    <element id="MedicationStatement.extension:quantityToSupply">
       <path value="MedicationStatement.extension" />
-      <sliceName value="quantityDispensed" />
+      <sliceName value="quantityToSupply" />
       <short value="Amount of medication to supply per dispense" />
       <definition value="Amount of medication to supply per dispense." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
@@ -12248,7 +12248,7 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="MedicationStatement.extension">
       <path value="MedicationStatement.extension" />
       <slicing>
         <discriminator>
@@ -12267,9 +12267,9 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatementReasonEnded-1" />
       </type>
     </element>
-    <element id="MedicationStatement.extension:quantityDispensed">
+    <element id="MedicationStatement.extension:quantityToSupply">
       <path value="MedicationStatement.extension" />
-      <sliceName value="quantityDispensed" />
+      <sliceName value="quantityToSupply" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -12436,7 +12436,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="MedicationStatement.reasonNotTaken.coding:snomedCT.extension">
       <path value="MedicationStatement.reasonNotTaken.coding.extension" />
       <slicing>
         <discriminator>
@@ -12449,7 +12449,6 @@
     <element id="MedicationStatement.reasonNotTaken.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationStatement.reasonNotTaken.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -12531,7 +12530,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
+    <element id="MedicationStatement.dosage.route.coding:snomedCT.extension">
       <path value="MedicationStatement.dosage.route.coding.extension" />
       <slicing>
         <discriminator>
@@ -12544,7 +12543,6 @@
     <element id="MedicationStatement.dosage.route.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationStatement.dosage.route.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -12593,7 +12591,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
+    <element id="MedicationStatement.dosage.method.coding:snomedCT.extension">
       <path value="MedicationStatement.dosage.method.coding.extension" />
       <slicing>
         <discriminator>
@@ -12606,7 +12604,6 @@
     <element id="MedicationStatement.dosage.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationStatement.dosage.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
