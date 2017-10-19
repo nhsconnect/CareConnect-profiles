@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-10T15:09:27.385+01:00" />
+    <lastUpdated value="2017-10-19T09:07:47.117+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -608,6 +608,49 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSCommunication-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.extension:birthPlace">
+      <path value="Patient.extension" />
+      <sliceName value="birthPlace" />
+      <short value="Birth Place: The registered place of birth of the patient." />
+      <definition value="Birth Place: The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2011,7 +2054,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Patient.identifier.id">
+    <element id="Patient.identifier:nhsNumber.id">
       <path value="Patient.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2244,7 +2287,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.id">
+    <element id="Patient.identifier:nhsNumber.type.id">
       <path value="Patient.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2273,7 +2316,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.extension">
+    <element id="Patient.identifier:nhsNumber.type.extension">
       <path value="Patient.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -2322,7 +2365,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding">
+    <element id="Patient.identifier:nhsNumber.type.coding">
       <path value="Patient.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -2376,7 +2419,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.id">
+    <element id="Patient.identifier:nhsNumber.type.coding.id">
       <path value="Patient.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2405,7 +2448,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.extension">
+    <element id="Patient.identifier:nhsNumber.type.coding.extension">
       <path value="Patient.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -2454,7 +2497,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.system">
+    <element id="Patient.identifier:nhsNumber.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -2496,7 +2539,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.version">
+    <element id="Patient.identifier:nhsNumber.type.coding.version">
       <path value="Patient.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -2537,7 +2580,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.code">
+    <element id="Patient.identifier:nhsNumber.type.coding.code">
       <path value="Patient.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -2579,7 +2622,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.display">
+    <element id="Patient.identifier:nhsNumber.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2624,7 +2667,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.userSelected">
+    <element id="Patient.identifier:nhsNumber.type.coding.userSelected">
       <path value="Patient.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -2666,7 +2709,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.text">
+    <element id="Patient.identifier:nhsNumber.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2863,7 +2906,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.id">
+    <element id="Patient.identifier:nhsNumber.period.id">
       <path value="Patient.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2892,7 +2935,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.extension">
+    <element id="Patient.identifier:nhsNumber.period.extension">
       <path value="Patient.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -2941,7 +2984,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.start">
+    <element id="Patient.identifier:nhsNumber.period.start">
       <path value="Patient.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -2979,7 +3022,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.end">
+    <element id="Patient.identifier:nhsNumber.period.end">
       <path value="Patient.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -3071,7 +3114,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.id">
+    <element id="Patient.identifier:nhsNumber.assigner.id">
       <path value="Patient.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3100,7 +3143,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.extension">
+    <element id="Patient.identifier:nhsNumber.assigner.extension">
       <path value="Patient.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -3149,7 +3192,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.reference">
+    <element id="Patient.identifier:nhsNumber.assigner.reference">
       <path value="Patient.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -3183,7 +3226,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.identifier">
+    <element id="Patient.identifier:nhsNumber.assigner.identifier">
       <path value="Patient.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -3228,7 +3271,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.display">
+    <element id="Patient.identifier:nhsNumber.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3322,7 +3365,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Patient.identifier.id">
+    <element id="Patient.identifier:localIdentifier.id">
       <path value="Patient.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3351,7 +3394,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.extension">
+    <element id="Patient.identifier:localIdentifier.extension">
       <path value="Patient.identifier.extension" />
       <slicing>
         <discriminator>
@@ -3400,7 +3443,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.use">
+    <element id="Patient.identifier:localIdentifier.use">
       <path value="Patient.identifier.use" />
       <short value="usual | official | temp | secondary (If known)" />
       <definition value="The purpose of this identifier." />
@@ -3449,7 +3492,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type">
+    <element id="Patient.identifier:localIdentifier.type">
       <path value="Patient.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -3512,7 +3555,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.id">
+    <element id="Patient.identifier:localIdentifier.type.id">
       <path value="Patient.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3541,7 +3584,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.extension">
+    <element id="Patient.identifier:localIdentifier.type.extension">
       <path value="Patient.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -3590,7 +3633,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding">
+    <element id="Patient.identifier:localIdentifier.type.coding">
       <path value="Patient.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -3644,7 +3687,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.id">
+    <element id="Patient.identifier:localIdentifier.type.coding.id">
       <path value="Patient.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3673,7 +3716,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.extension">
+    <element id="Patient.identifier:localIdentifier.type.coding.extension">
       <path value="Patient.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -3722,7 +3765,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.system">
+    <element id="Patient.identifier:localIdentifier.type.coding.system">
       <path value="Patient.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -3764,7 +3807,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.version">
+    <element id="Patient.identifier:localIdentifier.type.coding.version">
       <path value="Patient.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -3805,7 +3848,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.code">
+    <element id="Patient.identifier:localIdentifier.type.coding.code">
       <path value="Patient.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -3847,7 +3890,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.display">
+    <element id="Patient.identifier:localIdentifier.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3892,7 +3935,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.coding.userSelected">
+    <element id="Patient.identifier:localIdentifier.type.coding.userSelected">
       <path value="Patient.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -3934,7 +3977,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Patient.identifier.type.text">
+    <element id="Patient.identifier:localIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -4071,7 +4114,7 @@
         <map value="./Value" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period">
+    <element id="Patient.identifier:localIdentifier.period">
       <path value="Patient.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -4127,7 +4170,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.id">
+    <element id="Patient.identifier:localIdentifier.period.id">
       <path value="Patient.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4156,7 +4199,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.extension">
+    <element id="Patient.identifier:localIdentifier.period.extension">
       <path value="Patient.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -4205,7 +4248,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.start">
+    <element id="Patient.identifier:localIdentifier.period.start">
       <path value="Patient.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -4243,7 +4286,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Patient.identifier.period.end">
+    <element id="Patient.identifier:localIdentifier.period.end">
       <path value="Patient.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -4335,7 +4378,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.id">
+    <element id="Patient.identifier:localIdentifier.assigner.id">
       <path value="Patient.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4364,7 +4407,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.extension">
+    <element id="Patient.identifier:localIdentifier.assigner.extension">
       <path value="Patient.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -4413,7 +4456,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.reference">
+    <element id="Patient.identifier:localIdentifier.assigner.reference">
       <path value="Patient.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -4447,7 +4490,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.identifier">
+    <element id="Patient.identifier:localIdentifier.assigner.identifier">
       <path value="Patient.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -4492,7 +4535,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Patient.identifier.assigner.display">
+    <element id="Patient.identifier:localIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -5236,7 +5279,7 @@
         <map value=".patient.name" />
       </mapping>
     </element>
-    <element id="Patient.name.id">
+    <element id="Patient.name:usual.id">
       <path value="Patient.name.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -5265,7 +5308,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.name.extension">
+    <element id="Patient.name:usual.extension">
       <path value="Patient.name.extension" />
       <slicing>
         <discriminator>
@@ -5368,7 +5411,7 @@
         <map value="./NamePurpose" />
       </mapping>
     </element>
-    <element id="Patient.name.text">
+    <element id="Patient.name:usual.text">
       <path value="Patient.name.text" />
       <short value="Text representation of the full name" />
       <definition value="A full text representation of the name." />
@@ -5448,7 +5491,7 @@
         <map value="./FamilyName" />
       </mapping>
     </element>
-    <element id="Patient.name.given">
+    <element id="Patient.name:usual.given">
       <path value="Patient.name.given" />
       <short value="Given names (not always 'first'). Includes middle names" />
       <definition value="Given name." />
@@ -5492,7 +5535,7 @@
         <map value="./GivenNames" />
       </mapping>
     </element>
-    <element id="Patient.name.prefix">
+    <element id="Patient.name:usual.prefix">
       <path value="Patient.name.prefix" />
       <short value="Parts that come before the name" />
       <definition value="Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name." />
@@ -5534,7 +5577,7 @@
         <map value="./TitleCode" />
       </mapping>
     </element>
-    <element id="Patient.name.suffix">
+    <element id="Patient.name:usual.suffix">
       <path value="Patient.name.suffix" />
       <short value="Parts that come after the name" />
       <definition value="Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name." />
@@ -5572,7 +5615,7 @@
         <map value="./part[partType = SFX]" />
       </mapping>
     </element>
-    <element id="Patient.name.period">
+    <element id="Patient.name:usual.period">
       <path value="Patient.name.period" />
       <short value="Time period when name was/is in use" />
       <definition value="Indicates the period of time when this name was valid for the named person." />
@@ -5629,7 +5672,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Patient.name.period.id">
+    <element id="Patient.name:usual.period.id">
       <path value="Patient.name.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -5658,7 +5701,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.name.period.extension">
+    <element id="Patient.name:usual.period.extension">
       <path value="Patient.name.period.extension" />
       <slicing>
         <discriminator>
@@ -5707,7 +5750,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.name.period.start">
+    <element id="Patient.name:usual.period.start">
       <path value="Patient.name.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -5745,7 +5788,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Patient.name.period.end">
+    <element id="Patient.name:usual.period.end">
       <path value="Patient.name.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -5839,7 +5882,7 @@
         <map value=".patient.name" />
       </mapping>
     </element>
-    <element id="Patient.name.id">
+    <element id="Patient.name:other.id">
       <path value="Patient.name.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -5868,7 +5911,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.name.extension">
+    <element id="Patient.name:other.extension">
       <path value="Patient.name.extension" />
       <slicing>
         <discriminator>
@@ -5970,7 +6013,7 @@
         <map value="./NamePurpose" />
       </mapping>
     </element>
-    <element id="Patient.name.text">
+    <element id="Patient.name:other.text">
       <path value="Patient.name.text" />
       <short value="Text representation of the full name" />
       <definition value="A full text representation of the name." />
@@ -6008,7 +6051,7 @@
         <map value="./formatted" />
       </mapping>
     </element>
-    <element id="Patient.name.family">
+    <element id="Patient.name:other.family">
       <path value="Patient.name.family" />
       <short value="Family name (often called 'Surname')" />
       <definition value="The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
@@ -6050,7 +6093,7 @@
         <map value="./FamilyName" />
       </mapping>
     </element>
-    <element id="Patient.name.given">
+    <element id="Patient.name:other.given">
       <path value="Patient.name.given" />
       <short value="Given names (not always 'first'). Includes middle names" />
       <definition value="Given name." />
@@ -6094,7 +6137,7 @@
         <map value="./GivenNames" />
       </mapping>
     </element>
-    <element id="Patient.name.prefix">
+    <element id="Patient.name:other.prefix">
       <path value="Patient.name.prefix" />
       <short value="Parts that come before the name" />
       <definition value="Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name." />
@@ -6136,7 +6179,7 @@
         <map value="./TitleCode" />
       </mapping>
     </element>
-    <element id="Patient.name.suffix">
+    <element id="Patient.name:other.suffix">
       <path value="Patient.name.suffix" />
       <short value="Parts that come after the name" />
       <definition value="Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name." />
@@ -6174,7 +6217,7 @@
         <map value="./part[partType = SFX]" />
       </mapping>
     </element>
-    <element id="Patient.name.period">
+    <element id="Patient.name:other.period">
       <path value="Patient.name.period" />
       <short value="Time period when name was/is in use" />
       <definition value="Indicates the period of time when this name was valid for the named person." />
@@ -6231,7 +6274,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Patient.name.period.id">
+    <element id="Patient.name:other.period.id">
       <path value="Patient.name.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -6260,7 +6303,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Patient.name.period.extension">
+    <element id="Patient.name:other.period.extension">
       <path value="Patient.name.period.extension" />
       <slicing>
         <discriminator>
@@ -6309,7 +6352,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.name.period.start">
+    <element id="Patient.name:other.period.start">
       <path value="Patient.name.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -6347,7 +6390,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Patient.name.period.end">
+    <element id="Patient.name:other.period.end">
       <path value="Patient.name.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -15680,7 +15723,7 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="Patient.extension">
       <path value="Patient.extension" />
       <slicing>
         <discriminator>
@@ -15693,9 +15736,6 @@
     <element id="Patient.extension:registrationDetails">
       <path value="Patient.extension" />
       <sliceName value="registrationDetails" />
-      <short value="Additional registration information for the Patient resource" />
-      <definition value="Additional registration information for the Patient resource." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -15754,6 +15794,18 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSCommunication-1" />
       </type>
     </element>
+    <element id="Patient.extension:birthPlace">
+      <path value="Patient.extension" />
+      <sliceName value="birthPlace" />
+      <short value="Birth Place: The registered place of birth of the patient." />
+      <definition value="Birth Place: The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
+      </type>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
@@ -15771,7 +15823,7 @@
       <short value="The patient's NHS number" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Patient.identifier:nhsNumber.extension">
       <path value="Patient.identifier.extension" />
       <slicing>
         <discriminator>
@@ -15899,7 +15951,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
+    <element id="Patient.birthDate.extension">
       <path value="Patient.birthDate.extension" />
       <slicing>
         <discriminator>
