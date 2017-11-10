@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T14:28:45.213+01:00" />
+    <lastUpdated value="2017-11-10T09:30:20.071+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AllergySeverity-1" />
   <version value="0.0.1" />
@@ -22,8 +22,8 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <short value="A coded severity of the allergy/intolerance." />
+      <definition value="A coded severity of the allergy/intolerance." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -209,6 +209,11 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="A coded severity of the allergy/intolerance." />
+      <definition value="A coded severity of the allergy/intolerance." />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AllergySeverity-1" />
