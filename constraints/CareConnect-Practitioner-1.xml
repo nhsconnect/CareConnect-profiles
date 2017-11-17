@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-19T10:19:14.495+01:00" />
+    <lastUpdated value="2017-11-17T08:56:20.574+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -1757,7 +1757,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.id">
+    <element id="Practitioner.identifier:sdsUserID.id">
       <path value="Practitioner.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -1786,7 +1786,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.extension">
+    <element id="Practitioner.identifier:sdsUserID.extension">
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -1947,7 +1947,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.id">
+    <element id="Practitioner.identifier:sdsUserID.type.id">
       <path value="Practitioner.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -1976,7 +1976,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.extension">
+    <element id="Practitioner.identifier:sdsUserID.type.extension">
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -2025,7 +2025,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding">
+    <element id="Practitioner.identifier:sdsUserID.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -2079,7 +2079,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.id">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.id">
       <path value="Practitioner.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2108,7 +2108,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.extension">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.extension">
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -2157,7 +2157,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.system">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -2199,7 +2199,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.version">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.version">
       <path value="Practitioner.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -2240,7 +2240,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.code">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -2282,7 +2282,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.display">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2327,7 +2327,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.userSelected">
+    <element id="Practitioner.identifier:sdsUserID.type.coding.userSelected">
       <path value="Practitioner.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -2369,7 +2369,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.text">
+    <element id="Practitioner.identifier:sdsUserID.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2562,7 +2562,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.id">
+    <element id="Practitioner.identifier:sdsUserID.period.id">
       <path value="Practitioner.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2591,7 +2591,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.extension">
+    <element id="Practitioner.identifier:sdsUserID.period.extension">
       <path value="Practitioner.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -2640,7 +2640,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.start">
+    <element id="Practitioner.identifier:sdsUserID.period.start">
       <path value="Practitioner.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -2678,7 +2678,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.end">
+    <element id="Practitioner.identifier:sdsUserID.period.end">
       <path value="Practitioner.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -2770,7 +2770,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.id">
+    <element id="Practitioner.identifier:sdsUserID.assigner.id">
       <path value="Practitioner.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -2799,7 +2799,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.extension">
+    <element id="Practitioner.identifier:sdsUserID.assigner.extension">
       <path value="Practitioner.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -2848,7 +2848,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.reference">
+    <element id="Practitioner.identifier:sdsUserID.assigner.reference">
       <path value="Practitioner.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -2882,7 +2882,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.identifier">
+    <element id="Practitioner.identifier:sdsUserID.assigner.identifier">
       <path value="Practitioner.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -2927,7 +2927,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.display">
+    <element id="Practitioner.identifier:sdsUserID.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3021,7 +3021,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.id">
+    <element id="Practitioner.identifier:sdsRoleProfileID.id">
       <path value="Practitioner.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3050,7 +3050,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.extension">
+    <element id="Practitioner.identifier:sdsRoleProfileID.extension">
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -3211,7 +3211,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.id">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.id">
       <path value="Practitioner.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3240,7 +3240,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.extension">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.extension">
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -3289,7 +3289,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -3343,7 +3343,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.id">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.id">
       <path value="Practitioner.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3372,7 +3372,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.extension">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.extension">
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -3421,7 +3421,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.system">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -3463,7 +3463,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.version">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.version">
       <path value="Practitioner.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -3504,7 +3504,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.code">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -3546,7 +3546,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.display">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3591,7 +3591,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.userSelected">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.coding.userSelected">
       <path value="Practitioner.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -3633,7 +3633,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.text">
+    <element id="Practitioner.identifier:sdsRoleProfileID.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -3826,7 +3826,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.id">
+    <element id="Practitioner.identifier:sdsRoleProfileID.period.id">
       <path value="Practitioner.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3855,7 +3855,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.extension">
+    <element id="Practitioner.identifier:sdsRoleProfileID.period.extension">
       <path value="Practitioner.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -3904,7 +3904,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.start">
+    <element id="Practitioner.identifier:sdsRoleProfileID.period.start">
       <path value="Practitioner.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -3942,7 +3942,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.end">
+    <element id="Practitioner.identifier:sdsRoleProfileID.period.end">
       <path value="Practitioner.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -4034,7 +4034,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.id">
+    <element id="Practitioner.identifier:sdsRoleProfileID.assigner.id">
       <path value="Practitioner.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4063,7 +4063,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.extension">
+    <element id="Practitioner.identifier:sdsRoleProfileID.assigner.extension">
       <path value="Practitioner.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -4112,7 +4112,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.reference">
+    <element id="Practitioner.identifier:sdsRoleProfileID.assigner.reference">
       <path value="Practitioner.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -4146,7 +4146,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.identifier">
+    <element id="Practitioner.identifier:sdsRoleProfileID.assigner.identifier">
       <path value="Practitioner.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -4191,7 +4191,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.display">
+    <element id="Practitioner.identifier:sdsRoleProfileID.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -4285,7 +4285,7 @@
         <map value="id" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.id">
+    <element id="Practitioner.identifier:localIdentifier.id">
       <path value="Practitioner.identifier.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4314,7 +4314,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.extension">
+    <element id="Practitioner.identifier:localIdentifier.extension">
       <path value="Practitioner.identifier.extension" />
       <slicing>
         <discriminator>
@@ -4363,7 +4363,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.use">
+    <element id="Practitioner.identifier:localIdentifier.use">
       <path value="Practitioner.identifier.use" />
       <short value="usual | official | temp | secondary (If known)" />
       <definition value="The purpose of this identifier." />
@@ -4412,7 +4412,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type">
+    <element id="Practitioner.identifier:localIdentifier.type">
       <path value="Practitioner.identifier.type" />
       <short value="Description of identifier" />
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." />
@@ -4475,7 +4475,7 @@
         <map value="Role.code or implied by context" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.id">
+    <element id="Practitioner.identifier:localIdentifier.type.id">
       <path value="Practitioner.identifier.type.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4504,7 +4504,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.extension">
+    <element id="Practitioner.identifier:localIdentifier.type.extension">
       <path value="Practitioner.identifier.type.extension" />
       <slicing>
         <discriminator>
@@ -4553,7 +4553,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding">
+    <element id="Practitioner.identifier:localIdentifier.type.coding">
       <path value="Practitioner.identifier.type.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -4607,7 +4607,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.id">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.id">
       <path value="Practitioner.identifier.type.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -4636,7 +4636,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.extension">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.extension">
       <path value="Practitioner.identifier.type.coding.extension" />
       <slicing>
         <discriminator>
@@ -4685,7 +4685,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.system">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.system">
       <path value="Practitioner.identifier.type.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -4727,7 +4727,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.version">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.version">
       <path value="Practitioner.identifier.type.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -4768,7 +4768,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.code">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.code">
       <path value="Practitioner.identifier.type.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -4810,7 +4810,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.display">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -4855,7 +4855,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.coding.userSelected">
+    <element id="Practitioner.identifier:localIdentifier.type.coding.userSelected">
       <path value="Practitioner.identifier.type.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -4897,7 +4897,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.type.text">
+    <element id="Practitioner.identifier:localIdentifier.type.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -5034,7 +5034,7 @@
         <map value="./Value" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period">
+    <element id="Practitioner.identifier:localIdentifier.period">
       <path value="Practitioner.identifier.period" />
       <short value="Time period when id is/was valid for use" />
       <definition value="Time period during which identifier is/was valid for use." />
@@ -5090,7 +5090,7 @@
         <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.id">
+    <element id="Practitioner.identifier:localIdentifier.period.id">
       <path value="Practitioner.identifier.period.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -5119,7 +5119,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.extension">
+    <element id="Practitioner.identifier:localIdentifier.period.extension">
       <path value="Practitioner.identifier.period.extension" />
       <slicing>
         <discriminator>
@@ -5168,7 +5168,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.start">
+    <element id="Practitioner.identifier:localIdentifier.period.start">
       <path value="Practitioner.identifier.period.start" />
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
@@ -5206,7 +5206,7 @@
         <map value="./low" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.period.end">
+    <element id="Practitioner.identifier:localIdentifier.period.end">
       <path value="Practitioner.identifier.period.end" />
       <short value="End time with inclusive boundary, if not ongoing" />
       <definition value="The end of the period. If the end of the period is missing, it means that the period is ongoing. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time." />
@@ -5298,7 +5298,7 @@
         <map value="./IdentifierIssuingAuthority" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.id">
+    <element id="Practitioner.identifier:localIdentifier.assigner.id">
       <path value="Practitioner.identifier.assigner.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -5327,7 +5327,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.extension">
+    <element id="Practitioner.identifier:localIdentifier.assigner.extension">
       <path value="Practitioner.identifier.assigner.extension" />
       <slicing>
         <discriminator>
@@ -5376,7 +5376,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.reference">
+    <element id="Practitioner.identifier:localIdentifier.assigner.reference">
       <path value="Practitioner.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -5410,7 +5410,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.identifier">
+    <element id="Practitioner.identifier:localIdentifier.assigner.identifier">
       <path value="Practitioner.identifier.assigner.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -5455,7 +5455,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Practitioner.identifier.assigner.display">
+    <element id="Practitioner.identifier:localIdentifier.assigner.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -9189,7 +9189,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -10167,7 +10167,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -10934,7 +10934,7 @@
       <path value="Practitioner" />
       <short value="A person with a formal responsibility in the provisioning of healthcare or related services" />
     </element>
-    <element>
+    <element id="Practitioner.extension">
       <path value="Practitioner.extension" />
       <slicing>
         <discriminator>
@@ -10947,10 +10947,6 @@
     <element id="Practitioner.extension:nhsCommunication">
       <path value="Practitioner.extension" />
       <sliceName value="nhsCommunication" />
-      <short value="NHS communication preferences for a resource" />
-      <definition value="Communication preferences including a list of Languages which may be used for communication" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSCommunication-1" />
@@ -11078,6 +11074,20 @@
     <element id="Practitioner.birthDate">
       <path value="Practitioner.birthDate" />
       <short value="The date on which the practitioner was born" />
+    </element>
+    <element id="Practitioner.qualification.identifier.assigner">
+      <path value="Practitioner.qualification.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
+    </element>
+    <element id="Practitioner.qualification.issuer">
+      <path value="Practitioner.qualification.issuer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
     </element>
     <element id="Practitioner.communication">
       <path value="Practitioner.communication" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-14T10:22:23.081+01:00" />
+    <lastUpdated value="2017-11-17T08:57:02.55+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -2986,7 +2986,7 @@
         <map value="(ServD maps Practitioners and Organizations via another entity, so this concept is not available)" />
       </mapping>
     </element>
-    <element id="PractitionerRole.code.id">
+    <element id="PractitionerRole.code:sdsJobRoleName.id">
       <path value="PractitionerRole.code.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3015,7 +3015,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="PractitionerRole.code.extension">
+    <element id="PractitionerRole.code:sdsJobRoleName.extension">
       <path value="PractitionerRole.code.extension" />
       <slicing>
         <discriminator>
@@ -3118,7 +3118,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="PractitionerRole.code.coding.id">
+    <element id="PractitionerRole.code:sdsJobRoleName.coding.id">
       <path value="PractitionerRole.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -3147,7 +3147,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="PractitionerRole.code.coding.extension">
+    <element id="PractitionerRole.code:sdsJobRoleName.coding.extension">
       <path value="PractitionerRole.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -3212,7 +3212,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/STU3/CareConnect-SDSJobRoleName-1" />
+      <fixedUri value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3409,7 +3409,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="PractitionerRole.code.text">
+    <element id="PractitionerRole.code:sdsJobRoleName.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -5988,7 +5988,7 @@
     <element id="PractitionerRole.code:sdsJobRoleName.coding.system">
       <path value="PractitionerRole.code.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.hl7.org.uk/STU3/CareConnect-SDSJobRoleName-1" />
+      <fixedUri value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1" />
     </element>
     <element id="PractitionerRole.code:sdsJobRoleName.coding.version">
       <path value="PractitionerRole.code.coding.version" />
