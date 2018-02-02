@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-01-29T15:07:02.271+00:00" />
+    <lastUpdated value="2018-01-31T09:02:17.392+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -5599,7 +5599,7 @@
       <comment value="Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes&#xA;&#xA;When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.&#xA;&#xA;We expect that some jurisdictions will profile this optionality to be a single cardinality." />
       <requirements value="Need to be able to track the kind of organization that this is - different organization types have different uses." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Organization.type" />
         <min value="0" />
@@ -6133,7 +6133,7 @@
       <definition value="A name associated with the organization." />
       <comment value="If the name of an organization changes, consider putting the old name in the alias column so that it can still be located through searches." />
       <requirements value="Need to use the name as the label of the organization." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Organization.name" />
@@ -10733,14 +10733,6 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
-    </element>
-    <element id="Organization.type">
-      <path value="Organization.type" />
-      <max value="1" />
-    </element>
-    <element id="Organization.name">
-      <path value="Organization.name" />
-      <min value="1" />
     </element>
     <element id="Organization.address.state">
       <path value="Organization.address.state" />
