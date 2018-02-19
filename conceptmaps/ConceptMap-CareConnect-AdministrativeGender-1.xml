@@ -12,11 +12,11 @@
 		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1"/>
 	</sourceReference>
 	<targetReference>
-		<reference value="https://fhir.nhs.uk/STU3/ValueSet/NHSDataDictionary-PersonStatedGender-1"/>
+		<reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-NHSDataDictionary-PersonStatedGender-1"/>
 	</targetReference>
 	<group>
 		<source value="http://hl7.org/fhir/administrative-gender"/>
-		<target value="https://fhir.nhs.uk/STU3/CodeSystem/NHSDataDictionary-PersonStatedGender-1"/>
+		<target value="https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-NHSDataDictionary-PersonStatedGender-1"/>
 		<element>
 			<code value="male"/>
 			<display value="Male"/>

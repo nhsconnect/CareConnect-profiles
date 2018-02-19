@@ -19,3 +19,14 @@ ValueSet-CareConnect-SDSJobRoleName-1: <a href="https://fhir.hl7.org.uk/STU3/Val
 When to use Practitioner.identifier vs PractitionerRole.identifier:
 
 It is suggested that Practitioner.identifier is used for identifiers that are recognised by Royal Colleges (for example a General Medical Council (GMC) Code), and PractitionerRole.identifier is used for the identification of a Practitioner working for an Organisation (such as a SmartCard identifier).
+
+***Identifier.system***
+
+The following identifier system uri's should be used where official identifiers are being used:
+
+Organization | URI
+--- | --- 
+General Medical Council (GMC) | https://fhir.hl7.org.uk/Id/gmc-number
+Nurse & Midwifery Council (NMC) | https://fhir.hl7.org.uk/Id/nmc-number
+Health & Care Profession Council | https://fhir.hl7.org.uk/Id/hcpc-number
+

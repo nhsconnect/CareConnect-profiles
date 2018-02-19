@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-19T10:17:46.026+01:00" />
+    <lastUpdated value="2018-02-19T12:01:59.831+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSCommunication-1" />
-  <version value="0.0.1" />
+  <version value="1.0.0" />
   <name value="Extension-CareConnect-NHSCommunication-1" />
   <status value="draft" />
   <date value="2017-06-07T15:55:24.330896+01:00" />
@@ -288,7 +288,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:language.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:language.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Languages which may be used for communication" />
@@ -331,7 +331,7 @@
     <element id="Extension.extension:preferred">
       <path value="Extension.extension" />
       <sliceName value="preferred" />
-      <short value="Additional Content defined by implementations" />
+      <short value="Language preference indicator" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -482,7 +482,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:preferred.value[x]">
+    <element id="Extension.extension:preferred.valueBoolean">
       <path value="Extension.extension.valueBoolean" />
       <short value="Indicates whether or not this language is preferred (over other languages up a certain level)" />
       <definition value="Indicates whether or not this language is preferred (over other languages up a certain level)" />
@@ -517,7 +517,7 @@
     <element id="Extension.extension:modeOfCommunication">
       <path value="Extension.extension" />
       <sliceName value="modeOfCommunication" />
-      <short value="Additional Content defined by implementations" />
+      <short value="Mode of communication for the selected language" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -668,7 +668,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:modeOfCommunication.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:modeOfCommunication.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="A valueset to describe the mode the patient can communicate in, representing the method of expression of the language." />
@@ -711,7 +711,7 @@
     <element id="Extension.extension:communicationProficiency">
       <path value="Extension.extension" />
       <sliceName value="communicationProficiency" />
-      <short value="Additional Content defined by implementations" />
+      <short value="The level of proficiency in communicating a language" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -862,7 +862,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:communicationProficiency.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:communicationProficiency.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="A valueset to describe the level of proficiency in communicating a language" />
@@ -905,7 +905,7 @@
     <element id="Extension.extension:interpreterRequired">
       <path value="Extension.extension" />
       <sliceName value="interpreterRequired" />
-      <short value="Additional Content defined by implementations" />
+      <short value="Interpreter preference indicator" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -1056,7 +1056,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:interpreterRequired.value[x]">
+    <element id="Extension.extension:interpreterRequired.valueBoolean">
       <path value="Extension.extension.valueBoolean" />
       <short value="Indicates whether an interpreter is required for communication purposes" />
       <definition value="Indicates whether an interpreter is required for communication purposes- True / False?" />
@@ -1272,6 +1272,16 @@
       <short value="NHS communication preferences for a resource" />
       <definition value="Communication preferences including a list of Languages which may be used for communication" />
     </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Extension.extension:language">
       <path value="Extension.extension" />
       <sliceName value="language" />
@@ -1284,7 +1294,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="language" />
     </element>
-    <element id="Extension.extension:language.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:language.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Languages which may be used for communication" />
@@ -1304,12 +1314,13 @@
     <element id="Extension.extension:preferred">
       <path value="Extension.extension" />
       <sliceName value="preferred" />
+      <short value="Language preference indicator" />
     </element>
     <element id="Extension.extension:preferred.url">
       <path value="Extension.extension.url" />
       <fixedUri value="preferred" />
     </element>
-    <element id="Extension.extension:preferred.value[x]">
+    <element id="Extension.extension:preferred.valueBoolean">
       <path value="Extension.extension.valueBoolean" />
       <short value="Indicates whether or not this language is preferred (over other languages up a certain level)" />
       <definition value="Indicates whether or not this language is preferred (over other languages up a certain level)" />
@@ -1321,12 +1332,13 @@
     <element id="Extension.extension:modeOfCommunication">
       <path value="Extension.extension" />
       <sliceName value="modeOfCommunication" />
+      <short value="Mode of communication for the selected language" />
     </element>
     <element id="Extension.extension:modeOfCommunication.url">
       <path value="Extension.extension.url" />
       <fixedUri value="modeOfCommunication" />
     </element>
-    <element id="Extension.extension:modeOfCommunication.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:modeOfCommunication.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="A valueset to describe the mode the patient can communicate in, representing the method of expression of the language." />
@@ -1346,13 +1358,14 @@
     <element id="Extension.extension:communicationProficiency">
       <path value="Extension.extension" />
       <sliceName value="communicationProficiency" />
+      <short value="The level of proficiency in communicating a language" />
       <max value="1" />
     </element>
     <element id="Extension.extension:communicationProficiency.url">
       <path value="Extension.extension.url" />
       <fixedUri value="communicationProficiency" />
     </element>
-    <element id="Extension.extension:communicationProficiency.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:communicationProficiency.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="A valueset to describe the level of proficiency in communicating a language" />
@@ -1372,13 +1385,14 @@
     <element id="Extension.extension:interpreterRequired">
       <path value="Extension.extension" />
       <sliceName value="interpreterRequired" />
+      <short value="Interpreter preference indicator" />
       <max value="1" />
     </element>
     <element id="Extension.extension:interpreterRequired.url">
       <path value="Extension.extension.url" />
       <fixedUri value="interpreterRequired" />
     </element>
-    <element id="Extension.extension:interpreterRequired.value[x]">
+    <element id="Extension.extension:interpreterRequired.valueBoolean">
       <path value="Extension.extension.valueBoolean" />
       <short value="Indicates whether an interpreter is required for communication purposes" />
       <definition value="Indicates whether an interpreter is required for communication purposes- True / False?" />
