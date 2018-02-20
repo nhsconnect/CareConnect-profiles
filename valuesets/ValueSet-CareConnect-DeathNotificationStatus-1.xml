@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-DeathNotice-1"/>
-	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeathNotice-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeathNotificationStatus-1"/>
 	<version value="1.0.0"/>
-	<name value="Care Connect Death Notice"/>
+	<name value="Care Connect Death Notification Status"/>
 	<status value="draft"/>
 	<date value="2018-02-14T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
@@ -11,7 +11,7 @@
 	<copyright value="Copyright © 2016 HL7 UK"/>
 	<compose>
 		<include>
-			<system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-DeathNotice-1"/>
+			<system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-DeathNotificationStatus-1"/>
 		</include>
 	</compose>
 </ValueSet>

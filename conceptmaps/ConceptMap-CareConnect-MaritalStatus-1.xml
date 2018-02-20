@@ -12,7 +12,7 @@
 		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MaritalStatus-1"/>
 	</sourceReference>
 	<targetReference>
-		<reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-NHSDataDictionary-PersonMaritalStatus-1"/>
+		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NHSDataDictionary-PersonMaritalStatus-1"/>
 	</targetReference>
 	<group>
 		<source value="http://hl7.org/fhir/v3/MaritalStatus"/>

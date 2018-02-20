@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-02-14T16:02:38.26+00:00" />
+    <lastUpdated value="2018-02-20T15:00:37.531+00:00" />
   </meta>
-  <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotification-1" />
+  <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />
   <version value="1.0.0" />
-  <name value="Extension-CareConnect-DeathNotification-1" />
+  <name value="Extension-CareConnect-DeathNotificationStatus-1" />
   <status value="draft" />
   <date value="2018-02-14T15:41:26.005+00:00" />
   <publisher value="HL7 UK" />
@@ -22,7 +22,7 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))" />
+      <short value="Representation of a patient’s death notification (as held on Personal Demographics Service (PDS))" />
       <definition value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))." />
       <min value="0" />
       <max value="1" />
@@ -149,7 +149,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotification-1" />
+      <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -167,7 +167,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="To identify the type of death notice as held on Personal Demographics Service (PDS)" />
@@ -195,7 +195,7 @@
         <strength value="required" />
         <description value="To identify the type of death notice as held on Personal Demographics Service (PDS)." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeathNotice-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeathNotificationStatus-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -211,15 +211,15 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))" />
+      <short value="Representation of a patient’s death notification (as held on Personal Demographics Service (PDS))" />
       <definition value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))." />
       <max value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotification-1" />
+      <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="To identify the type of death notice as held on Personal Demographics Service (PDS)" />
@@ -232,7 +232,7 @@
         <strength value="required" />
         <description value="To identify the type of death notice as held on Personal Demographics Service (PDS)." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeathNotice-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeathNotificationStatus-1" />
         </valueSetReference>
       </binding>
     </element>

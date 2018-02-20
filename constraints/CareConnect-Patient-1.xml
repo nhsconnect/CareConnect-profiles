@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-02-14T16:02:44.456+00:00" />
+    <lastUpdated value="2018-02-20T16:16:55.698+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
@@ -676,10 +676,10 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Patient.extension:deathNotification">
+    <element id="Patient.extension:deathNotificationStatus">
       <path value="Patient.extension" />
-      <sliceName value="deathNotification" />
-      <short value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))" />
+      <sliceName value="deathNotificationStatus" />
+      <short value="Representation of a patient’s death notification (as held on Personal Demographics Service (PDS))" />
       <definition value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -693,7 +693,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotification-1" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5434,7 +5434,7 @@
         <strength value="required" />
         <description value="The use of a human name" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/name-use" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -6036,7 +6036,7 @@
         <strength value="required" />
         <description value="The use of a human name" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/name-use" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -15844,16 +15844,12 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NominatedPharmacy-1" />
       </type>
     </element>
-    <element id="Patient.extension:deathNotification">
+    <element id="Patient.extension:deathNotificationStatus">
       <path value="Patient.extension" />
-      <sliceName value="deathNotification" />
-      <short value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))" />
-      <definition value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))." />
-      <min value="0" />
-      <max value="1" />
+      <sliceName value="deathNotificationStatus" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotification-1" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />
       </type>
     </element>
     <element id="Patient.identifier">
@@ -15965,6 +15961,15 @@
       <path value="Patient.name.use" />
       <min value="1" />
       <fixedCode value="usual" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NameUse" />
+        </extension>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.name:usual.family">
       <path value="Patient.name.family" />
@@ -15977,6 +15982,15 @@
     <element id="Patient.name:other.use">
       <path value="Patient.name.use" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NameUse" />
+        </extension>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.telecom.system">
       <path value="Patient.telecom.system" />
