@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T14:38:34.782+01:00" />
+    <lastUpdated value="2018-02-20T08:47:20.046+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-EncounterTransport-1" />
-  <version value="0.0.1" />
+  <version value="1.0.0" />
   <name value="Extension-CareConnect-EncounterTransport-1" />
   <status value="draft" />
   <date value="2017-07-11T09:46:04.4958234+01:00" />
@@ -287,7 +287,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:transportType.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:transportType.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Transport Type" />
@@ -474,7 +474,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:transportPeriod.value[x]:valuePeriod">
+    <element id="Extension.extension:transportPeriod.valuePeriod:valuePeriod">
       <path value="Extension.extension.valuePeriod" />
       <sliceName value="valuePeriod" />
       <short value="Transport Period" />
@@ -661,7 +661,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:reasonForTransport.value[x]:valueString">
+    <element id="Extension.extension:reasonForTransport.valueString:valueString">
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <short value="Reason for transport" />
@@ -879,7 +879,7 @@
       <definition value="Encounter transport." />
       <max value="1" />
     </element>
-    <element>
+    <element id="Extension.extension">
       <path value="Extension.extension" />
       <slicing>
         <discriminator>
@@ -899,7 +899,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="transportType" />
     </element>
-    <element id="Extension.extension:transportType.value[x]:valueCodeableConcept">
+    <element id="Extension.extension:transportType.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Transport Type" />
@@ -917,7 +917,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="transportPeriod" />
     </element>
-    <element id="Extension.extension:transportPeriod.value[x]:valuePeriod">
+    <element id="Extension.extension:transportPeriod.valuePeriod:valuePeriod">
       <path value="Extension.extension.valuePeriod" />
       <sliceName value="valuePeriod" />
       <short value="Transport Period" />
@@ -935,7 +935,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="reasonForTransport" />
     </element>
-    <element id="Extension.extension:reasonForTransport.value[x]:valueString">
+    <element id="Extension.extension:reasonForTransport.valueString:valueString">
       <path value="Extension.extension.valueString" />
       <sliceName value="valueString" />
       <short value="Reason for transport" />
