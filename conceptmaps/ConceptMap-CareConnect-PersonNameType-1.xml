@@ -57,7 +57,7 @@
 			<code value="old"/>
 			<display value="Old"/>
 			<target>
-				<code value="PREVIOUS-BATCHELOR"/>
+				<code value="PREVIOUS-BACHELOR"/>
 				<display value="Bachelor name"/>
 				<equivalence value="equivalent"/>
 			</target>
