@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-	<id value="CareConnect-AllergyCertainty-1"/>
-	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyCertainty-1"/>
+	<id value="CareConnect-AllergyCode-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyCode-1"/>
 	<version value="1.0.0"/>
-	<name value="Care Connect Allergy Certainty"/>
+	<name value="Care Connect Allergy Code"/>
 	<status value="draft"/>
 	<date value="2018-02-27T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the certainty of an allergy."/>
+	<description value="A code from the SNOMED Clinical Terminology UK hierarchy with concept id '373873005' that describes a pharmaceutical / biological product, or from the SNOMED Clinical Terminology UK hierarchy with concept id '105590001' that describes a substance."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>
 			<concept>
-				<code value="385434005"/>
-				<display value="Improbable diagnosis"/>
+				<code value="373873005"/>
 			</concept>
+		</include>
+		<include>
+			<system value="http://snomed.info/sct"/>
 			<concept>
-				<code value="2931005"/>
-				<display value="Probable diagnosis"/>
-			</concept>
-			<concept>
-				<code value="255545003"/>
-				<display value="Definite"/>
-			</concept>
-			<concept>
-				<code value="410605003"/>
-				<display value="Confirmed present"/>
+				<code value="105590001"/>
 			</concept>
 		</include>
 	</compose>

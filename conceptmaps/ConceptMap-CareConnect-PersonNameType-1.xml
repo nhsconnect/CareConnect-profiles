@@ -9,7 +9,7 @@
 	<description value="A Concept Map from ValueSet Name Use to PDS Person Name Type to aid interpretation."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
 	<sourceReference>
-		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1"/>
+		<reference value="http://hl7.org/fhir/ValueSet/name-use"/>
 	</sourceReference>
 	<targetReference>
 		<reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-PDS-PersonNameType-1"/>

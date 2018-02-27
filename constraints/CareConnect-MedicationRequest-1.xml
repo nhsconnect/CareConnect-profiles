@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T14:04:43.459+01:00" />
+    <lastUpdated value="2018-02-27T09:57:02.243+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="phx" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationRequest-1" />
-  <version value="0.0.1" />
+  <version value="1.0.0" />
   <name value="CareConnect-MedicationRequest-1" />
   <status value="draft" />
   <date value="2017-07-14T10:40:46.3799462+01:00" />
@@ -345,7 +345,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="DomainResource.extension" />
@@ -355,49 +355,6 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="MedicationRequest.extension:flag">
-      <path value="MedicationRequest.extension" />
-      <sliceName value="flag" />
-      <short value="Flags related to the patient's medications" />
-      <definition value="Flags related to the patient's medications." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="DomainResource.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlag-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3496,7 +3453,7 @@
       <short value="active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown" />
       <definition value="A code specifying the current state of the order.  Generally this will be active or completed state." />
       <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="MedicationRequest.status" />
@@ -4179,8 +4136,9 @@
         <map value="grade" />
       </mapping>
     </element>
-    <element id="MedicationRequest.medication[x]">
-      <path value="MedicationRequest.medication[x]" />
+    <element id="MedicationRequest.medicationReference:medicationReference">
+      <path value="MedicationRequest.medicationReference" />
+      <sliceName value="medicationReference" />
       <short value="Medication to be taken" />
       <definition value="Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications." />
       <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource. ." />
@@ -4191,9 +4149,6 @@
         <min value="1" />
         <max value="1" />
       </base>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1" />
@@ -4211,11 +4166,9 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MedicationCode" />
         </extension>
-        <strength value="required" />
-        <description value="A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device)." />
-        <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
-        </valueSetReference>
+        <strength value="example" />
+        <description value="A coded concept identifying substance or product that can be ordered." />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/medication-codes" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -5014,7 +4967,7 @@
       <path value="MedicationRequest.authoredOn" />
       <short value="When request was initially authored" />
       <definition value="The date (and perhaps time) when the prescription was initially written or authored on." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="MedicationRequest.authoredOn" />
@@ -7031,7 +6984,7 @@
       <short value="How the medication should be taken" />
       <definition value="Indicates how the medication is to be used by the patient." />
       <comment value="There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, &quot;Ondansetron 8mg orally or IV twice a day as needed for nausea&quot; or &quot;Compazine® (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting&quot;.  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed." />
-      <min value="1" />
+      <min value="0" />
       <max value="*" />
       <base>
         <path value="MedicationRequest.dosageInstruction" />
@@ -7184,7 +7137,7 @@
       <definition value="Free text dosage instructions e.g. SIG." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Dosage.text" />
@@ -13876,7 +13829,7 @@
       <short value="Starting time with inclusive boundary" />
       <definition value="The start of the period. The boundary is inclusive." />
       <comment value="If the low element is missing, the meaning is that the low boundary is not known." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Period.start" />
@@ -14130,7 +14083,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.extension:quantityText">
+    <element id="MedicationRequest.dispenseRequest.quantity.extension:quantityText">
       <path value="MedicationRequest.dispenseRequest.quantity.extension" />
       <sliceName value="quantityText" />
       <short value="Quantity representation" />
@@ -14173,7 +14126,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.value">
+    <element id="MedicationRequest.dispenseRequest.quantity.value">
       <path value="MedicationRequest.dispenseRequest.quantity.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -14261,7 +14214,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.unit">
+    <element id="MedicationRequest.dispenseRequest.quantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14302,7 +14255,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.system">
+    <element id="MedicationRequest.dispenseRequest.quantity.system">
       <path value="MedicationRequest.dispenseRequest.quantity.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -14341,7 +14294,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.code">
+    <element id="MedicationRequest.dispenseRequest.quantity.code">
       <path value="MedicationRequest.dispenseRequest.quantity.code" />
       <short value="Coded form of the unit" />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -16429,7 +16382,7 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="MedicationRequest.extension">
       <path value="MedicationRequest.extension" />
       <slicing>
         <discriminator>
@@ -16442,19 +16395,13 @@
     <element id="MedicationRequest.extension:supplyType">
       <path value="MedicationRequest.extension" />
       <sliceName value="supplyType" />
-      <min value="1" />
+      <short value="Medication supply type" />
+      <definition value="Medication supply type." />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationSupplyType-1" />
-      </type>
-    </element>
-    <element id="MedicationRequest.extension:flag">
-      <path value="MedicationRequest.extension" />
-      <sliceName value="flag" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationFlag-1" />
       </type>
     </element>
     <element id="MedicationRequest.identifier.system">
@@ -16498,15 +16445,9 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
     </element>
-    <element id="MedicationRequest.status">
-      <path value="MedicationRequest.status" />
-      <min value="1" />
-    </element>
-    <element id="MedicationRequest.medication[x]">
-      <path value="MedicationRequest.medication[x]" />
-      <type>
-        <code value="CodeableConcept" />
-      </type>
+    <element id="MedicationRequest.medicationReference:medicationReference">
+      <path value="MedicationRequest.medicationReference" />
+      <sliceName value="medicationReference" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1" />
@@ -16515,11 +16456,8 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="MedicationCode" />
         </extension>
-        <strength value="required" />
-        <description value="A code from the SNOMED Clinical Terminology UK coding system that describes a manufactured material (e.g. a pharmaceutical product or personal medical device)." />
-        <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ManufacturedMaterialSnCT-1" />
-        </valueSetReference>
+        <strength value="example" />
+        <valueSetUri value="http://hl7.org/fhir/ValueSet/medication-codes" />
       </binding>
     </element>
     <element id="MedicationRequest.subject">
@@ -16543,10 +16481,6 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1" />
       </type>
-    </element>
-    <element id="MedicationRequest.authoredOn">
-      <path value="MedicationRequest.authoredOn" />
-      <min value="1" />
     </element>
     <element id="MedicationRequest.requester.agent">
       <path value="MedicationRequest.requester.agent" />
@@ -16614,14 +16548,6 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
     </element>
-    <element id="MedicationRequest.dosageInstruction">
-      <path value="MedicationRequest.dosageInstruction" />
-      <min value="1" />
-    </element>
-    <element id="MedicationRequest.dosageInstruction.text">
-      <path value="MedicationRequest.dosageInstruction.text" />
-      <min value="1" />
-    </element>
     <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding" />
       <slicing>
@@ -16638,7 +16564,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.extension">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.extension" />
       <slicing>
         <discriminator>
@@ -16651,7 +16577,6 @@
     <element id="MedicationRequest.dosageInstruction.additionalInstruction.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.additionalInstruction.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -16700,7 +16625,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
+    <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.extension">
       <path value="MedicationRequest.dosageInstruction.route.coding.extension" />
       <slicing>
         <discriminator>
@@ -16713,7 +16638,6 @@
     <element id="MedicationRequest.dosageInstruction.route.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.route.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -16762,7 +16686,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element>
+    <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.extension">
       <path value="MedicationRequest.dosageInstruction.method.coding.extension" />
       <slicing>
         <discriminator>
@@ -16775,7 +16699,6 @@
     <element id="MedicationRequest.dosageInstruction.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="MedicationRequest.dosageInstruction.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -16801,11 +16724,7 @@
       <path value="MedicationRequest.dosageInstruction.method.coding.display" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
-      <path value="MedicationRequest.dispenseRequest.validityPeriod.start" />
-      <min value="1" />
-    </element>
-    <element>
+    <element id="MedicationRequest.dispenseRequest.quantity.extension">
       <path value="MedicationRequest.dispenseRequest.quantity.extension" />
       <slicing>
         <discriminator>
@@ -16815,7 +16734,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.extension:quantityText">
+    <element id="MedicationRequest.dispenseRequest.quantity.extension:quantityText">
       <path value="MedicationRequest.dispenseRequest.quantity.extension" />
       <sliceName value="quantityText" />
       <max value="1" />
@@ -16824,22 +16743,22 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationQuantityText-1" />
       </type>
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.value">
+    <element id="MedicationRequest.dispenseRequest.quantity.value">
       <path value="MedicationRequest.dispenseRequest.quantity.value" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.unit">
+    <element id="MedicationRequest.dispenseRequest.quantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="MedicationRequest.dispenseRequest.quantity.unit" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.system">
+    <element id="MedicationRequest.dispenseRequest.quantity.system">
       <path value="MedicationRequest.dispenseRequest.quantity.system" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.quantity:SimpleQuantity.code">
+    <element id="MedicationRequest.dispenseRequest.quantity.code">
       <path value="MedicationRequest.dispenseRequest.quantity.code" />
       <min value="1" />
     </element>

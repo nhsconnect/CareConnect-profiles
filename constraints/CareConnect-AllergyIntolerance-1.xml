@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T13:56:52.292+01:00" />
+    <lastUpdated value="2018-02-27T15:18:44.333+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
-  <version value="0.0.1" />
+  <version value="1.0.0" />
   <name value="CareConnect-AllergyIntolerance-1" />
   <status value="draft" />
   <date value="2017-07-13T08:24:34.7834577+01:00" />
@@ -474,11 +474,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="AllergyIntolerance.extension:probabilityOfRecurrence">
+    <element id="AllergyIntolerance.extension:reasonEnded">
       <path value="AllergyIntolerance.extension" />
-      <sliceName value="probabilityOfRecurrence" />
-      <short value="The probability of the reaction (allergic, adverse, intolerant) occurring" />
-      <definition value="The probability of the reaction (allergic, adverse, intolerant) occurring." />
+      <sliceName value="reasonEnded" />
+      <short value="The reason why the allergy or intolerance has been resolved" />
+      <definition value="The reason why the allergy or intolerance has been resolved." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -491,7 +491,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ProbabilityOfRecurrence-1" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonEnded-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -508,6 +508,7 @@
         <expression value="extension.exists() != value.exists()" />
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2119,7 +2120,7 @@
         <strength value="example" />
         <description value="Type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/allergyintolerance-code" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyCode-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -2899,6 +2900,7 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <mustSupport value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -3819,92 +3821,6 @@
       </base>
       <type>
         <code value="Extension" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.extension:allergyCertainty">
-      <path value="AllergyIntolerance.reaction.extension" />
-      <sliceName value="allergyCertainty" />
-      <short value="Certainty that the stated causative agent caused the allergic or adverse reaction" />
-      <definition value="Certainty that the stated causative agent caused the allergic or adverse reaction." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="Element.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AllergyCertainty-1" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="AllergyIntolerance.reaction.extension:allergySeverity">
-      <path value="AllergyIntolerance.reaction.extension" />
-      <sliceName value="allergySeverity" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="Element.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AllergySeverity-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4921,10 +4837,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Manifestation" />
         </extension>
-        <strength value="example" />
+        <strength value="extensible" />
         <description value="Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/clinical-findings" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyManifestation-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -5891,7 +5807,7 @@
       <definition value="Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations." />
       <comment value="It is acknowledged that this assessment is very subjective. There may be some some specific practice domains where objective scales have been applied. Objective scales can be included in this model as extensions." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="AllergyIntolerance.reaction.severity" />
         <min value="0" />
@@ -5957,7 +5873,7 @@
         <strength value="example" />
         <description value="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/route-codes" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ExposureRoute-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -7097,7 +7013,7 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="AllergyIntolerance.extension">
       <path value="AllergyIntolerance.extension" />
       <slicing>
         <discriminator>
@@ -7134,14 +7050,18 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-Evidence-1" />
       </type>
     </element>
-    <element id="AllergyIntolerance.extension:probabilityOfRecurrence">
+    <element id="AllergyIntolerance.extension:reasonEnded">
       <path value="AllergyIntolerance.extension" />
-      <sliceName value="probabilityOfRecurrence" />
+      <sliceName value="reasonEnded" />
+      <short value="The reason why the allergy or intolerance has been resolved" />
+      <definition value="The reason why the allergy or intolerance has been resolved." />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ProbabilityOfRecurrence-1" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonEnded-1" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="AllergyIntolerance.identifier.system">
       <path value="AllergyIntolerance.identifier.system" />
@@ -7158,12 +7078,28 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
     </element>
+    <element id="AllergyIntolerance.code">
+      <path value="AllergyIntolerance.code" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AllergyIntoleranceCode" />
+        </extension>
+        <strength value="example" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyCode-1" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="AllergyIntolerance.patient">
       <path value="AllergyIntolerance.patient" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
       </type>
+    </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]" />
+      <mustSupport value="true" />
     </element>
     <element id="AllergyIntolerance.recorder">
       <path value="AllergyIntolerance.recorder" />
@@ -7209,34 +7145,6 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
     </element>
-    <element>
-      <path value="AllergyIntolerance.reaction.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="AllergyIntolerance.reaction.extension:allergyCertainty">
-      <path value="AllergyIntolerance.reaction.extension" />
-      <sliceName value="allergyCertainty" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AllergyCertainty-1" />
-      </type>
-    </element>
-    <element id="AllergyIntolerance.reaction.extension:allergySeverity">
-      <path value="AllergyIntolerance.reaction.extension" />
-      <sliceName value="allergySeverity" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AllergySeverity-1" />
-      </type>
-    </element>
     <element id="AllergyIntolerance.reaction.substance.coding">
       <path value="AllergyIntolerance.reaction.substance.coding" />
       <slicing>
@@ -7253,7 +7161,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="AllergyIntolerance.reaction.substance.coding:snomedCT.extension">
       <path value="AllergyIntolerance.reaction.substance.coding.extension" />
       <slicing>
         <discriminator>
@@ -7266,7 +7174,6 @@
     <element id="AllergyIntolerance.reaction.substance.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="AllergyIntolerance.reaction.substance.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -7292,6 +7199,18 @@
       <path value="AllergyIntolerance.reaction.substance.coding.display" />
       <min value="1" />
     </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <path value="AllergyIntolerance.reaction.manifestation" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Manifestation" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyManifestation-1" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="AllergyIntolerance.reaction.manifestation.coding">
       <path value="AllergyIntolerance.reaction.manifestation.coding" />
       <slicing>
@@ -7308,7 +7227,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:snomedCT.extension">
       <path value="AllergyIntolerance.reaction.manifestation.coding.extension" />
       <slicing>
         <discriminator>
@@ -7321,7 +7240,6 @@
     <element id="AllergyIntolerance.reaction.manifestation.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="AllergyIntolerance.reaction.manifestation.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -7347,9 +7265,17 @@
       <path value="AllergyIntolerance.reaction.manifestation.coding.display" />
       <min value="1" />
     </element>
-    <element id="AllergyIntolerance.reaction.severity">
-      <path value="AllergyIntolerance.reaction.severity" />
-      <max value="0" />
+    <element id="AllergyIntolerance.reaction.exposureRoute">
+      <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="RouteOfAdministration" />
+        </extension>
+        <strength value="example" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ExposureRoute-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="AllergyIntolerance.reaction.exposureRoute.coding">
       <path value="AllergyIntolerance.reaction.exposureRoute.coding" />
@@ -7367,7 +7293,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomedCT.extension">
       <path value="AllergyIntolerance.reaction.exposureRoute.coding.extension" />
       <slicing>
         <discriminator>
@@ -7380,7 +7306,6 @@
     <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="AllergyIntolerance.reaction.exposureRoute.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
