@@ -12,15 +12,19 @@
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>
-			<concept>
-				<code value="373873005"/>
-			</concept>
+			<filter>
+				<property value="concept"/>
+				<op value="in"/>
+				<value value="373873005"/>
+			</filter>
 		</include>
 		<include>
 			<system value="http://snomed.info/sct"/>
-			<concept>
-				<code value="105590001"/>
-			</concept>
+			<filter>
+				<property value="concept"/>
+				<op value="in"/>
+				<value value="105590001"/>
+			</filter>>
 		</include>
 	</compose>
 </ValueSet>
