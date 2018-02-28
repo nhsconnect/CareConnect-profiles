@@ -32,6 +32,14 @@
 				<code value="394827008"/>
 				<display value="Personal administration"/>
 			</concept>
+			<concept>
+				<code value="394828003"/>
+				<display value="Prescription by another organisation"/>
+			</concept>
+			<concept>
+				<code value="394829006"/>
+				<display value="Past medication"/>
+			</concept>			
 		</include>
 	</compose>
 </ValueSet>
