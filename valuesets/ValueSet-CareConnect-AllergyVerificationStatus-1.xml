@@ -25,7 +25,7 @@
 	</identifier>
 	<version value="3.0.1"/>
 	<name value="AllergyIntoleranceVerificationStatus"/>
-	<status value="draft"/>
+	<status value="active"/>
 	<date value="2017-04-19T07:44:47+10:00"/>
 	<publisher value="HL7 (FHIR Project)"/>
 	<contact>
@@ -46,14 +46,6 @@
 			<concept>
 				<code value="confirmed"/>
 				<display value="Confirmed"/>
-			</concept>
-			<concept>
-				<code value="refuted"/>
-				<display value="Refuted"/>
-			</concept>
-			<concept>
-				<code value="entered-in-error"/>
-				<display value="Entered In Error"/>
 			</concept>
 		</include>
 	</compose>

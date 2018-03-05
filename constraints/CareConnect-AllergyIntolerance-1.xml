@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-02-28T10:51:14.045+00:00" />
+    <lastUpdated value="2018-03-05T12:07:37.791+00:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -1833,7 +1833,7 @@
     </element>
     <element id="AllergyIntolerance.verificationStatus">
       <path value="AllergyIntolerance.verificationStatus" />
-      <short value="unconfirmed | confirmed | refuted | entered-in-error" />
+      <short value="unconfirmed | confirmed" />
       <definition value="Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product)." />
       <comment value="This element is labeled as a modifier because the status contains the codes refuted and entered-in-error that mark the AllergyIntolerance as not currently valid." />
       <min value="1" />
@@ -6991,8 +6991,6 @@
     <element id="AllergyIntolerance.extension:allergyEnd">
       <path value="AllergyIntolerance.extension" />
       <sliceName value="allergyEnd" />
-      <short value="Supports the date and reason that the allergy was no longer valid" />
-      <definition value="Supports the date and reason that the allergy was no longer valid." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -7022,6 +7020,10 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus" />
+      <short value="unconfirmed | confirmed" />
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code" />
