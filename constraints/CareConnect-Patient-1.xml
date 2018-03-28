@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-02-28T10:17:34.253+00:00" />
+    <lastUpdated value="2018-03-28T13:59:04.782+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="CareConnect-Patient-1" />
   <status value="draft" />
   <date value="2017-06-05T16:05:38.2594486+01:00" />
@@ -5434,7 +5434,7 @@
         <strength value="required" />
         <description value="The use of a human name" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/name-use" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -6036,7 +6036,7 @@
         <strength value="required" />
         <description value="The use of a human name" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/name-use" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -15957,6 +15957,15 @@
       <path value="Patient.name.use" />
       <min value="1" />
       <fixedCode value="official" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NameUse" />
+        </extension>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.name:official.family">
       <path value="Patient.name.family" />
@@ -15969,6 +15978,15 @@
     <element id="Patient.name:other.use">
       <path value="Patient.name.use" />
       <min value="1" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NameUse" />
+        </extension>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-NameUse-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Patient.telecom.system">
       <path value="Patient.telecom.system" />

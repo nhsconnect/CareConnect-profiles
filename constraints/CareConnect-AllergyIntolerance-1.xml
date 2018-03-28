@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-03-05T13:04:00.895+00:00" />
+    <lastUpdated value="2018-03-28T14:03:26.156+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="CareConnect-AllergyIntolerance-1" />
   <status value="draft" />
   <date value="2017-07-13T08:24:34.7834577+01:00" />
@@ -1865,7 +1865,7 @@
         <strength value="required" />
         <description value="Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/allergy-verification-status" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyVerificationStatus-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -5787,7 +5787,7 @@
         <strength value="required" />
         <description value="Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/reaction-event-severity" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReactionEventSeverity-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -7024,6 +7024,15 @@
     <element id="AllergyIntolerance.verificationStatus">
       <path value="AllergyIntolerance.verificationStatus" />
       <short value="unconfirmed | confirmed" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AllergyIntoleranceVerificationStatus" />
+        </extension>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyVerificationStatus-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="AllergyIntolerance.code">
       <path value="AllergyIntolerance.code" />
@@ -7211,6 +7220,18 @@
       </extension>
       <path value="AllergyIntolerance.reaction.manifestation.coding.display" />
       <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AllergyIntoleranceSeverity" />
+        </extension>
+        <strength value="required" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReactionEventSeverity-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="AllergyIntolerance.reaction.exposureRoute">
       <path value="AllergyIntolerance.reaction.exposureRoute" />
