@@ -5,35 +5,25 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Condition Relationship"/>
 	<status value="draft"/>
-	<date value="2017-08-01T00:00:00+00:00"/>
+	<date value="2018-04-16T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A CodeSystem that identifies the kind of relationship that exists with a target condition."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
 	<caseSensitive value="true"/>
 	<content value="complete"/>
 	<concept>
-		<code value="combined"/>
-		<display value="Combined"/>
-		<definition value="This condition is combined/merged with the target condition to form a single logical condition."/>
+		<code value="merge-combine"/>
+		<display value="Merge/Combine"/>
+		<definition value="This condition is merged/combined with the target condition to form a single logical condition."/>
 	</concept>
 	<concept>
-		<code value="grouped"/>
-		<display value="Grouped"/>
-		<definition value="This condition is part of a group that includes the target condition as a member of the group."/>
+		<code value="nesting"/>
+		<display value="Nesting"/>
+		<definition value="This target condition is a component problem of this condition."/>
 	</concept>
 	<concept>
-		<code value="replaces"/>
-		<display value="Replaces"/>
-		<definition value="This condition replaces a previous condition (i.e. a revised diagnosis). The target condition is now obsolete."/>
-	</concept>
-	<concept>
-		<code value="evolved-from"/>
-		<display value="Evolved From"/>
+		<code value="evolve"/>
+		<display value="Evolve"/>
 		<definition value="This condition has evolved from the target condition."/>
-	</concept>
-	<concept>
-		<code value="onset"/>
-		<display value="Onset"/>
-		<definition value="This condition follows-on from the target onset condition. Used when specifing a relationship to a previous onset condition when this condition episodicity is Review, Flare or End."/>
 	</concept>
 </CodeSystem>

@@ -5,34 +5,28 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Condition Category"/>
 	<status value="draft"/>
-	<date value="2017-08-01T00:00:00+00:00"/>
+	<date value="2018-04-16T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A CodeSystem to identify the category of a condition."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
 	<caseSensitive value="true"/>
 	<content value="complete"/>
 	<concept>
-		<code value="complaint"/>
-		<display value="Complaint"/>
+		<code value="problem-list-item"/>
+		<display value="Problem List Item"/>
+		<definition value="An item on a problem list which can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person."/>
 	</concept>
 	<concept>
-		<code value="symptom"/>
-		<display value="Symptom"/>
+		<code value="encounter-diagnosis"/>
+		<display value="Encounter Diagnosis"/>
+		<definition value="A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter."/>
 	</concept>
 	<concept>
-		<code value="finding"/>
-		<display value="Finding"/>
+		<code value="chief-complaint"/>
+		<display value="Chief Complaint"/>
 	</concept>
 	<concept>
-		<code value="diagnosis"/>
-		<display value="Diagnosis"/>
-	</concept>
-	<concept>
-		<code value="problem"/>
-		<display value="Problem"/>
-	</concept>
-	<concept>
-		<code value="need"/>
-		<display value="Need"/>
+		<code value="presenting-complaint"/>
+		<display value="Presenting Complaint"/>
 	</concept>
 </CodeSystem>
