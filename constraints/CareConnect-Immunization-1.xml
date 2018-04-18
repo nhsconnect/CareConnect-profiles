@@ -1,18 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-18T10:36:47.42+01:00" />
+    <lastUpdated value="2018-04-18T14:14:31.163+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pher" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1" />
-  <version value="0.0.1" />
+  <version value="1.0.0" />
   <name value="CareConnect-Immunization-1" />
   <status value="draft" />
   <date value="2017-07-13T12:35:11.2226231+01:00" />
   <publisher value="HL7 UK" />
+  <contact>
+    <name value="INTEROPen" />
+    <telecom>
+      <system value="email" />
+      <value value="admin@interopen.org" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="This Immunization Resource describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed." />
+  <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/ " />
   <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -388,9 +397,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Immunization.extension:dateRecorded">
+    <element id="Immunization.extension:recordedDate">
       <path value="Immunization.extension" />
-      <sliceName value="dateRecorded" />
+      <sliceName value="recordedDate" />
       <short value="The date that the Vaccination was recorded" />
       <definition value="The date that the event was recorded." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
@@ -1808,6 +1817,7 @@
       <type>
         <code value="boolean" />
       </type>
+      <fixedBoolean value="false" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -5893,6 +5903,13 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="example" />
+        <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration." />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -12009,9 +12026,9 @@
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ParentPresent-1" />
       </type>
     </element>
-    <element id="Immunization.extension:dateRecorded">
+    <element id="Immunization.extension:recordedDate">
       <path value="Immunization.extension" />
-      <sliceName value="dateRecorded" />
+      <sliceName value="recordedDate" />
       <short value="The date that the Vaccination was recorded" />
       <max value="1" />
       <type>
@@ -12033,6 +12050,10 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
+    </element>
+    <element id="Immunization.notGiven">
+      <path value="Immunization.notGiven" />
+      <fixedBoolean value="false" />
     </element>
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
@@ -12185,6 +12206,13 @@
       <path value="Immunization.route.coding" />
       <sliceName value="snomedCT" />
       <max value="1" />
+      <binding>
+        <strength value="example" />
+        <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration." />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Immunization.route.coding:snomedCT.extension">
       <path value="Immunization.route.coding.extension" />
