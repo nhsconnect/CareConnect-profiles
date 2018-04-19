@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-04-18T14:14:31.163+01:00" />
+    <lastUpdated value="2018-04-19T09:29:40.238+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pher" />
@@ -1817,7 +1817,6 @@
       <type>
         <code value="boolean" />
       </type>
-      <fixedBoolean value="false" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3340,6 +3339,7 @@
       <type>
         <code value="boolean" />
       </type>
+      <fixedBoolean value="false" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -12051,10 +12051,6 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
     </element>
-    <element id="Immunization.notGiven">
-      <path value="Immunization.notGiven" />
-      <fixedBoolean value="false" />
-    </element>
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
       <slicing>
@@ -12122,6 +12118,10 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1" />
       </type>
+    </element>
+    <element id="Immunization.primarySource">
+      <path value="Immunization.primarySource" />
+      <fixedBoolean value="false" />
     </element>
     <element id="Immunization.location">
       <path value="Immunization.location" />
