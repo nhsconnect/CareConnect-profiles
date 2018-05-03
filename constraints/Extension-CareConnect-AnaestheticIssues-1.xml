@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-04-25T14:01:21.986+01:00" />
+    <lastUpdated value="2018-05-02T14:49:51.654+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AnaestheticIssues-1" />
   <version value="1.0.0" />
@@ -178,8 +178,8 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Allow Snomed Concept or a link to Condition resource." />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <short value="Snomed Concept or a link to the Condition resource" />
+      <definition value="Snomed Concept or a link to Condition resource." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -193,7 +193,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -233,13 +233,14 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Allow Snomed Concept or a link to Condition resource." />
+      <short value="Snomed Concept or a link to the Condition resource" />
+      <definition value="Snomed Concept or a link to Condition resource." />
       <type>
         <code value="CodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1" />
       </type>
       <binding>
         <strength value="required" />

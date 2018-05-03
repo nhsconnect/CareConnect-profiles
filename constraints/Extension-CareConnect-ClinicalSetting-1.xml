@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-04-17T08:38:00.836+01:00" />
+    <lastUpdated value="2018-05-03T09:15:59.925+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ClinicalSetting-1" />
   <version value="1.0.0" />
@@ -176,13 +176,13 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="The clinical setting of a list" />
       <definition value="The clinical setting of a list." />
       <comment value="A stream of bytes, base64 encoded" />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Extension.value[x]" />
@@ -228,11 +228,12 @@
       <path value="Extension.url" />
       <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ClinicalSetting-1" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="The clinical setting of a list" />
       <definition value="The clinical setting of a list." />
+      <min value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>

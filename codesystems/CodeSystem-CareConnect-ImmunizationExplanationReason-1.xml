@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ImmunizationExplanationReason-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ImmunizationExplanationReason-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Immunization Explanation Reason"/>
+	<status value="draft"/>
+	<date value="2018-05-03T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem that identifies a code to record the reason why a vaccine was administered."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<content value="complete"/>
+	<concept>
+		<code value="1"/>
+		<display value="Routine mass immunisation"/>
+	</concept>
+	<concept>
+		<code value="2"/>
+		<display value="Travel to endemic area"/>
+	</concept>
+	<concept>
+		<code value="3"/>
+		<display value="Planned travel to high risk area"/>
+	</concept>
+	<concept>
+		<code value="4"/>
+		<display value="Recent travel to high risk area"/>
+	</concept>
+	<concept>
+		<code value="5"/>
+		<display value="Subpopulation at special or unusual risk"/>
+	</concept>
+	<concept>
+		<code value="6"/>
+		<display value="High risk due to occupation"/>
+	</concept>
+	<concept>
+		<code value="7"/>
+		<display value="High risk due to lifestyle"/>
+	</concept>
+	<concept>
+		<code value="8"/>
+		<display value="High risk due to existing medical condition"/>
+	</concept>
+	<concept>
+		<code value="9"/>
+		<display value="Control of known sporadic outbreak"/>
+	</concept>
+	<concept>
+		<code value="10"/>
+		<display value="Patient request"/>
+	</concept>
+	<concept>
+		<code value="11"/>
+		<display value="Post-exposure prophyaxis"/>
+	</concept>
+	<concept>
+		<code value="12"/>
+		<display value="Other"/>
+	</concept>
+</CodeSystem>

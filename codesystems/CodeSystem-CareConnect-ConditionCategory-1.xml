@@ -22,10 +22,6 @@
 		<definition value="A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter."/>
 	</concept>
 	<concept>
-		<code value="chief-complaint"/>
-		<display value="Chief Complaint"/>
-	</concept>
-	<concept>
 		<code value="presenting-complaint"/>
 		<display value="Presenting Complaint"/>
 	</concept>

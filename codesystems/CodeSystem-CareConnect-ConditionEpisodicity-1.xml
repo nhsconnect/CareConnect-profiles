@@ -5,7 +5,7 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Condition Episodicity"/>
 	<status value="draft"/>
-	<date value="2017-08-01T00:00:00+00:00"/>
+	<date value="2018-05-03T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A CodeSystem to identify the episodicity of a condition."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
@@ -25,11 +25,6 @@
 		<code value="review"/>
 		<display value="Review"/>
 		<definition value="A review of an existing condition episode."/>
-	</concept>
-	<concept>
-		<code value="flare"/>
-		<display value="Flare"/>
-		<definition value="A flare-up of an existing condition episode."/>
 	</concept>
 	<concept>
 		<code value="end"/>
