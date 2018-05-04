@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/JEEL1/Desktop/STU3%20Schemas/codesystem.xsd">
+<CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-DischargeMethod-1"/>
 	<extension url="http://hl7.org/fhir/StructureDefinition/codesystem-sourceReference">
 		<valueUri value="http://www.datadictionary.nhs.uk/data_dictionary/attributes/d/disc/discharge_method_de.asp?shownav=1"/>
