@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-04-18T15:05:19.179+01:00" />
+    <lastUpdated value="2018-05-04T09:54:22.262+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1" />
   <version value="1.0.0" />
@@ -6019,10 +6019,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="CompositionSectionType" />
         </extension>
-        <strength value="example" />
+        <strength value="preferred" />
         <description value="Classification of a section of a composition/document." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/doc-section-codes" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CompositionSectionCode-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -8163,6 +8163,18 @@
     <element id="Composition.relatesTo">
       <path value="Composition.relatesTo" />
       <max value="0" />
+    </element>
+    <element id="Composition.section.code">
+      <path value="Composition.section.code" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CompositionSectionType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CompositionSectionCode-1" />
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-08-25T15:21:45.51+01:00" />
+    <lastUpdated value="2018-05-04T13:07:15.671+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonCondition-1" />
   <version value="0.0.1" />
@@ -16,9 +16,6 @@
   <abstract value="false" />
   <contextType value="resource" />
   <context value="Observation" />
-  <context value="Procedure" />
-  <context value="MedicationStatement" />
-  <context value="MedicationRequest" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
