@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-04-16T15:34:45.989+01:00" />
+    <lastUpdated value="2018-05-08T13:08:28.499+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-RelatedClinicalContent-1" />
   <version value="1.0.0" />
@@ -176,11 +176,11 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueReference">
+    <element id="Extension.valueReference:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
-      <short value="Value of extension" />
-      <definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)." />
+      <short value="A reference to any resource that provides related clinical content to the Condition" />
+      <definition value="A reference to any resource that provides related clinical content to the Condition." />
       <comment value="A stream of bytes, base64 encoded" />
       <min value="0" />
       <max value="1" />
@@ -220,9 +220,11 @@
       <path value="Extension.url" />
       <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-RelatedClinicalContent-1" />
     </element>
-    <element id="Extension.value[x]:valueReference">
+    <element id="Extension.valueReference:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
+      <short value="A reference to any resource that provides related clinical content to the Condition" />
+      <definition value="A reference to any resource that provides related clinical content to the Condition." />
       <type>
         <code value="Reference" />
       </type>
