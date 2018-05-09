@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConceptMap xmlns="http://hl7.org/fhir">
 	<url value="https://fhir.hl7.org.uk/STU3/ConceptMap/CareConnect-ConditionEpisodicity-1"/>
-	<version value="1.0.1"/>
+	<version value="1.0.0"/>
 	<name value="Concept Map - Condition Episodicity"/>
 	<status value="draft"/>
 	<date value="2018-05-03T00:00:00+00:00"/>
