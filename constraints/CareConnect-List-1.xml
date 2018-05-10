@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2018-04-18T15:05:16.427+01:00" />
+    <lastUpdated value="2018-05-10T14:14:34.695+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1" />
   <version value="1.0.0" />
@@ -385,6 +385,49 @@
         <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
       </constraint>
       <mustSupport value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="List.extension:warningCode">
+      <path value="List.extension" />
+      <sliceName value="warningCode" />
+      <short value="To capture warnings that the list may be incomplete" />
+      <definition value="To capture warnings that the list may be incomplete." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ListWarningCode-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1860,10 +1903,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ListPurpose" />
         </extension>
-        <strength value="example" />
+        <strength value="preferred" />
         <description value="What the purpose of a list is" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/list-example-codes" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -4931,7 +4974,7 @@
         <strength value="preferred" />
         <description value="If a list is empty, why it is empty" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/list-empty-reason" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListEmptyReasonCode-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -5443,6 +5486,18 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="List.extension:warningCode">
+      <path value="List.extension" />
+      <sliceName value="warningCode" />
+      <short value="To capture warnings that the list may be incomplete" />
+      <definition value="To capture warnings that the list may be incomplete." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ListWarningCode-1" />
+      </type>
+    </element>
     <element id="List.identifier.system">
       <path value="List.identifier.system" />
       <min value="1" />
@@ -5457,6 +5512,18 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
+    </element>
+    <element id="List.code">
+      <path value="List.code" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ListPurpose" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="List.subject">
       <path value="List.subject" />
@@ -5516,6 +5583,18 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
+    </element>
+    <element id="List.emptyReason">
+      <path value="List.emptyReason" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ListEmptyReason" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListEmptyReasonCode-1" />
+        </valueSetReference>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
