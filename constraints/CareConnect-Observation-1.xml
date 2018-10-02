@@ -12,7 +12,16 @@
   <status value="draft" />
   <date value="2017-07-11T14:34:25.8488438+01:00" />
   <publisher value="HL7 UK" />
+  <contact>
+    <name value="INTEROPen" />
+    <telecom>
+      <system value="email" />
+      <value value="admin@interopen.org" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="The Observation resource is used for tracking the current and historical observations that have been made for a patient." />
+  <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/" />
   <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -13832,7 +13841,7 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="Observation.extension">
       <path value="Observation.extension" />
       <slicing>
         <discriminator>
@@ -13881,7 +13890,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Observation.category.coding:snomedCT.extension">
       <path value="Observation.category.coding.extension" />
       <slicing>
         <discriminator>
@@ -13894,7 +13903,6 @@
     <element id="Observation.category.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.category.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -13936,7 +13944,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Observation.code.coding:snomedCT.extension">
       <path value="Observation.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -13949,7 +13957,6 @@
     <element id="Observation.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -14040,7 +14047,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Observation.bodySite.coding:snomedCT.extension">
       <path value="Observation.bodySite.coding.extension" />
       <slicing>
         <discriminator>
@@ -14053,7 +14060,6 @@
     <element id="Observation.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -14095,7 +14101,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Observation.method.coding:snomedCT.extension">
       <path value="Observation.method.coding.extension" />
       <slicing>
         <discriminator>
@@ -14108,7 +14114,6 @@
     <element id="Observation.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -14165,7 +14170,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="Observation.component.code.coding:snomedCT.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -14178,7 +14183,6 @@
     <element id="Observation.component.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.component.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />

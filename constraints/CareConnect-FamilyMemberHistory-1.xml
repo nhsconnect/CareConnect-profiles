@@ -12,7 +12,16 @@
   <status value="draft" />
   <date value="2017-07-12T15:03:45.0156449+01:00" />
   <publisher value="HL7 UK" />
+  <contact>
+    <name value="INTEROPen" />
+    <telecom>
+      <system value="email" />
+      <value value="admin@interopen.org" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="Significant health events and conditions for a person related to the patient relevant in the context of care for the patient." />
+  <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/" />
   <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -7404,7 +7413,7 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="FamilyMemberHistory.extension">
       <path value="FamilyMemberHistory.extension" />
       <slicing>
         <discriminator>
@@ -7470,7 +7479,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="FamilyMemberHistory.relationship.coding:snomedCT.extension">
       <path value="FamilyMemberHistory.relationship.coding.extension" />
       <slicing>
         <discriminator>
@@ -7483,7 +7492,6 @@
     <element id="FamilyMemberHistory.relationship.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.relationship.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -7577,7 +7585,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.extension">
       <path value="FamilyMemberHistory.condition.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -7590,7 +7598,6 @@
     <element id="FamilyMemberHistory.condition.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.condition.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -7632,7 +7639,7 @@
       <sliceName value="snomedCT" />
       <max value="1" />
     </element>
-    <element>
+    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.extension">
       <path value="FamilyMemberHistory.condition.outcome.coding.extension" />
       <slicing>
         <discriminator>
@@ -7645,7 +7652,6 @@
     <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="FamilyMemberHistory.condition.outcome.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
