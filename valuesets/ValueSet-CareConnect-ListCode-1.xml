@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-ListCode-1"/>
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1"/>
-	<version value="1.0.0"/>
+	<version value="1.0.1"/>
 	<name value="Care Connect List Code"/>
 	<status value="draft"/>
 	<date value="2018-05-10T00:00:00+00:00"/>
@@ -30,7 +30,7 @@
 			</concept>
 			<concept>
 				<code value="886921000000105"/>
-				<display value="Allergies and adverse reaction"/>
+				<display value="Allergies and adverse reactions"/>
 			</concept>			
 		</include>
 	</compose>

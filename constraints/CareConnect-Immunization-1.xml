@@ -7,7 +7,7 @@
     <valueCode value="pher" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-Immunization-1" />
   <status value="draft" />
   <date value="2017-07-13T12:35:11.2226231+01:00" />
@@ -7677,7 +7677,7 @@
         <strength value="example" />
         <description value="The reason why a vaccine was administered" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-2" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -11906,7 +11906,7 @@
         </extension>
         <strength value="example" />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-2" />
         </valueSetReference>
       </binding>
     </element>

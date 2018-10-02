@@ -4,7 +4,7 @@
     <lastUpdated value="2018-05-04T13:07:15.671+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonCondition-1" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="Extension-CareConnect-ReasonCondition-1" />
   <status value="draft" />
   <date value="2017-07-12T10:48:31.4895265+01:00" />

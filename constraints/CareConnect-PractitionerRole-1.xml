@@ -7,7 +7,7 @@
     <valueCode value="pa" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="CareConnect-PractitionerRole-1" />
   <status value="draft" />
   <date value="2017-07-11T10:52:33.3096011+01:00" />
@@ -1917,8 +1917,8 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
-      <short value="Practitioner that is able to provide the defined services for the organation" />
-      <definition value="Practitioner that is able to provide the defined services for the organation." />
+      <short value="Practitioner that is able to provide the defined services for the organisation" />
+      <definition value="Practitioner that is able to provide the defined services for the organisation." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="0" />
       <max value="1" />
@@ -5952,6 +5952,8 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
+      <short value="Practitioner that is able to provide the defined services for the organisation" />
+      <definition value="Practitioner that is able to provide the defined services for the organisation." />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />

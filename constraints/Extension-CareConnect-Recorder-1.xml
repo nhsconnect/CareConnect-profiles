@@ -4,7 +4,7 @@
     <lastUpdated value="2017-08-25T15:23:18.522+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-Recorder-1" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="Extension-CareConnect-Recorder-1" />
   <status value="draft" />
   <date value="2017-07-12T16:18:20.1464918+01:00" />

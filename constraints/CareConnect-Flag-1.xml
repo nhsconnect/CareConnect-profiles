@@ -7,7 +7,7 @@
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="CareConnect-Flag-1" />
   <status value="draft" />
   <date value="2017-07-12T14:17:39.4946433+01:00" />

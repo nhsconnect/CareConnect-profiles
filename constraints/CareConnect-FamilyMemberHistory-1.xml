@@ -7,7 +7,7 @@
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="CareConnect-FamilyMemberHistory-1" />
   <status value="draft" />
   <date value="2017-07-12T15:03:45.0156449+01:00" />

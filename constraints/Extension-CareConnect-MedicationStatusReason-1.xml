@@ -4,7 +4,7 @@
     <lastUpdated value="2018-03-06T14:31:48.388+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatusReason-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="Extension-CareConnect-MedicationStatusReason-1" />
   <status value="draft" />
   <date value="2018-03-06T11:24:16.033+00:00" />

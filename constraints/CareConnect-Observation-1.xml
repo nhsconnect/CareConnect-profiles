@@ -7,7 +7,7 @@
     <valueCode value="oo" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-  <version value="0.0.1" />
+  <version value="0.0.2" />
   <name value="CareConnect-Observation-1" />
   <status value="draft" />
   <date value="2017-07-11T14:34:25.8488438+01:00" />

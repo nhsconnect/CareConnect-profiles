@@ -4,7 +4,7 @@
     <lastUpdated value="2018-02-19T16:02:12.681+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-OutcomeOfAttendance-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="Extension-CareConnect-OutcomeOfAttendance-1" />
   <status value="draft" />
   <date value="2018-02-19T15:58:26.011+00:00" />

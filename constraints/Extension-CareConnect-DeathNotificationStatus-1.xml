@@ -4,7 +4,7 @@
     <lastUpdated value="2018-02-20T15:00:37.531+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="Extension-CareConnect-DeathNotificationStatus-1" />
   <status value="draft" />
   <date value="2018-02-14T15:41:26.005+00:00" />

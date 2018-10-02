@@ -4,7 +4,7 @@
     <lastUpdated value="2018-02-20T14:57:35.171+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReligiousAffiliation-1" />
-  <version value="1.0.0" />
+  <version value="1.0.1" />
   <name value="Extension-CareConnect-ReligiousAffiliation-1" />
   <status value="draft" />
   <date value="2017-06-07T17:05:08.498977+01:00" />
