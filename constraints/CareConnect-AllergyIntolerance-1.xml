@@ -2926,7 +2926,7 @@
       <path value="AllergyIntolerance.assertedDate" />
       <short value="Date record was believed accurate" />
       <definition value="The date on which the existance of the AllergyIntolerance was first asserted or acknowledged." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="AllergyIntolerance.assertedDate" />
@@ -7126,6 +7126,10 @@
     <element id="AllergyIntolerance.onset[x]">
       <path value="AllergyIntolerance.onset[x]" />
       <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.assertedDate">
+      <path value="AllergyIntolerance.assertedDate" />
+      <min value="1" />
     </element>
     <element id="AllergyIntolerance.recorder">
       <path value="AllergyIntolerance.recorder" />

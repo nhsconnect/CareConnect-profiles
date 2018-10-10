@@ -381,6 +381,49 @@
         <map value="N/A" />
       </mapping>
     </element>
+    <element id="Composition.extension:clinicalSettingExtension">
+      <path value="Composition.extension" />
+      <sliceName value="clinicalSettingExtension" />
+      <short value="To record the clinical setting of a problem list" />
+      <definition value="To record the clinical setting of a problem list." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="DomainResource.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ClinicalSetting-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
     <element id="Composition.modifierExtension">
       <path value="Composition.modifierExtension" />
       <slicing>
@@ -1744,7 +1787,7 @@
     </element>
     <element id="Composition.type">
       <path value="Composition.type" />
-      <short value="Kind of composition (LOINC if possible)" />
+      <short value="Kind of composition (SNOMED CT)" />
       <definition value="Specifies the particular kind of composition (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the composition." />
       <comment value="For Composition type, LOINC is ubiquitous and strongly endorsed by HL7. Most implementation guides will require a specific LOINC code, or use LOINC as an extensible binding." />
       <requirements value="Key metadata element describing the composition, used in searching/filtering." />
@@ -1772,9 +1815,9 @@
           <valueString value="DocumentType" />
         </extension>
         <strength value="preferred" />
-        <description value="Type of a composition." />
+        <description value="SNOMED CT Document Type" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/doc-typecodes" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -8153,13 +8196,23 @@
     <element id="Composition.extension:careSettingTypeExtension">
       <path value="Composition.extension" />
       <sliceName value="careSettingTypeExtension" />
-      <short value="An extension to carry the Care setting type of the document" />
-      <definition value="Optional Extension Element - found in all resources." />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareSettingType-1" />
+      </type>
+    </element>
+    <element id="Composition.extension:clinicalSettingExtension">
+      <path value="Composition.extension" />
+      <sliceName value="clinicalSettingExtension" />
+      <short value="To record the clinical setting of a problem list" />
+      <definition value="To record the clinical setting of a problem list." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ClinicalSetting-1" />
       </type>
     </element>
     <element id="Composition.identifier.system">
@@ -8176,6 +8229,20 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <short value="Kind of composition (SNOMED CT)" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DocumentType" />
+        </extension>
+        <strength value="preferred" />
+        <description value="SNOMED CT Document Type" />
+        <valueSetReference>
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Composition.encounter">
       <path value="Composition.encounter" />
