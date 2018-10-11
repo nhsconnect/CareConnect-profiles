@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ConditionEpisodeSnCT-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionEpisodeSnCT-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Condition Episode SnCT"/>
+	<status value="draft"/>
+	<date value="2018-05-03T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes the episodicity of a Condition."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="255217005"/>
+				<display value="First episode"/>
+			</concept>
+			<concept>
+				<code value="288527008"/>
+				<display value="New episode"/>
+			</concept>
+			<concept>
+				<code value="303350001"/>
+				<display value="Ongoing episode"/>
+			</concept>
+			<concept>
+				<code value="272131007"/>
+				<display value="Old episode"/>
+			</concept>
+			<concept>
+				<code value="394846009"/>
+				<display value="Undefined episodicity"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

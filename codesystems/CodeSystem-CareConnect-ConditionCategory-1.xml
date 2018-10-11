@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ConditionCategory-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Condition Category"/>
+	<status value="draft"/>
+	<date value="2018-05-10T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A CodeSystem to identify the category of a condition."/>
+	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="problem-list-item"/>
+		<display value="Problem List Item"/>
+		<definition value="An item on a problem list which can be managed over time and can be expressed by a practitioner (e.g. physician, nurse), patient, or related person."/>
+	</concept>
+	<concept>
+		<code value="encounter-diagnosis"/>
+		<display value="Encounter Diagnosis"/>
+		<definition value="A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter."/>
+	</concept>
+	<concept>
+		<code value="presenting-complaint"/>
+		<display value="Presenting Complaint"/>
+	</concept>
+	<concept>
+		<code value="co-morbidity"/>
+		<display value="Co-morbidity"/>
+	</concept>
+	<concept>
+		<code value="issue"/>
+		<display value="Issue"/>
+	</concept>
+</CodeSystem>
