@@ -13287,6 +13287,13 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="preferred" />
+        <description value="A code from the SNOMED Clinical Terminology UK coding system describing a type of observation" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -15244,6 +15251,13 @@
       <path value="Observation.component.code.coding" />
       <sliceName value="snomedCT" />
       <max value="1" />
+      <binding>
+        <strength value="preferred" />
+        <description value="A code from the SNOMED Clinical Terminology UK coding system describing a type of observation" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.component.code.coding:snomedCT.extension">
       <path value="Observation.component.code.coding.extension" />
