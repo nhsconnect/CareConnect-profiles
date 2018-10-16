@@ -15,7 +15,7 @@
 			<filter>
 				<property value="constraint"/>
 				<op value="="/>
-				<value value="(&lt;&lt;386053000 | Evaluation procedure)"/>
+				<value value="(&lt;&lt;386053000 | Evaluation procedure|)"/>
 			</filter>
 		</include>
 	</compose>
