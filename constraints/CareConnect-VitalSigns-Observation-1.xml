@@ -6,7 +6,7 @@
   <status value="draft" />
   <date value="2018-10-04T23:16:37.034+01:00" />
   <publisher value="HL7 UK" />
-  <description value="A Vital Signs profile which sets minimum expectations for the Observation resource to record, search and fetch the vital signs associated with a patient that include the primary vital signs plus additional measurements such as height, weight and BMI." />
+  <description value="A vital signs profile which sets minimum expectations for the Observation resource to record, search and fetch the vital signs associated with a patient that include the primary vital signs plus additional measurements such as height, weight and BMI." />
   <copyright value="Copyright © 2018 HL7 UK&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -3078,6 +3078,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
         </valueSetReference>
@@ -3214,7 +3215,6 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
@@ -3298,7 +3298,6 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
-      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="extensible" />
@@ -4351,7 +4350,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <short value="Clinically relevant time/time-period for observation" />
+      <short value="Clinically relevant time/time-period for theobservation" />
       <definition value="The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the &quot;physiologically relevant time&quot;. This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself." />
       <comment value="At least a date should be present unless this observation is a historical report." />
       <requirements value="Knowing when an observation was deemed true is important to its relevance as well as determining trends." />
@@ -4742,7 +4741,9 @@
       <binding>
         <strength value="required" />
         <description value="A value set describing common UCUM units for recording vital signs" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -11879,7 +11880,9 @@
       <isSummary value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -12724,7 +12727,9 @@
       <binding>
         <strength value="required" />
         <description value="A value set for common UCUM units for recording vital signs" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim" />
@@ -13963,6 +13968,7 @@
       <max value="1" />
       <binding>
         <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
         </valueSetReference>
@@ -13972,7 +13978,6 @@
       <path value="Observation.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
-      <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding:loinc.version">
       <path value="Observation.code.coding.version" />
@@ -13981,7 +13986,6 @@
     <element id="Observation.code.coding:loinc.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
-      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSetUri value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
@@ -14057,6 +14061,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <short value="Clinically relevant time/time-period for theobservation" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -14090,7 +14095,9 @@
       <binding>
         <strength value="required" />
         <description value="A value set describing common UCUM units for recording vital signs" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Observation.valueQuantity:valueQuantity.value">
@@ -14228,7 +14235,9 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Observation.component.code.coding:snomedCT">
@@ -14299,7 +14308,9 @@
       <binding>
         <strength value="required" />
         <description value="A value set for common UCUM units for recording vital signs" />
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/ucum-vitals-common" />
+        </valueSetReference>
       </binding>
     </element>
     <element id="Observation.component.dataAbsentReason">
