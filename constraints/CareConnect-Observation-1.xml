@@ -366,49 +366,6 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.extension:reason">
-      <path value="Observation.extension" />
-      <sliceName value="reason" />
-      <short value="The reason the observation was added, performed or given." />
-      <definition value="The reason the observation was added, performed or given." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="DomainResource.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonCondition-1" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
     <element id="Observation.modifierExtension">
       <path value="Observation.modifierExtension" />
       <slicing>
@@ -908,7 +865,7 @@
     </element>
     <element id="Observation.basedOn">
       <path value="Observation.basedOn" />
-      <short value="Fulfills plan, proposal or order" />
+      <short value="Fulfills plan, proposal or order." />
       <definition value="A plan, proposal or order that is fulfilled in whole or in part by this event." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <requirements value="Allows tracing of authorization for the event and tracking whether proposals/recommendations were acted upon." />
@@ -6105,25 +6062,6 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:reason">
-      <path value="Observation.extension" />
-      <sliceName value="reason" />
-      <definition value="The reason the observation was added, performed or given." />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReasonCondition-1" />
-      </type>
-    </element>
     <element id="Observation.identifier.system">
       <path value="Observation.identifier.system" />
       <min value="1" />
@@ -6141,6 +6079,7 @@
     </element>
     <element id="Observation.basedOn">
       <path value="Observation.basedOn" />
+      <short value="Fulfills plan, proposal or order." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
