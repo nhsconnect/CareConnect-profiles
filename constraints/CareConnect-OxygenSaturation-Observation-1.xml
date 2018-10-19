@@ -3567,11 +3567,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-        </coding>
-      </fixedCodeableConcept>
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -4553,7 +4548,7 @@
     <element id="Observation.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -7820,7 +7815,7 @@
     <element id="Observation.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -8747,7 +8742,7 @@
     <element id="Observation.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -13920,7 +13915,7 @@
     <element id="Observation.component.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.component.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -15768,11 +15763,6 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-        </coding>
-      </fixedCodeableConcept>
       <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
