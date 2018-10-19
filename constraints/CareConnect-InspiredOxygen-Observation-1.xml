@@ -1341,7 +1341,7 @@
     <element id="Observation.category.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.category.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display." />
+      <short value="The SNOMED CT Description ID for the display" />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -1672,7 +1672,7 @@
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the whether a patient requires oxygen or is breathing room air" />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-InspiredOxygen-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-InspiredOxygen-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -3080,7 +3080,7 @@
     <element id="Observation.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display." />
+      <short value="The SNOMED CT Description ID for the display" />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -3720,7 +3720,7 @@
     <element id="Observation.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display." />
+      <short value="The SNOMED CT Description ID for the display" />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -5402,7 +5402,7 @@
     <element id="Observation.component.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.component.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display." />
+      <short value="The SNOMED CT Description ID for the display" />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -6054,7 +6054,7 @@
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes the whether a patient requires oxygen or is breathing room air" />
         <valueSetReference>
-          <reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-InspiredOxygen-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-InspiredOxygen-1" />
         </valueSetReference>
       </binding>
     </element>
