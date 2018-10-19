@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2018-02-26T10:48:04.064+00:00" />
@@ -32,7 +32,7 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <min value="0" />
       <max value="1" />
@@ -695,7 +695,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <max value="1" />
     </element>
