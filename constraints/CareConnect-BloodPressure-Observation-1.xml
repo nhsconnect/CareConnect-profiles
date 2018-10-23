@@ -13120,9 +13120,9 @@
         <map value="outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]" />
       </mapping>
     </element>
-    <element id="Observation.component:component">
+    <element id="Observation.component:systolicComponent">
       <path value="Observation.component" />
-      <sliceName value="component" />
+      <sliceName value="systolicComponent" />
       <short value="Component results" />
       <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations." />
       <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below." />
@@ -13160,7 +13160,7 @@
         <map value="outBoundRelationship[typeCode=COMP]" />
       </mapping>
     </element>
-    <element id="Observation.component:component.id">
+    <element id="Observation.component:systolicComponent.id">
       <path value="Observation.component.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -13189,7 +13189,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.extension">
+    <element id="Observation.component:systolicComponent.extension">
       <path value="Observation.component.extension" />
       <slicing>
         <discriminator>
@@ -13238,7 +13238,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.modifierExtension">
+    <element id="Observation.component:systolicComponent.modifierExtension">
       <path value="Observation.component.modifierExtension" />
       <short value="Extensions that cannot be ignored" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." />
@@ -13282,7 +13282,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code">
+    <element id="Observation.component:systolicComponent.code">
       <path value="Observation.component.code" />
       <short value="Type of component observation (code / type)" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;code&quot;." />
@@ -13351,7 +13351,7 @@
         <map value="what" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.id">
+    <element id="Observation.component:systolicComponent.code.id">
       <path value="Observation.component.code.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -13380,7 +13380,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.extension">
+    <element id="Observation.component:systolicComponent.code.extension">
       <path value="Observation.component.code.extension" />
       <slicing>
         <discriminator>
@@ -13429,7 +13429,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding">
+    <element id="Observation.component:systolicComponent.code.coding">
       <path value="Observation.component.code.coding" />
       <slicing>
         <discriminator>
@@ -13491,7 +13491,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.id">
+    <element id="Observation.component:systolicComponent.code.coding.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -13520,7 +13520,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.extension">
+    <element id="Observation.component:systolicComponent.code.coding.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -13569,7 +13569,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.system">
+    <element id="Observation.component:systolicComponent.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -13611,7 +13611,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.version">
+    <element id="Observation.component:systolicComponent.code.coding.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -13652,7 +13652,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.code">
+    <element id="Observation.component:systolicComponent.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -13694,7 +13694,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.display">
+    <element id="Observation.component:systolicComponent.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -13739,7 +13739,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding.userSelected">
+    <element id="Observation.component:systolicComponent.code.coding.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -13781,7 +13781,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc">
+    <element id="Observation.component:systolicComponent.code.coding:loinc">
       <path value="Observation.component.code.coding" />
       <sliceName value="loinc" />
       <short value="Systolic Blood Pressure" />
@@ -13836,7 +13836,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.id">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -13865,7 +13865,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.extension">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -13914,7 +13914,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.system">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -13958,7 +13958,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.version">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -13999,7 +13999,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.code">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -14043,7 +14043,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.display">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14088,7 +14088,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:loinc.userSelected">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -14130,7 +14130,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
       <sliceName value="snomedCT" />
       <short value="Systolic Blood Pressure" />
@@ -14185,7 +14185,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.id">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -14214,7 +14214,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.extension">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -14263,7 +14263,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.system">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -14306,7 +14306,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.version">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -14347,7 +14347,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.code">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -14390,7 +14390,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.display">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14436,7 +14436,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.userSelected">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -14478,7 +14478,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:component.code.text">
+    <element id="Observation.component:systolicComponent.code.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14523,7 +14523,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
       <sliceName value="valueQuantity" />
       <short value="Actual component result" />
@@ -14593,7 +14593,7 @@
         <map value="363714003 |Interprets|" />
       </mapping>
     </element>
-    <element id="Observation.component:component.value[x]:valueQuantity.id">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.id">
       <path value="Observation.component.valueQuantity.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -14622,7 +14622,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.value[x]:valueQuantity.extension">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.extension">
       <path value="Observation.component.valueQuantity.extension" />
       <slicing>
         <discriminator>
@@ -14671,7 +14671,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.value">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.value">
       <path value="Observation.component.valueQuantity.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -14709,7 +14709,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="Observation.component:component.value[x]:valueQuantity.comparator">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.comparator">
       <path value="Observation.component.valueQuantity.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is &quot;&lt;&quot; , then the real value is &lt; stated value." />
@@ -14759,7 +14759,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.unit">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -14801,7 +14801,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.system">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.system">
       <path value="Observation.component.valueQuantity.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -14841,7 +14841,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.code">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.code">
       <path value="Observation.component.valueQuantity.code" />
       <short value="Coded responses from the common UCUM units for vital signs value set." />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -14881,7 +14881,7 @@
         <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason">
+    <element id="Observation.component:systolicComponent.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason" />
       <short value="Why the component result is missing" />
       <definition value="Provides a reason why the expected value in the element Observation.value[x] is missing." />
@@ -14942,7 +14942,7 @@
         <map value="value.nullFlavor" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.id">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.id">
       <path value="Observation.component.dataAbsentReason.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -14971,7 +14971,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.extension">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.extension">
       <path value="Observation.component.dataAbsentReason.extension" />
       <slicing>
         <discriminator>
@@ -15020,7 +15020,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding">
       <path value="Observation.component.dataAbsentReason.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -15074,7 +15074,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.id">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.id">
       <path value="Observation.component.dataAbsentReason.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -15103,7 +15103,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.extension">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.extension">
       <path value="Observation.component.dataAbsentReason.coding.extension" />
       <slicing>
         <discriminator>
@@ -15152,7 +15152,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.system">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.system">
       <path value="Observation.component.dataAbsentReason.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -15194,7 +15194,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.version">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.version">
       <path value="Observation.component.dataAbsentReason.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -15235,7 +15235,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.code">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.code">
       <path value="Observation.component.dataAbsentReason.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -15277,7 +15277,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.display">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -15322,7 +15322,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.coding.userSelected">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.coding.userSelected">
       <path value="Observation.component.dataAbsentReason.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -15364,7 +15364,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:component.dataAbsentReason.text">
+    <element id="Observation.component:systolicComponent.dataAbsentReason.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -15409,7 +15409,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation">
+    <element id="Observation.component:systolicComponent.interpretation">
       <path value="Observation.component.interpretation" />
       <short value="High, low, normal, etc." />
       <definition value="The assessment made based on the result of the observation.  Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. Otherwise known as abnormal flag." />
@@ -15477,7 +15477,7 @@
         <map value="363713009 |Has interpretation|" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.id">
+    <element id="Observation.component:systolicComponent.interpretation.id">
       <path value="Observation.component.interpretation.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -15506,7 +15506,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.extension">
+    <element id="Observation.component:systolicComponent.interpretation.extension">
       <path value="Observation.component.interpretation.extension" />
       <slicing>
         <discriminator>
@@ -15555,7 +15555,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding">
+    <element id="Observation.component:systolicComponent.interpretation.coding">
       <path value="Observation.component.interpretation.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -15609,7 +15609,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.id">
+    <element id="Observation.component:systolicComponent.interpretation.coding.id">
       <path value="Observation.component.interpretation.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -15638,7 +15638,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.extension">
+    <element id="Observation.component:systolicComponent.interpretation.coding.extension">
       <path value="Observation.component.interpretation.coding.extension" />
       <slicing>
         <discriminator>
@@ -15687,7 +15687,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.system">
+    <element id="Observation.component:systolicComponent.interpretation.coding.system">
       <path value="Observation.component.interpretation.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -15729,7 +15729,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.version">
+    <element id="Observation.component:systolicComponent.interpretation.coding.version">
       <path value="Observation.component.interpretation.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -15770,7 +15770,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.code">
+    <element id="Observation.component:systolicComponent.interpretation.coding.code">
       <path value="Observation.component.interpretation.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -15812,7 +15812,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.display">
+    <element id="Observation.component:systolicComponent.interpretation.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -15857,7 +15857,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.coding.userSelected">
+    <element id="Observation.component:systolicComponent.interpretation.coding.userSelected">
       <path value="Observation.component.interpretation.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -15899,7 +15899,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:component.interpretation.text">
+    <element id="Observation.component:systolicComponent.interpretation.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -15944,7 +15944,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Observation.component:component.referenceRange">
+    <element id="Observation.component:systolicComponent.referenceRange">
       <path value="Observation.component.referenceRange" />
       <short value="Provides guide for interpretation of component result" />
       <definition value="Guidance on how to interpret the value by comparison to a normal or recommended range." />
@@ -15967,9 +15967,9 @@
         <map value="outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent">
+    <element id="Observation.component:diastolicComponent">
       <path value="Observation.component" />
-      <sliceName value="sliceComponent" />
+      <sliceName value="diastolicComponent" />
       <short value="Used when reporting systolic and diastolic blood pressure." />
       <definition value="Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations." />
       <comment value="For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below." />
@@ -16007,7 +16007,7 @@
         <map value="outBoundRelationship[typeCode=COMP]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.id">
+    <element id="Observation.component:diastolicComponent.id">
       <path value="Observation.component.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -16036,7 +16036,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.extension">
+    <element id="Observation.component:diastolicComponent.extension">
       <path value="Observation.component.extension" />
       <slicing>
         <discriminator>
@@ -16085,7 +16085,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.modifierExtension">
+    <element id="Observation.component:diastolicComponent.modifierExtension">
       <path value="Observation.component.modifierExtension" />
       <short value="Extensions that cannot be ignored" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." />
@@ -16129,7 +16129,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code">
+    <element id="Observation.component:diastolicComponent.code">
       <path value="Observation.component.code" />
       <short value="Type of component observation (code / type)" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;code&quot;." />
@@ -16198,7 +16198,7 @@
         <map value="what" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.id">
+    <element id="Observation.component:diastolicComponent.code.id">
       <path value="Observation.component.code.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -16227,7 +16227,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.extension">
+    <element id="Observation.component:diastolicComponent.code.extension">
       <path value="Observation.component.code.extension" />
       <slicing>
         <discriminator>
@@ -16276,7 +16276,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding">
+    <element id="Observation.component:diastolicComponent.code.coding">
       <path value="Observation.component.code.coding" />
       <slicing>
         <discriminator>
@@ -16337,7 +16337,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.id">
+    <element id="Observation.component:diastolicComponent.code.coding.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -16366,7 +16366,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.extension">
+    <element id="Observation.component:diastolicComponent.code.coding.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -16415,7 +16415,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.system">
+    <element id="Observation.component:diastolicComponent.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -16457,7 +16457,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.version">
+    <element id="Observation.component:diastolicComponent.code.coding.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -16498,7 +16498,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.code">
+    <element id="Observation.component:diastolicComponent.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -16540,7 +16540,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.display">
+    <element id="Observation.component:diastolicComponent.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -16585,7 +16585,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding.userSelected">
+    <element id="Observation.component:diastolicComponent.code.coding.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -16627,7 +16627,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc">
       <path value="Observation.component.code.coding" />
       <sliceName value="loinc" />
       <short value="Diastolic Blood Pressure" />
@@ -16682,7 +16682,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.id">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -16711,7 +16711,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.extension">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -16760,7 +16760,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.system">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -16804,7 +16804,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.version">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -16845,7 +16845,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.code">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -16889,7 +16889,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.display">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -16934,7 +16934,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.userSelected">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -16976,7 +16976,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
       <sliceName value="snomedCT" />
       <short value="Diastolic Blood Pressure" />
@@ -17031,7 +17031,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.id">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.id">
       <path value="Observation.component.code.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -17060,7 +17060,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.extension">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.extension">
       <path value="Observation.component.code.coding.extension" />
       <slicing>
         <discriminator>
@@ -17109,7 +17109,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.system">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.system">
       <path value="Observation.component.code.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -17151,7 +17151,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.version">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.version">
       <path value="Observation.component.code.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -17192,7 +17192,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.code">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.code">
       <path value="Observation.component.code.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -17235,7 +17235,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.display">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -17281,7 +17281,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.userSelected">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.userSelected">
       <path value="Observation.component.code.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -17323,7 +17323,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.code.text">
+    <element id="Observation.component:diastolicComponent.code.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -17368,7 +17368,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
       <sliceName value="valueQuantity" />
       <short value="Actual component result" />
@@ -17431,7 +17431,7 @@
         <map value="363714003 |Interprets|" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.value[x]:valueQuantity.id">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.id">
       <path value="Observation.component.valueQuantity.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -17460,7 +17460,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.value[x]:valueQuantity.extension">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.extension">
       <path value="Observation.component.valueQuantity.extension" />
       <slicing>
         <discriminator>
@@ -17509,7 +17509,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.value">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.value">
       <path value="Observation.component.valueQuantity.value" />
       <short value="Numerical value (with implicit precision)" />
       <definition value="The value of the measured amount. The value includes an implicit precision in the presentation of the value." />
@@ -17548,7 +17548,7 @@
         <map value="PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.value[x]:valueQuantity.comparator">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.comparator">
       <path value="Observation.component.valueQuantity.comparator" />
       <short value="&lt; | &lt;= | &gt;= | &gt; - how to understand the value" />
       <definition value="How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is &quot;&lt;&quot; , then the real value is &lt; stated value." />
@@ -17598,7 +17598,7 @@
         <map value="IVL properties" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.unit">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -17640,7 +17640,7 @@
         <map value="PQ.unit" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.system">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.system">
       <path value="Observation.component.valueQuantity.system" />
       <short value="System that defines coded unit form" />
       <definition value="The identification of the system that provides the coded form of the unit." />
@@ -17681,7 +17681,7 @@
         <map value="CO.codeSystem, PQ.translation.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.code">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.code">
       <path value="Observation.component.valueQuantity.code" />
       <short value="Coded responses from the common UCUM units for vital signs value set." />
       <definition value="A computer processable form of the unit in some unit representation system." />
@@ -17721,7 +17721,7 @@
         <map value="PQ.code, MO.currency, PQ.translation.code" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason" />
       <short value="Why the component result is missing" />
       <definition value="Provides a reason why the expected value in the element Observation.value[x] is missing." />
@@ -17782,7 +17782,7 @@
         <map value="value.nullFlavor" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.id">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.id">
       <path value="Observation.component.dataAbsentReason.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -17811,7 +17811,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.extension">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.extension">
       <path value="Observation.component.dataAbsentReason.extension" />
       <slicing>
         <discriminator>
@@ -17860,7 +17860,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding">
       <path value="Observation.component.dataAbsentReason.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -17914,7 +17914,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.id">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.id">
       <path value="Observation.component.dataAbsentReason.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -17943,7 +17943,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.extension">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.extension">
       <path value="Observation.component.dataAbsentReason.coding.extension" />
       <slicing>
         <discriminator>
@@ -17992,7 +17992,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.system">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.system">
       <path value="Observation.component.dataAbsentReason.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -18034,7 +18034,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.version">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.version">
       <path value="Observation.component.dataAbsentReason.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -18075,7 +18075,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.code">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.code">
       <path value="Observation.component.dataAbsentReason.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -18117,7 +18117,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.display">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -18162,7 +18162,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.coding.userSelected">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.coding.userSelected">
       <path value="Observation.component.dataAbsentReason.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -18204,7 +18204,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason.text">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -18249,7 +18249,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation">
+    <element id="Observation.component:diastolicComponent.interpretation">
       <path value="Observation.component.interpretation" />
       <short value="High, low, normal, etc." />
       <definition value="The assessment made based on the result of the observation.  Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. Otherwise known as abnormal flag." />
@@ -18317,7 +18317,7 @@
         <map value="363713009 |Has interpretation|" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.id">
+    <element id="Observation.component:diastolicComponent.interpretation.id">
       <path value="Observation.component.interpretation.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -18346,7 +18346,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.extension">
+    <element id="Observation.component:diastolicComponent.interpretation.extension">
       <path value="Observation.component.interpretation.extension" />
       <slicing>
         <discriminator>
@@ -18395,7 +18395,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding">
+    <element id="Observation.component:diastolicComponent.interpretation.coding">
       <path value="Observation.component.interpretation.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -18449,7 +18449,7 @@
         <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.id">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.id">
       <path value="Observation.component.interpretation.coding.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
@@ -18478,7 +18478,7 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.extension">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.extension">
       <path value="Observation.component.interpretation.coding.extension" />
       <slicing>
         <discriminator>
@@ -18527,7 +18527,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.system">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.system">
       <path value="Observation.component.interpretation.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -18569,7 +18569,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.version">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.version">
       <path value="Observation.component.interpretation.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -18610,7 +18610,7 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.code">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.code">
       <path value="Observation.component.interpretation.coding.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
@@ -18652,7 +18652,7 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.display">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -18697,7 +18697,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.coding.userSelected">
+    <element id="Observation.component:diastolicComponent.interpretation.coding.userSelected">
       <path value="Observation.component.interpretation.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -18739,7 +18739,7 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.interpretation.text">
+    <element id="Observation.component:diastolicComponent.interpretation.text">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -18784,7 +18784,7 @@
         <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" />
       </mapping>
     </element>
-    <element id="Observation.component:sliceComponent.referenceRange">
+    <element id="Observation.component:diastolicComponent.referenceRange">
       <path value="Observation.component.referenceRange" />
       <short value="Provides guide for interpretation of component result" />
       <definition value="Guidance on how to interpret the value by comparison to a normal or recommended range." />
@@ -19222,12 +19222,12 @@
       <path value="Observation.component.dataAbsentReason.coding.code" />
       <mustSupport value="false" />
     </element>
-    <element id="Observation.component:component">
+    <element id="Observation.component:systolicComponent">
       <path value="Observation.component" />
-      <sliceName value="component" />
+      <sliceName value="systolicComponent" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:component.code">
+    <element id="Observation.component:systolicComponent.code">
       <path value="Observation.component.code" />
       <mustSupport value="true" />
       <binding>
@@ -19240,7 +19240,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:component.code.coding">
+    <element id="Observation.component:systolicComponent.code.coding">
       <path value="Observation.component.code.coding" />
       <slicing>
         <discriminator>
@@ -19251,47 +19251,47 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:component.code.coding:loinc">
+    <element id="Observation.component:systolicComponent.code.coding:loinc">
       <path value="Observation.component.code.coding" />
       <sliceName value="loinc" />
       <short value="Systolic Blood Pressure" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Observation.component:component.code.coding:loinc.system">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
       <mustSupport value="false" />
     </element>
-    <element id="Observation.component:component.code.coding:loinc.code">
+    <element id="Observation.component:systolicComponent.code.coding:loinc.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
       <fixedCode value="8480-6" />
       <mustSupport value="false" />
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
       <sliceName value="snomedCT" />
       <short value="Systolic Blood Pressure" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.system">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.version">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.version">
       <path value="Observation.component.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.code">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
       <fixedCode value="72313002" />
     </element>
-    <element id="Observation.component:component.code.coding:snomedCT.display">
+    <element id="Observation.component:systolicComponent.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -19299,7 +19299,7 @@
       <min value="1" />
       <fixedString value="Systolic arterial pressure" />
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
       <sliceName value="valueQuantity" />
       <type>
@@ -19314,11 +19314,11 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.value">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.value">
       <path value="Observation.component.valueQuantity.value" />
       <min value="1" />
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.unit">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -19326,29 +19326,29 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.system">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.system">
       <path value="Observation.component.valueQuantity.system" />
       <min value="1" />
       <fixedUri value="http://unitsofmeasure.org" />
     </element>
-    <element id="Observation.component:component.valueQuantity:valueQuantity.code">
+    <element id="Observation.component:systolicComponent.value[x]:valueQuantity.code">
       <path value="Observation.component.valueQuantity.code" />
       <short value="Coded responses from the common UCUM units for vital signs value set." />
       <min value="1" />
       <fixedCode value="mm[Hg]" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:component.dataAbsentReason">
+    <element id="Observation.component:systolicComponent.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent">
+    <element id="Observation.component:diastolicComponent">
       <path value="Observation.component" />
-      <sliceName value="sliceComponent" />
+      <sliceName value="diastolicComponent" />
       <short value="Used when reporting systolic and diastolic blood pressure." />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent.code">
+    <element id="Observation.component:diastolicComponent.code">
       <path value="Observation.component.code" />
       <mustSupport value="true" />
       <binding>
@@ -19361,7 +19361,7 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding">
+    <element id="Observation.component:diastolicComponent.code.coding">
       <path value="Observation.component.code.coding" />
       <slicing>
         <discriminator>
@@ -19371,46 +19371,46 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc">
       <path value="Observation.component.code.coding" />
       <sliceName value="loinc" />
       <short value="Diastolic Blood Pressure" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.system">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://loinc.org" />
       <mustSupport value="false" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:loinc.code">
+    <element id="Observation.component:diastolicComponent.code.coding:loinc.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
       <fixedCode value="8462-4" />
       <mustSupport value="false" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
       <sliceName value="snomedCT" />
       <short value="Diastolic Blood Pressure" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.system">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.version">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.version">
       <path value="Observation.component.code.coding.version" />
       <max value="0" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.code">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
       <fixedCode value="1091811000000102" />
     </element>
-    <element id="Observation.component:sliceComponent.code.coding:snomedCT.display">
+    <element id="Observation.component:diastolicComponent.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -19418,7 +19418,7 @@
       <min value="1" />
       <fixedString value="Diastolic arterial pressure" />
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity">
       <path value="Observation.component.valueQuantity" />
       <sliceName value="valueQuantity" />
       <type>
@@ -19426,12 +19426,12 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.value">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.value">
       <path value="Observation.component.valueQuantity.value" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.unit">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -19439,20 +19439,20 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.system">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.system">
       <path value="Observation.component.valueQuantity.system" />
       <min value="1" />
       <fixedUri value="http://unitsofmeasure.org" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent.valueQuantity:valueQuantity.code">
+    <element id="Observation.component:diastolicComponent.value[x]:valueQuantity.code">
       <path value="Observation.component.valueQuantity.code" />
       <short value="Coded responses from the common UCUM units for vital signs value set." />
       <min value="1" />
       <fixedCode value="mm[Hg]" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:sliceComponent.dataAbsentReason">
+    <element id="Observation.component:diastolicComponent.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason" />
       <mustSupport value="true" />
     </element>
