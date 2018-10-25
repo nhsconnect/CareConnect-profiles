@@ -3436,6 +3436,7 @@
       <type>
         <code value="string" />
       </type>
+      <fixedString value="Vital Signs" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -15726,6 +15727,13 @@
       <path value="Observation.category.coding.code" />
       <min value="1" />
       <fixedCode value="vital-signs" />
+    </element>
+    <element id="Observation.category.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.category.coding.display" />
+      <fixedString value="Vital Signs" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
