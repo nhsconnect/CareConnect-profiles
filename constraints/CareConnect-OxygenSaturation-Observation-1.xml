@@ -13671,6 +13671,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
         </valueSetReference>
@@ -16138,6 +16139,7 @@
       <mustSupport value="false" />
       <binding>
         <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types." />
         <valueSetReference>
           <reference value="http://hl7.org/fhir/ValueSet/observation-vitalsignresult" />
         </valueSetReference>
