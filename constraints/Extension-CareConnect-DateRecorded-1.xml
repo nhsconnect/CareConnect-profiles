@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2018-05-02T16:19:40.804+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DateRecorded-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-DateRecorded-1" />
-  <status value="draft" />
+  <status value="active" />
   <date value="2017-07-13T15:48:14.3369842+01:00" />
   <publisher value="HL7 UK" />
   <contact>

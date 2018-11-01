@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2018-05-08T12:43:21.163+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ClinicalSetting-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-ClinicalSetting-1" />
-  <status value="draft" />
+  <status value="active" />
   <date value="2018-04-17T08:25:18.264+01:00" />
   <publisher value="HL7 UK" />
   <contact>

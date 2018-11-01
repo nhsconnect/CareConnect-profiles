@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2018-05-04T09:27:39.779+01:00" />
@@ -7,9 +7,9 @@
     <valueCode value="pher" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="CareConnect-Immunization-1" />
-  <status value="draft" />
+  <status value="active" />
   <date value="2017-07-13T12:35:11.2226231+01:00" />
   <publisher value="HL7 UK" />
   <contact>
