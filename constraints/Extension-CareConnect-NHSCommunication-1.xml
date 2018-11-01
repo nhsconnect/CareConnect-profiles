@@ -4,9 +4,9 @@
     <lastUpdated value="2018-02-19T12:01:59.831+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSCommunication-1" />
-  <version value="1.0.1" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-NHSCommunication-1" />
-  <status value="draft" />
+  <status value="active" />
   <date value="2017-06-07T15:55:24.330896+01:00" />
   <publisher value="HL7 UK" />
   <contact>
@@ -346,7 +346,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -1324,6 +1324,7 @@
       <path value="Extension.extension" />
       <sliceName value="preferred" />
       <short value="Language preference indicator" />
+      <max value="1" />
     </element>
     <element id="Extension.extension:preferred.url">
       <path value="Extension.extension.url" />

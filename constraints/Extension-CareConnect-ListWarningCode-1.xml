@@ -4,10 +4,10 @@
     <lastUpdated value="2018-05-10T13:54:46.268+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ListWarningCode-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-ListWarningCode-1" />
-  <status value="draft" />
-  <date value="2018-05-10T13:37:44.524+01:00" />
+  <status value="active" />
+  <date value="2018-11-05" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -176,7 +176,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCode">
+    <element id="Extension.valueCode:valueCode">
       <path value="Extension.valueCode" />
       <sliceName value="valueCode" />
       <short value="To capture warnings that the list may be incomplete" />
@@ -228,7 +228,7 @@
       <path value="Extension.url" />
       <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ListWarningCode-1" />
     </element>
-    <element id="Extension.value[x]:valueCode">
+    <element id="Extension.valueCode:valueCode">
       <path value="Extension.valueCode" />
       <sliceName value="valueCode" />
       <short value="To capture warnings that the list may be incomplete" />

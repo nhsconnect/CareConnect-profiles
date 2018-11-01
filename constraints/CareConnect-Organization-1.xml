@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2018-02-05T14:49:01.808+00:00" />
@@ -10,7 +10,7 @@
   <version value="1.1.0" />
   <name value="CareConnect-Organization-1" />
   <status value="active" />
-  <date value="2017-07-07T09:11:24.3271864+01:00" />
+  <date value="2018-11-05" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
