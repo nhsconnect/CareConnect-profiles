@@ -1902,7 +1902,7 @@
       <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary." />
       <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.use" />
         <min value="0" />
@@ -1951,7 +1951,7 @@
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. &#xA;&#xA;Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.type" />
         <min value="0" />
@@ -2572,7 +2572,7 @@
       <definition value="Time period during which identifier is/was valid for use." />
       <comment value="This is not a duration - that's a measure of time (a separate type), but a duration that occurs at a fixed value of time. A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;). If duration is required, specify the type as Interval|Duration." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.period" />
         <min value="0" />
@@ -2783,7 +2783,7 @@
       <definition value="Organization that issued/manages the identifier." />
       <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.assigner" />
         <min value="0" />
@@ -2791,7 +2791,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3167,7 +3167,7 @@
       <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary." />
       <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.use" />
         <min value="0" />
@@ -3216,7 +3216,7 @@
       <comment value="This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. &#xA;&#xA;Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type." />
       <requirements value="Allows users to make use of identifiers when the identifier system is not known." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.type" />
         <min value="0" />
@@ -3837,7 +3837,7 @@
       <definition value="Time period during which identifier is/was valid for use." />
       <comment value="This is not a duration - that's a measure of time (a separate type), but a duration that occurs at a fixed value of time. A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;). If duration is required, specify the type as Interval|Duration." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.period" />
         <min value="0" />
@@ -4048,7 +4048,7 @@
       <definition value="Organization that issued/manages the identifier." />
       <comment value="The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Identifier.assigner" />
         <min value="0" />
@@ -4056,7 +4056,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -7197,7 +7197,7 @@
       <alias value="Province" />
       <alias value="Territory" />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Address.state" />
         <min value="0" />
@@ -10030,7 +10030,7 @@
       <alias value="Province" />
       <alias value="Territory" />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Address.state" />
         <min value="0" />
@@ -10665,14 +10665,6 @@
       <definition value="Identifier code supplier by the Organisation Data Service" />
       <max value="1" />
     </element>
-    <element id="Organization.identifier:odsOrganisationCode.use">
-      <path value="Organization.identifier.use" />
-      <max value="0" />
-    </element>
-    <element id="Organization.identifier:odsOrganisationCode.type">
-      <path value="Organization.identifier.type" />
-      <max value="0" />
-    </element>
     <element id="Organization.identifier:odsOrganisationCode.system">
       <path value="Organization.identifier.system" />
       <min value="1" />
@@ -10682,13 +10674,12 @@
       <path value="Organization.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Organization.identifier:odsOrganisationCode.period">
-      <path value="Organization.identifier.period" />
-      <max value="0" />
-    </element>
     <element id="Organization.identifier:odsOrganisationCode.assigner">
       <path value="Organization.identifier.assigner" />
-      <max value="0" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
     </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
@@ -10696,14 +10687,6 @@
       <short value="ODS Site code to identify the organisation at site level" />
       <definition value="ODS Site code to identify the organisation at site level" />
       <max value="1" />
-    </element>
-    <element id="Organization.identifier:odsSiteCode.use">
-      <path value="Organization.identifier.use" />
-      <max value="0" />
-    </element>
-    <element id="Organization.identifier:odsSiteCode.type">
-      <path value="Organization.identifier.type" />
-      <max value="0" />
     </element>
     <element id="Organization.identifier:odsSiteCode.system">
       <path value="Organization.identifier.system" />
@@ -10714,13 +10697,12 @@
       <path value="Organization.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Organization.identifier:odsSiteCode.period">
-      <path value="Organization.identifier.period" />
-      <max value="0" />
-    </element>
     <element id="Organization.identifier:odsSiteCode.assigner">
       <path value="Organization.identifier.assigner" />
-      <max value="0" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
     </element>
     <element id="Organization.identifier:localIdentifier">
       <path value="Organization.identifier" />
@@ -10743,10 +10725,6 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
     </element>
-    <element id="Organization.address.state">
-      <path value="Organization.address.state" />
-      <max value="0" />
-    </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf" />
       <type>
@@ -10757,10 +10735,6 @@
     <element id="Organization.contact.name.family">
       <path value="Organization.contact.name.family" />
       <min value="1" />
-    </element>
-    <element id="Organization.contact.address.state">
-      <path value="Organization.contact.address.state" />
-      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
