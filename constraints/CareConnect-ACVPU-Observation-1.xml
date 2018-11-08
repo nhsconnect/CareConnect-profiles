@@ -3987,7 +3987,7 @@
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system which describes whether a patient is mentally alert, unresponsive, responds to voice, responds to pain or is acutely confused." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ACPVU-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ACVPU-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -13596,7 +13596,7 @@
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system which describes whether a patient is mentally alert, unresponsive, responds to voice, responds to pain or is acutely confused." />
         <valueSetReference>
-          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ACPVU-1" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ACVPU-1" />
         </valueSetReference>
       </binding>
     </element>
