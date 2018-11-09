@@ -10,7 +10,7 @@
   <version value="1.0.0" />
   <name value="CareConnect-InspiredOxygen-Observation-1" />
   <status value="draft" />
-  <date value="2018-10-17" />
+  <date value="2018-11-09" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -2156,7 +2156,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -5698,7 +5698,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -11444,7 +11444,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -13462,7 +13462,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -13596,7 +13596,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -13726,7 +13726,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="system" />
+          <path value="code" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
