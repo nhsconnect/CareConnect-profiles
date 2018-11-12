@@ -5,10 +5,11 @@
 	<version value="1.1.0"/>
 	<name value="Care Connect Death Notification Status"/>
 	<status value="active"/>
-	<date value="2018-11-01T00:00:00+00:00"/>
+	<date value="2018-11-12T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A CodeSystem to identify the type of death notice as held on Personal Demographics Service (PDS)."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
+	<caseSensitive value="true"/>
 	<content value="complete"/>
 	<concept>
 		<code value="1"/>
@@ -17,5 +18,9 @@
 	<concept>
 		<code value="2"/>
 		<display value="Formal - death notice received from Registrar of Deaths"/>
+	</concept>
+	<concept>
+		<code value="U"/>
+		<display value="Removed"/>
 	</concept>
 </CodeSystem>
