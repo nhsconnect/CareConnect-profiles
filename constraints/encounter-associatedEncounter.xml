@@ -4,10 +4,10 @@
     <lastUpdated value="2017-07-12T16:25:32.45+01:00" />
   </meta>
   <url value="http://hl7.org/fhir/StructureDefinition/encounter-associatedEncounter" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="encounter-associatedEncounter" />
-  <status value="draft" />
-  <date value="2017-07-12T16:22:26.0876966+01:00" />
+  <status value="active" />
+  <date value="2018-11-05" />
   <description value="This encounter occurs within the scope of the referenced encounter." />
   <copyright value="Copyright © Health Level Seven, Inc. - FHIR WG" />
   <fhirVersion value="3.0.1" />
@@ -167,7 +167,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueReference">
+    <element id="Extension.valueReference:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
       <short value="Value of extension" />
@@ -212,7 +212,7 @@
       <path value="Extension.url" />
       <fixedUri value="http://hl7.org/fhir/StructureDefinition/encounter-associatedEncounter" />
     </element>
-    <element id="Extension.value[x]:valueReference">
+    <element id="Extension.valueReference:valueReference">
       <path value="Extension.valueReference" />
       <sliceName value="valueReference" />
       <type>

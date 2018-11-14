@@ -7,10 +7,10 @@
     <valueCode value="pa" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1" />
-  <version value="1.0.1" />
+  <version value="1.1.0" />
   <name value="CareConnect-Encounter-1" />
-  <status value="draft" />
-  <date value="2017-07-10T15:06:13.594979+01:00" />
+  <status value="active" />
+  <date value="2018-11-05" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -3758,7 +3758,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -3982,7 +3982,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -8108,7 +8108,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -12261,7 +12261,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -12478,7 +12478,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -16225,7 +16225,6 @@
     <element id="Encounter.type.coding:snomedCT">
       <path value="Encounter.type.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
       <binding>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK coding system that describes an encounter between a care professional and the patient (or patient's record)." />
@@ -16256,10 +16255,6 @@
       <path value="Encounter.type.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Encounter.type.coding:snomedCT.version">
-      <path value="Encounter.type.coding.version" />
-      <max value="0" />
     </element>
     <element id="Encounter.type.coding:snomedCT.code">
       <path value="Encounter.type.coding.code" />
@@ -16331,10 +16326,6 @@
       <path value="Encounter.reason.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Encounter.reason.coding:snomedCT.version">
-      <path value="Encounter.reason.coding.version" />
-      <max value="0" />
     </element>
     <element id="Encounter.reason.coding:snomedCT.code">
       <path value="Encounter.reason.coding.code" />
@@ -16433,7 +16424,6 @@
     <element id="Encounter.hospitalization.reAdmission.coding:snomedCT">
       <path value="Encounter.hospitalization.reAdmission.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
     </element>
     <element id="Encounter.hospitalization.reAdmission.coding:snomedCT.extension">
       <path value="Encounter.hospitalization.reAdmission.coding.extension" />
@@ -16457,10 +16447,6 @@
       <path value="Encounter.hospitalization.reAdmission.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Encounter.hospitalization.reAdmission.coding:snomedCT.version">
-      <path value="Encounter.hospitalization.reAdmission.coding.version" />
-      <max value="0" />
     </element>
     <element id="Encounter.hospitalization.reAdmission.coding:snomedCT.code">
       <path value="Encounter.hospitalization.reAdmission.coding.code" />

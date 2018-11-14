@@ -4069,7 +4069,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -4293,7 +4293,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -7740,7 +7740,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -7964,7 +7964,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -9424,7 +9424,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -9648,7 +9648,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -12622,7 +12622,6 @@
     <element id="Procedure.code.coding:snomedCT">
       <path value="Procedure.code.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
       <binding>
         <strength value="extensible" />
         <description value="A code from the SNOMED Clinical Terminology UK." />
@@ -12653,10 +12652,6 @@
       <path value="Procedure.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Procedure.code.coding:snomedCT.version">
-      <path value="Procedure.code.coding.version" />
-      <max value="0" />
     </element>
     <element id="Procedure.code.coding:snomedCT.code">
       <path value="Procedure.code.coding.code" />
@@ -12753,7 +12748,6 @@
     <element id="Procedure.bodySite.coding:snomedCT">
       <path value="Procedure.bodySite.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
       <binding>
         <strength value="extensible" />
         <description value="A code from the SNOMED Clinical Terminology UK." />
@@ -12785,10 +12779,6 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Procedure.bodySite.coding:snomedCT.version">
-      <path value="Procedure.bodySite.coding.version" />
-      <max value="0" />
-    </element>
     <element id="Procedure.bodySite.coding:snomedCT.code">
       <path value="Procedure.bodySite.coding.code" />
       <min value="1" />
@@ -12814,7 +12804,6 @@
     <element id="Procedure.complication.coding:snomedCT">
       <path value="Procedure.complication.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
       <binding>
         <strength value="required" />
         <description value="A code from the SNOMED Clinical Terminology UK." />
@@ -12845,10 +12834,6 @@
       <path value="Procedure.complication.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Procedure.complication.coding:snomedCT.version">
-      <path value="Procedure.complication.coding.version" />
-      <max value="0" />
     </element>
     <element id="Procedure.complication.coding:snomedCT.code">
       <path value="Procedure.complication.coding.code" />

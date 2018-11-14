@@ -4,10 +4,10 @@
     <lastUpdated value="2018-02-19T15:40:11.742+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1" />
-  <version value="1.0.1" />
+  <version value="1.1.0" />
   <name value="Extension-CareConnect-AdmissionMethod-1" />
-  <status value="draft" />
-  <date value="2018-02-19T14:50:54.127+00:00" />
+  <status value="active" />
+  <date value="2018-11-05" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />

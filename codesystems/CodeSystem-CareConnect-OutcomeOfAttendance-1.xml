@@ -5,10 +5,10 @@
 		<valueUri value="http://www.datadictionary.nhs.uk/data_dictionary/attributes/o/out/outcome_of_attendance_de.asp?shownav=1"/>
 	</extension>
 	<url value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-OutcomeOfAttendance-1"/>
-	<version value="1.0.0"/>
+	<version value="1.1.0"/>
 	<name value="NHS Data Model and Dictionary Outcome of Attendance"/>
-	<status value="draft"/>
-	<date value="2018-03-06T00:00:00+00:00"/>
+	<status value="active"/>
+	<date value="2018-11-14T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="This records the outcome of an Out-Patient Attendance Consultant."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>

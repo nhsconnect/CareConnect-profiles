@@ -688,7 +688,7 @@
     <element id="Patient.extension:deathNotificationStatus">
       <path value="Patient.extension" />
       <sliceName value="deathNotificationStatus" />
-      <short value="Representation of a patient’s death notification (as held on Personal Demographics Service (PDS))" />
+      <short value="Representation of a patient’s death notification status (as held on Personal Demographics Service (PDS))" />
       <definition value="This extension is constrained to represent a patient’s death notification (as held on Personal Demographics Service (PDS))." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -15852,6 +15852,7 @@
     <element id="Patient.extension:deathNotificationStatus">
       <path value="Patient.extension" />
       <sliceName value="deathNotificationStatus" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DeathNotificationStatus-1" />

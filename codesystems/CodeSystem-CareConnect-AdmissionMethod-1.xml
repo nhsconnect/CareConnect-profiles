@@ -5,10 +5,10 @@
 		<valueUri value="http://www.datadictionary.nhs.uk/data_dictionary/attributes/a/add/admission_method_de.asp?shownav=1"/>
 	</extension>
 	<url value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-AdmissionMethod-1"/>
-	<version value="1.0.0"/>
+	<version value="1.1.0"/>
 	<name value="NHS Data Model and Dictionary Admission Method"/>
-	<status value="draft"/>
-	<date value="2018-02-15T00:00:00+00:00"/>
+	<status value="active"/>
+	<date value="2018-11-14T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="The method of admission to a Hospital Provider Spell."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>

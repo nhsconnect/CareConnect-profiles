@@ -7,10 +7,10 @@
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="CareConnect-AllergyIntolerance-1" />
-  <status value="draft" />
-  <date value="2017-07-13T08:24:34.7834577+01:00" />
+  <status value="active" />
+  <date value="2018-11-05" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -2554,7 +2554,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -2661,6 +2661,49 @@
       </base>
       <type>
         <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomedCT.extension:snomedCTDescriptionID">
+      <path value="AllergyIntolerance.code.coding.extension" />
+      <sliceName value="snomedCTDescriptionID" />
+      <short value="The SNOMED CT Description ID for the display" />
+      <definition value="The SNOMED CT Description ID for the display." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4706,7 +4749,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -4923,7 +4966,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -5630,7 +5673,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -5847,7 +5890,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -6659,7 +6702,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -6876,7 +6919,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -7415,7 +7458,6 @@
     <element id="AllergyIntolerance.code.coding:snomedCT">
       <path value="AllergyIntolerance.code.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
       <binding>
         <strength value="example" />
         <description value="A code from the SNOMED Clinical Terminology UK or a code from the v3 Code System NullFlavor specifying why a valid value is not present." />
@@ -7423,6 +7465,28 @@
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyCode-1" />
         </valueSetReference>
       </binding>
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomedCT.extension">
+      <path value="AllergyIntolerance.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomedCT.extension:snomedCTDescriptionID">
+      <path value="AllergyIntolerance.code.coding.extension" />
+      <sliceName value="snomedCTDescriptionID" />
+      <short value="The SNOMED CT Description ID for the display" />
+      <definition value="The SNOMED CT Description ID for the display." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
+      </type>
     </element>
     <element id="AllergyIntolerance.code.coding:snomedCT.system">
       <path value="AllergyIntolerance.code.coding.system" />
@@ -7512,7 +7576,6 @@
     <element id="AllergyIntolerance.reaction.substance.coding:snomedCT">
       <path value="AllergyIntolerance.reaction.substance.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
     </element>
     <element id="AllergyIntolerance.reaction.substance.coding:snomedCT.extension">
       <path value="AllergyIntolerance.reaction.substance.coding.extension" />
@@ -7536,10 +7599,6 @@
       <path value="AllergyIntolerance.reaction.substance.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="AllergyIntolerance.reaction.substance.coding:snomedCT.version">
-      <path value="AllergyIntolerance.reaction.substance.coding.version" />
-      <max value="0" />
     </element>
     <element id="AllergyIntolerance.reaction.substance.coding:snomedCT.code">
       <path value="AllergyIntolerance.reaction.substance.coding.code" />
@@ -7578,7 +7637,6 @@
     <element id="AllergyIntolerance.reaction.manifestation.coding:snomedCT">
       <path value="AllergyIntolerance.reaction.manifestation.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
     </element>
     <element id="AllergyIntolerance.reaction.manifestation.coding:snomedCT.extension">
       <path value="AllergyIntolerance.reaction.manifestation.coding.extension" />
@@ -7602,10 +7660,6 @@
       <path value="AllergyIntolerance.reaction.manifestation.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="AllergyIntolerance.reaction.manifestation.coding:snomedCT.version">
-      <path value="AllergyIntolerance.reaction.manifestation.coding.version" />
-      <max value="0" />
     </element>
     <element id="AllergyIntolerance.reaction.manifestation.coding:snomedCT.code">
       <path value="AllergyIntolerance.reaction.manifestation.coding.code" />
@@ -7656,7 +7710,6 @@
     <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomedCT">
       <path value="AllergyIntolerance.reaction.exposureRoute.coding" />
       <sliceName value="snomedCT" />
-      <max value="1" />
     </element>
     <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomedCT.extension">
       <path value="AllergyIntolerance.reaction.exposureRoute.coding.extension" />
@@ -7680,10 +7733,6 @@
       <path value="AllergyIntolerance.reaction.exposureRoute.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomedCT.version">
-      <path value="AllergyIntolerance.reaction.exposureRoute.coding.version" />
-      <max value="0" />
     </element>
     <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomedCT.code">
       <path value="AllergyIntolerance.reaction.exposureRoute.coding.code" />
