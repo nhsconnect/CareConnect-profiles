@@ -3,7 +3,7 @@
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-2"/>
 	<version value="2.1.0"/>
 	<name value="Care Connect Immunization Explanation Reason"/>
-	<status value="active"/>
+	<status value="draft"/>
 	<date value="2018-11-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system that represents the clinical indication or reason for administering the vaccine."/>

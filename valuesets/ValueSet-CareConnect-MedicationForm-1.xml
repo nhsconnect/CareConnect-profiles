@@ -4,7 +4,7 @@
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationForm-1"/>
 	<version value="1.1.0"/>
 	<name value="Care Connect Medication Form"/>
-	<status value="active"/>
+	<status value="draft"/>
 	<date value="2018-11-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes a medication dose form. These will form part of the NHS dm+d. Any code from the SNOMED CT UK 'NHS dm+d Dose Form' subset with subset original id 837201000001137; the corresponding SNOMED CT UK Refset fully specified name is 'National Health Service dictionary of medicines and devices dose form simple reference set (foundation metadata concept)' with Refset Id 999000781000001107."/>

@@ -4,7 +4,7 @@
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyManifestation-1"/>
 	<version value="1.2.0"/>
 	<name value="Care Connect Allergy Manifestation"/>
-	<status value="active"/>
+	<status value="draft"/>
 	<date value="2018-11-14T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK hierarchy with concept id '404684003' to record an allergy manifestation or a value from the HL7 FHIR nullFlavors code system."/>

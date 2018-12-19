@@ -6,7 +6,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/birthPlace" />
   <version value="1.0.0" />
   <name value="birthPlace" />
-  <status value="active" />
+  <status value="draft" />
   <date value="2018-11-05" />
   <publisher value="HL7 UK " />
   <description value="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements." />

@@ -4,7 +4,7 @@
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ProcedureCode-1"/>
 	<version value="1.1.0"/>
 	<name value="Care Connect Procedure Code"/>
-	<status value="active"/>
+	<status value="draft"/>
 	<date value="2018-11-01T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK with the expression (&lt;&lt;71388002 |Procedure|&lt;&lt;129125009 |Procedure with explicit context|)."/>

@@ -4,7 +4,7 @@
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DocumentType-1"/>
 	<version value="1.1.0"/>
 	<name value="Care Connect Document Type"/>
-	<status value="active"/>
+	<status value="draft"/>
 	<date value="2018-11-05T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system that describes a clinical document type. Any code from the SNOMED CT UK 'Document Type' subset with subset original id 44041000000135; the corresponding SNOMED CT UK Refset fully specified name is 'Correspondence document type simple reference set (foundation metadata concept)' with Refset Id 999000391000000109."/>
