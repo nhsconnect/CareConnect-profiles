@@ -55,6 +55,11 @@
 				<op value="="/>
 				<value value="UNK"/>
 			</filter>
+			<filter>
+				<property value="concept"/>
+				<op value="="/>
+				<value value="NA"/>
+			</filter>
 		</include>
 	</compose>
 </ValueSet>
