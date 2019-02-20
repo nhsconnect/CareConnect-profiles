@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DiagnosticReport-1" />
+  <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
   <version value="1.0.0" />
-  <name value="CareConnect-DiagnosticReport-1" />
+  <name value="CareConnect-ProcedureRequest-1" />
   <status value="draft" />
-  <date value="2019-02-18T16:31:05.839+00:00" />
+  <date value="2019-02-19T09:52:02.257+00:00" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -14,26 +14,20 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A test report for National Pathology that contains data on the pathology tests performed on patients specimens populated by the performing orgnaisation. " />
+  <description value="Procedure Request" />
   <copyright value="Copyright © 2019 HL7 UK&#xD; &#xD;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD; &#xD;http://www.apache.org/licenses/LICENSE-2.0&#xD; &#xD;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD; &#xD;HL7® FHIR® standard Copyright © 2011+ HL7&#xD; &#xD;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD; &#xD;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
-  <type value="DiagnosticReport" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+  <type value="ProcedureRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
   <derivation value="constraint" />
   <snapshot>
-    <element id="DiagnosticReport">
-      <path value="DiagnosticReport" />
-      <short value="A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports" />
-      <definition value="The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports." />
-      <comment value="This is intended to capture a single report, and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing." />
-      <alias value="Report" />
-      <alias value="Test" />
-      <alias value="Result" />
-      <alias value="Results" />
-      <alias value="Labs" />
-      <alias value="Laboratory" />
+    <element id="ProcedureRequest">
+      <path value="ProcedureRequest" />
+      <short value="A request for a procedure or diagnostic to be performed" />
+      <definition value="A record of a request for diagnostic investigations, treatments, or operations to be performed." />
+      <alias value="diagnostic request" />
       <min value="0" />
       <max value="*" />
       <base>
@@ -75,23 +69,23 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event" />
+        <map value="Request" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="ORU -&gt; OBR" />
+        <map value="ORC" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="Observation[classCode=OBS, moodCode=EVN]" />
+        <map value="Act[moodCode&lt;=INT]" />
       </mapping>
       <mapping>
         <identity value="w5" />
-        <map value="clinical.diagnostics" />
+        <map value="clinical.general" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.id">
-      <path value="DiagnosticReport.id" />
+    <element id="ProcedureRequest.id">
+      <path value="ProcedureRequest.id" />
       <short value="Logical id of this artifact" />
       <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes." />
       <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation." />
@@ -119,8 +113,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta">
-      <path value="DiagnosticReport.meta" />
+    <element id="ProcedureRequest.meta">
+      <path value="ProcedureRequest.meta" />
       <short value="Metadata about the resource" />
       <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource." />
       <min value="0" />
@@ -151,8 +145,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.id">
-      <path value="DiagnosticReport.meta.id" />
+    <element id="ProcedureRequest.meta.id">
+      <path value="ProcedureRequest.meta.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -180,8 +174,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.extension">
-      <path value="DiagnosticReport.meta.extension" />
+    <element id="ProcedureRequest.meta.extension">
+      <path value="ProcedureRequest.meta.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -229,8 +223,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.versionId">
-      <path value="DiagnosticReport.meta.versionId" />
+    <element id="ProcedureRequest.meta.versionId">
+      <path value="ProcedureRequest.meta.versionId" />
       <short value="Version specific identifier" />
       <definition value="The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted." />
       <comment value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes." />
@@ -258,8 +252,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.lastUpdated">
-      <path value="DiagnosticReport.meta.lastUpdated" />
+    <element id="ProcedureRequest.meta.lastUpdated">
+      <path value="ProcedureRequest.meta.lastUpdated" />
       <short value="When the resource version last changed" />
       <definition value="When the resource last changed - e.g. when the version changed." />
       <comment value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant." />
@@ -287,8 +281,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.profile">
-      <path value="DiagnosticReport.meta.profile" />
+    <element id="ProcedureRequest.meta.profile">
+      <path value="ProcedureRequest.meta.profile" />
       <short value="Profiles this resource claims to conform to" />
       <definition value="A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]()." />
       <comment value="It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set." />
@@ -316,8 +310,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security">
-      <path value="DiagnosticReport.meta.security" />
+    <element id="ProcedureRequest.meta.security">
+      <path value="ProcedureRequest.meta.security" />
       <short value="Security Labels applied to this resource" />
       <definition value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure." />
       <comment value="The security labels can be updated without changing the stated version of the resource  The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored." />
@@ -370,8 +364,8 @@
         <map value="fhir:Coding rdfs:subClassOf dt:CDCoding" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.id">
-      <path value="DiagnosticReport.meta.security.id" />
+    <element id="ProcedureRequest.meta.security.id">
+      <path value="ProcedureRequest.meta.security.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -399,8 +393,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.extension">
-      <path value="DiagnosticReport.meta.security.extension" />
+    <element id="ProcedureRequest.meta.security.extension">
+      <path value="ProcedureRequest.meta.security.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -448,8 +442,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.system">
-      <path value="DiagnosticReport.meta.security.system" />
+    <element id="ProcedureRequest.meta.security.system">
+      <path value="ProcedureRequest.meta.security.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
@@ -490,8 +484,8 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.version">
-      <path value="DiagnosticReport.meta.security.version" />
+    <element id="ProcedureRequest.meta.security.version">
+      <path value="ProcedureRequest.meta.security.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
@@ -531,8 +525,8 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.code">
-      <path value="DiagnosticReport.meta.security.code" />
+    <element id="ProcedureRequest.meta.security.code">
+      <path value="ProcedureRequest.meta.security.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
@@ -573,11 +567,11 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.display">
+    <element id="ProcedureRequest.meta.security.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
-      <path value="DiagnosticReport.meta.security.display" />
+      <path value="ProcedureRequest.meta.security.display" />
       <short value="Representation defined by the system" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
@@ -618,8 +612,8 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.security.userSelected">
-      <path value="DiagnosticReport.meta.security.userSelected" />
+    <element id="ProcedureRequest.meta.security.userSelected">
+      <path value="ProcedureRequest.meta.security.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
       <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
@@ -660,8 +654,8 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag">
-      <path value="DiagnosticReport.meta.tag" />
+    <element id="ProcedureRequest.meta.tag">
+      <path value="ProcedureRequest.meta.tag" />
       <short value="Tags applied to this resource" />
       <definition value="Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource." />
       <comment value="The tags can be updated without changing the stated version of the resource.  The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored." />
@@ -711,8 +705,8 @@
         <map value="fhir:Coding rdfs:subClassOf dt:CDCoding" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.id">
-      <path value="DiagnosticReport.meta.tag.id" />
+    <element id="ProcedureRequest.meta.tag.id">
+      <path value="ProcedureRequest.meta.tag.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -740,8 +734,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.extension">
-      <path value="DiagnosticReport.meta.tag.extension" />
+    <element id="ProcedureRequest.meta.tag.extension">
+      <path value="ProcedureRequest.meta.tag.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -789,8 +783,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.system">
-      <path value="DiagnosticReport.meta.tag.system" />
+    <element id="ProcedureRequest.meta.tag.system">
+      <path value="ProcedureRequest.meta.tag.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
@@ -831,8 +825,8 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.version">
-      <path value="DiagnosticReport.meta.tag.version" />
+    <element id="ProcedureRequest.meta.tag.version">
+      <path value="ProcedureRequest.meta.tag.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
@@ -872,8 +866,8 @@
         <map value="fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.code">
-      <path value="DiagnosticReport.meta.tag.code" />
+    <element id="ProcedureRequest.meta.tag.code">
+      <path value="ProcedureRequest.meta.tag.code" />
       <short value="Symbol in syntax defined by the system" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
@@ -914,11 +908,11 @@
         <map value="fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.display">
+    <element id="ProcedureRequest.meta.tag.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
-      <path value="DiagnosticReport.meta.tag.display" />
+      <path value="ProcedureRequest.meta.tag.display" />
       <short value="Representation defined by the system" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
@@ -959,8 +953,8 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.meta.tag.userSelected">
-      <path value="DiagnosticReport.meta.tag.userSelected" />
+    <element id="ProcedureRequest.meta.tag.userSelected">
+      <path value="ProcedureRequest.meta.tag.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
       <comment value="Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely." />
@@ -1001,8 +995,8 @@
         <map value="fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\#true a [     fhir:source &quot;true&quot;;     fhir:target dt:CDCoding.codingRationale\#O   ]" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.implicitRules">
-      <path value="DiagnosticReport.implicitRules" />
+    <element id="ProcedureRequest.implicitRules">
+      <path value="ProcedureRequest.implicitRules" />
       <short value="A set of rules under which this content was created" />
       <definition value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content." />
       <comment value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. &#xA;&#xA;This element is labelled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation." />
@@ -1031,8 +1025,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.language">
-      <path value="DiagnosticReport.language" />
+    <element id="ProcedureRequest.language">
+      <path value="ProcedureRequest.language" />
       <short value="Language of the resource content" />
       <definition value="The base language in which the resource is written." />
       <comment value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)." />
@@ -1077,8 +1071,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.text">
-      <path value="DiagnosticReport.text" />
+    <element id="ProcedureRequest.text">
+      <path value="ProcedureRequest.text" />
       <short value="Text summary of the resource, for human interpretation" />
       <definition value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." />
       <comment value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded in formation is added later." />
@@ -1118,8 +1112,8 @@
         <map value="Act.text?" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.text.id">
-      <path value="DiagnosticReport.text.id" />
+    <element id="ProcedureRequest.text.id">
+      <path value="ProcedureRequest.text.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -1147,8 +1141,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.text.extension">
-      <path value="DiagnosticReport.text.extension" />
+    <element id="ProcedureRequest.text.extension">
+      <path value="ProcedureRequest.text.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -1196,8 +1190,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.text.status">
-      <path value="DiagnosticReport.text.status" />
+    <element id="ProcedureRequest.text.status">
+      <path value="ProcedureRequest.text.status" />
       <short value="generated | extensions | additional | empty" />
       <definition value="The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
@@ -1238,8 +1232,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.text.div">
-      <path value="DiagnosticReport.text.div" />
+    <element id="ProcedureRequest.text.div">
+      <path value="ProcedureRequest.text.div" />
       <short value="Limited xhtml content" />
       <definition value="The actual narrative content, a stripped down version of XHTML." />
       <comment value="The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained stylesheets. The XHTML content may not contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects." />
@@ -1284,8 +1278,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.contained">
-      <path value="DiagnosticReport.contained" />
+    <element id="ProcedureRequest.contained">
+      <path value="ProcedureRequest.contained" />
       <short value="Contained, inline Resources" />
       <definition value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope." />
       <comment value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again." />
@@ -1311,8 +1305,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.extension">
-      <path value="DiagnosticReport.extension" />
+    <element id="ProcedureRequest.extension">
+      <path value="ProcedureRequest.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -1360,8 +1354,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.modifierExtension">
-      <path value="DiagnosticReport.modifierExtension" />
+    <element id="ProcedureRequest.modifierExtension">
+      <path value="ProcedureRequest.modifierExtension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -1410,19 +1404,15 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.identifier">
-      <path value="DiagnosticReport.identifier" />
-      <short value="Business identifier for report" />
-      <definition value="Identifiers assigned to this report by the performer or other systems." />
-      <comment value="Usually assigned by the Information System of the diagnostic service provider (filler id)." />
-      <requirements value="Need to know what identifier to use when making queries about this report from the source laboratory, and for linking to the report outside FHIR context." />
-      <alias value="ReportID" />
-      <alias value="Filler ID" />
-      <alias value="Placer ID" />
-      <min value="0" />
-      <max value="*" />
+    <element id="ProcedureRequest.identifier">
+      <path value="ProcedureRequest.identifier" />
+      <short value="Identifiers assigned to this order" />
+      <definition value="Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller." />
+      <comment value="The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below." />
+      <min value="1" />
+      <max value="1" />
       <base>
-        <path value="DiagnosticReport.identifier" />
+        <path value="ProcedureRequest.identifier" />
         <min value="0" />
         <max value="*" />
       </base>
@@ -1456,38 +1446,45 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.identifier" />
+        <map value="Request.identifier" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="OBR-51" />
+        <map value="ORC.2, ORC.3" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="id" />
+        <map value=".identifier" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="ClinicalStatement.identifier" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="id" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.basedOn">
-      <path value="DiagnosticReport.basedOn" />
-      <short value="What was requested" />
-      <definition value="Details concerning a test or procedure requested." />
-      <comment value="Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single test result resource. Note that there are also cases where one request leads to multiple reports." />
-      <requirements value="This allows tracing of authorization for the report and tracking whether proposals/recommendations were acted upon." />
-      <alias value="Request" />
+    <element id="ProcedureRequest.definition">
+      <path value="ProcedureRequest.definition" />
+      <short value="Protocol or definition" />
+      <definition value="Protocol or definition followed by this request." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <alias value="protocol" />
       <min value="0" />
       <max value="*" />
       <base>
-        <path value="DiagnosticReport.basedOn" />
+        <path value="ProcedureRequest.definition" />
         <min value="0" />
         <max value="*" />
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PlanDefinition" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1504,6 +1501,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <isSummary value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -1514,27 +1512,185 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.basedOn" />
+        <map value="Request.definition" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="ORC? OBR-2/3?" />
+        <map value="Varies by domain" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="outboundRelationship[typeCode=FLFS].target" />
+        <map value=".outboundRelationship[typeCode=DEFN].target" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.status">
-      <path value="DiagnosticReport.status" />
-      <short value="registered | partial | preliminary | final +" />
-      <definition value="The status of the diagnostic report as a whole." />
-      <comment value="This is labeled as &quot;Is Modifier&quot; because applications need to take appropriate action if a report is withdrawn." />
-      <requirements value="Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports." />
+    <element id="ProcedureRequest.basedOn">
+      <path value="ProcedureRequest.basedOn" />
+      <short value="What request fulfills" />
+      <definition value="Plan/proposal/order fulfilled by this request." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <alias value="fulfills" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="ProcedureRequest.basedOn" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
+        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.basedOn" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="ORC.8 (plus others)" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".outboundRelationship[typeCode=FLFS].target" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.replaces">
+      <path value="ProcedureRequest.replaces" />
+      <short value="What request replaces" />
+      <definition value="The request takes the place of the referenced completed or terminated request(s)." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="ProcedureRequest.replaces" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
+        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.replaces" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="Handled by message location of ORC (ORC.1=RO or RU)" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".outboundRelationship[typeCode=RPLC].target" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.requisition">
+      <path value="ProcedureRequest.requisition" />
+      <short value="Composite Request ID" />
+      <definition value="A shared identifier common to all procedure or diagnostic requests that were authorized more or less simultaneously by a single author, representing the composite or group identifier." />
+      <comment value="Requests are linked either by a &quot;basedOn&quot; relationship (i.e. one request is fulfilling another) or by having a common requisition. Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation." />
+      <requirements value="Some business processes need to know if multiple items were ordered as part of the same &quot;requisition&quot; for billing or other purposes." />
+      <alias value="grouperId" />
+      <alias value="groupIdentifier" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="ProcedureRequest.requisition" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Identifier" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="CX / EI (occasionally, more often EI maps to a resource id or a URL)" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="II - see see identifier pattern at http://wiki.hl7.org/index.php?title=Common_Design_Patterns#Identifier_Pattern for relevant discussion. The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="Identifier" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="ORC.4" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.status">
+      <path value="ProcedureRequest.status" />
+      <short value="draft | active | suspended | completed | entered-in-error | cancelled" />
+      <definition value="The status of the order." />
+      <comment value="The status is generally fully in the control of the requester - they determine whether the order is draft or active and, after it has been activated, competed, cancelled or suspended. States relating to the activities of the performer are reflected on either the corresponding event (see [Event Pattern](event.html) for general discussion) or using the [Task](task.html) resource.&#xA;&#xA;This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid." />
       <min value="1" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.status" />
+        <path value="ProcedureRequest.status" />
         <min value="1" />
         <max value="1" />
       </base>
@@ -1553,12 +1709,12 @@
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DiagnosticReportStatus" />
+          <valueString value="ProcedureRequestStatus" />
         </extension>
         <strength value="required" />
-        <description value="The status of the diagnostic report as a whole." />
+        <description value="The status of a procedure or diagnostic order." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/diagnostic-report-status" />
+          <reference value="http://hl7.org/fhir/ValueSet/request-status" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -1567,36 +1723,185 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.status" />
+        <map value="Request.status" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="OBR-25 (not 1:1 mapping)" />
+        <map value="ORC.5" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="statusCode  Note: final and amended are distinguished by whether observation is the subject of a ControlAct event of type &quot;revise&quot;" />
+        <map value=".status" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="Action.currentStatus" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="status" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.category">
-      <path value="DiagnosticReport.category" />
-      <short value="Service category" />
-      <definition value="A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes." />
-      <comment value="The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code." />
-      <alias value="Department" />
-      <alias value="Sub-department" />
-      <alias value="Service" />
-      <alias value="Discipline" />
+    <element id="ProcedureRequest.intent">
+      <path value="ProcedureRequest.intent" />
+      <short value="proposal | plan | order +" />
+      <definition value="Whether the request is a proposal, plan, an original order or a reflex order." />
+      <comment value="This element is labeled as a modifier because the intent alters when and how the resource is actually applicable." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="ProcedureRequest.intent" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isModifier value="true" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ProcedureRequestIntent" />
+        </extension>
+        <strength value="required" />
+        <description value="The kind of procedure or diagnostic request" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/request-intent" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.intent" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".moodCode (nuances beyond PRP/PLAN/RQO would need to be elsewhere)" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="class" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.priority">
+      <path value="ProcedureRequest.priority" />
+      <short value="routine | urgent | asap | stat" />
+      <definition value="Indicates how quickly the ProcedureRequest should be addressed with respect to other requests." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="0" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.category" />
+        <path value="ProcedureRequest.priority" />
         <min value="0" />
         <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <meaningWhenMissing value="If missing, this task should be performed with normal priority" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ProcedureRequestPriority" />
+        </extension>
+        <strength value="required" />
+        <description value="Identifies the level of importance to be assigned to actioning the request" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/request-priority" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.priority" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="TQ1.9" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".priorityCode" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="class" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.doNotPerform">
+      <path value="ProcedureRequest.doNotPerform" />
+      <short value="True if procedure should not be performed" />
+      <definition value="Set this to true if the record is saying that the procedure should NOT be performed." />
+      <comment value="This element is labeled as a [modifier](conformance-rules.html#isModifier.html) because it indicates that a procedure shouldn't happen, instead of a request for it to happen.  In general, only the code and timeframe will be present, though occasional additional qualifiers such as body site or even performer could be included to narrow the scope of the prohibition.  If the ProcedureRequest.code and ProcedureRequest.doNotPerform both contain negation, that will reinforce prohibition and should not have a double negative interpretation." />
+      <requirements value="Used for do not ambulate, do not elevate head of bed, do not flush NG tube, do not take blood pressure on a certain arm, etc." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="ProcedureRequest.doNotPerform" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="boolean" />
+      </type>
+      <defaultValueBoolean value="false" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isModifier value="true" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".actionNegationInd" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.category">
+      <path value="ProcedureRequest.category" />
+      <short value="Classification of procedure" />
+      <definition value="A code that classifies the procedure for searching, sorting and display purposes (e.g. &quot;Surgical Procedure&quot;)." />
+      <comment value="There may be multiple axis of categorization depending on the context or use case for retrieving or displaying the resource.  The level of granularity is defined by the category concepts in the value set." />
+      <requirements value="Used for filtering what procedure request are retrieved and displayed." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="ProcedureRequest.category" />
+        <min value="0" />
+        <max value="*" />
       </base>
       <type>
         <code value="CodeableConcept" />
@@ -1612,12 +1917,12 @@
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DiagnosticServiceSection" />
+          <valueString value="ProcedureRequestCategory" />
         </extension>
         <strength value="example" />
-        <description value="Codes for diagnostic service sections." />
+        <description value="Classification of the procedure" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections" />
+          <reference value="http://hl7.org/fhir/ValueSet/procedure-category" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -1637,28 +1942,23 @@
         <map value="fhir:CodeableConcept rdfs:subClassOf dt:CD" />
       </mapping>
       <mapping>
-        <identity value="v2" />
-        <map value="OBR-24" />
-      </mapping>
-      <mapping>
         <identity value="rim" />
-        <map value="inboundRelationship[typeCode=COMP].source[classCode=LIST, moodCode=EVN, code &lt; LabService].code" />
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;INT&quot;].code" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="class" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.code">
-      <path value="DiagnosticReport.code" />
-      <short value="Name/Code for this diagnostic report" />
-      <definition value="A code or name that describes this diagnostic report." />
-      <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
-      <alias value="Type" />
+    <element id="ProcedureRequest.code">
+      <path value="ProcedureRequest.code" />
+      <short value="What is being requested/ordered" />
+      <definition value="A code that identifies a particular procedure, diagnostic investigation, or panel of investigations, that have been requested." />
+      <comment value="Many laboratory and radiology procedure codes embed the specimen/organ system in the test ordeer name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code." />
       <min value="1" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.code" />
+        <path value="ProcedureRequest.code" />
         <min value="1" />
         <max value="1" />
       </base>
@@ -1676,12 +1976,12 @@
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DiagnosticReportCodes" />
+          <valueString value="ProcedureRequestCode" />
         </extension>
-        <strength value="preferred" />
-        <description value="Codes that describe Diagnostic Reports." />
+        <strength value="example" />
+        <description value="Codes for tests/services that can be performed by procedure or diagnostic services.  For laboratory, LOINC is  (preferred)[http://hl7.org/fhir/STU3/terminologies.html#preferred] and a valueset using LOINC Order codes is available [here](valueset-diagnostic-requests.html)." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/report-codes" />
+          <reference value="http://hl7.org/fhir/ValueSet/procedure-code" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -1702,33 +2002,35 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.code" />
+        <map value="Request.code" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="OBR-4 (HL7 v2 doesn't provide an easy way to indicate both the ordered test and the performed panel)" />
+        <map value="Varies by domain" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="code" />
+        <map value=".code" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="Procedure.procedureCode" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="what" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.subject">
-      <path value="DiagnosticReport.subject" />
-      <short value="The subject of the report - usually, but not always, the patient" />
-      <definition value="The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources." />
+    <element id="ProcedureRequest.subject">
+      <path value="ProcedureRequest.subject" />
+      <short value="Individual the service is ordered for" />
+      <definition value="On whom or what the procedure or diagnostic is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans)." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
-      <requirements value="SHALL know the subject context." />
-      <alias value="Patient" />
       <min value="1" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.subject" />
-        <min value="0" />
+        <path value="ProcedureRequest.subject" />
+        <min value="1" />
         <max value="1" />
       </base>
       <type>
@@ -1737,11 +2039,11 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
       <type>
         <code value="Reference" />
@@ -1773,32 +2075,35 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.subject" />
+        <map value="Request.subject" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="PID-3 (no HL7 v2 mapping for Group or Device)" />
+        <map value="Accompanying PID segment" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="participation[typeCode=SBJ]" />
+        <map value=".participation[typeCode=SBJ].role" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="ClinicalStatement.subject" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="who.focus" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.context">
-      <path value="DiagnosticReport.context" />
-      <short value="Health care event when test ordered" />
-      <definition value="The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport per is about." />
-      <comment value="This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter or episode but still be tied to the context of the encounter or episode (e.g. pre-admission lab tests)." />
-      <requirements value="Links the request to the Encounter context." />
-      <alias value="Encounter" />
+    <element id="ProcedureRequest.context">
+      <path value="ProcedureRequest.context" />
+      <short value="Encounter or Episode during which request was created" />
+      <definition value="An encounter or episode of care that provides additional information about the healthcare context in which this request is made." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <alias value="encounter" />
       <min value="0" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.context" />
+        <path value="ProcedureRequest.context" />
         <min value="0" />
         <max value="1" />
       </base>
@@ -1836,34 +2141,34 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.context" />
+        <map value="Request.context" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="PV1-19" />
+        <map value="Accompanying PV1" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]" />
+        <map value=".inboundRelationship(typeCode=COMP].source[classCode&lt;=PCPR, moodCode=EVN]" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="ClinicalStatement.encounter" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="context" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.effective[x]">
-      <path value="DiagnosticReport.effective[x]" />
-      <short value="Clinically relevant time/time-period for report" />
-      <definition value="The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself." />
-      <comment value="If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic." />
-      <requirements value="Need to know where in the patient history to file/present this report." />
-      <alias value="Observation time" />
-      <alias value="Effective Time" />
-      <alias value="Occurrence" />
-      <min value="1" />
+    <element id="ProcedureRequest.occurrence[x]">
+      <path value="ProcedureRequest.occurrence[x]" />
+      <short value="When procedure should occur" />
+      <definition value="The date/time at which the diagnostic testing should occur." />
+      <alias value="schedule" />
+      <min value="0" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.effective[x]" />
+        <path value="ProcedureRequest.occurrence[x]" />
         <min value="0" />
         <max value="1" />
       </base>
@@ -1872,6 +2177,9 @@
       </type>
       <type>
         <code value="Period" />
+      </type>
+      <type>
+        <code value="Timing" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1888,39 +2196,88 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.occurrence[x]" />
+        <map value="Request.occurrence[x]" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="OBR-7" />
+        <map value="Accompanying TQ1/TQ2 segments" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="effectiveTime" />
+        <map value=".effectiveTime" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="Procedure.procedureSchedule" />
       </mapping>
       <mapping>
         <identity value="w5" />
-        <map value="when.done" />
+        <map value="when.planned" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.issued">
-      <path value="DiagnosticReport.issued" />
-      <short value="DateTime this version was released" />
-      <definition value="The date and time that this version of the report was released from the source diagnostic service." />
-      <comment value="May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report." />
-      <requirements value="Clinicians need to be able to check the date that the report was released." />
-      <alias value="Date Created" />
-      <alias value="Date published" />
-      <alias value="Date Issued" />
+    <element id="ProcedureRequest.asNeeded[x]">
+      <path value="ProcedureRequest.asNeeded[x]" />
+      <short value="Preconditions for procedure or diagnostic" />
+      <definition value="If a CodeableConcept is present, it indicates the pre-condition for performing the procedure.  For example &quot;pain&quot;, &quot;on flare-up&quot;, etc." />
       <min value="0" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.issued" />
+        <path value="ProcedureRequest.asNeeded[x]" />
         <min value="0" />
         <max value="1" />
       </base>
       <type>
-        <code value="instant" />
+        <code value="boolean" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ProcedureAsNeededReason" />
+        </extension>
+        <strength value="example" />
+        <description value="A coded concept identifying the pre-condition that should hold prior to performing a procedure.  For example &quot;pain&quot;, &quot;on flare-up&quot;, etc." />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/medication-as-needed-reason" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="boolean: precondition.negationInd (inversed - so negationInd = true means asNeeded=false CodeableConcept: precondition.observationEventCriterion[code=&quot;Assertion&quot;].value" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="Proposal.prnReason.reason" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.authoredOn">
+      <path value="ProcedureRequest.authoredOn" />
+      <short value="Date request signed" />
+      <definition value="When the request transitioned to being actionable." />
+      <alias value="orderedOn" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="ProcedureRequest.authoredOn" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="dateTime" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1936,33 +2293,39 @@
         <map value="n/a" />
       </mapping>
       <mapping>
+        <identity value="workflow" />
+        <map value="Request.authoredOn" />
+      </mapping>
+      <mapping>
         <identity value="v2" />
-        <map value="OBR-22" />
+        <map value="ORC.9" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="participation[typeCode=VRF or AUT].time" />
+        <map value=".participation[typeCode=AUT].time" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="Proposal.proposedAtTime" />
       </mapping>
       <mapping>
         <identity value="w5" />
         <map value="when.recorded" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.performer">
-      <path value="DiagnosticReport.performer" />
-      <short value="Participants in producing the report" />
-      <definition value="Indicates who or what participated in producing the report." />
-      <alias value="Laboratory" />
-      <alias value="Service" />
-      <alias value="Practitioner" />
-      <alias value="Department" />
-      <alias value="Company" />
+    <element id="ProcedureRequest.requester">
+      <path value="ProcedureRequest.requester" />
+      <short value="Who/what is requesting procedure or diagnostic" />
+      <definition value="The individual who initiated the request and has responsibility for its activation." />
+      <comment value="This not the dispatcher, but rather who is the authorizer." />
+      <alias value="author" />
+      <alias value="orderer" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
-        <path value="DiagnosticReport.performer" />
+        <path value="ProcedureRequest.requester" />
         <min value="0" />
-        <max value="*" />
+        <max value="1" />
       </base>
       <type>
         <code value="BackboneElement" />
@@ -1982,23 +2345,23 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.performer" />
+        <map value="Request.requester" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="PRT-8 (where this PRT-4-Participation = &quot;PO&quot;)" />
+        <map value="ORC.12" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value=".participation[typeCode=PRF]" />
+        <map value=".participation[typeCode=AUT].role" />
       </mapping>
       <mapping>
-        <identity value="w5" />
-        <map value="who.witness" />
+        <identity value="quick" />
+        <map value="ClinicalStatement.statementAuthor" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.performer.id">
-      <path value="DiagnosticReport.performer.id" />
+    <element id="ProcedureRequest.requester.id">
+      <path value="ProcedureRequest.requester.id" />
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
       <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
@@ -2026,8 +2389,8 @@
         <map value="n/a" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.performer.extension">
-      <path value="DiagnosticReport.performer.extension" />
+    <element id="ProcedureRequest.requester.extension">
+      <path value="ProcedureRequest.requester.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -2075,8 +2438,8 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.performer.modifierExtension">
-      <path value="DiagnosticReport.performer.modifierExtension" />
+    <element id="ProcedureRequest.requester.modifierExtension">
+      <path value="ProcedureRequest.requester.modifierExtension" />
       <short value="Extensions that cannot be ignored" />
       <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
@@ -2119,15 +2482,138 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.performer.role">
-      <path value="DiagnosticReport.performer.role" />
-      <short value="Type of performer" />
-      <definition value="Describes the type of participation (e.g.  a responsible party, author, or verifier)." />
-      <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+    <element id="ProcedureRequest.requester.agent">
+      <path value="ProcedureRequest.requester.agent" />
+      <short value="Individual making the request" />
+      <definition value="The device, practitioner or organization who initiated the request." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="ProcedureRequest.requester.agent" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
+        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.requester.agent" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="ORC.12" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".player" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="ClinicalStatement.statementAuthor" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="who.author" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.requester.onBehalfOf">
+      <path value="ProcedureRequest.requester.onBehalfOf" />
+      <short value="Organization agent is acting for" />
+      <definition value="The organization the device or practitioner was acting on behalf of." />
+      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <requirements value="Practitioners and Devices can be associated with multiple organizations.  This element indicates which organization they were acting on behalf of when authoring the request." />
       <min value="0" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.performer.role" />
+        <path value="ProcedureRequest.requester.onBehalfOf" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
+        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.requester.onBehalfOf" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".scoper" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.performerType">
+      <path value="ProcedureRequest.performerType" />
+      <short value="Performer role" />
+      <definition value="Desired type of performer for doing the diagnostic testing." />
+      <comment value="this is a  role, not  a participation type.  I.e. does not describe the task, but describes the capacity.  For example, “compounding pharmacy” or “psychiatrist” or “internal referral”." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="ProcedureRequest.performerType" />
         <min value="0" />
         <max value="1" />
       </base>
@@ -2145,12 +2631,12 @@
       <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="Role" />
+          <valueString value="ProcedureRequestParticipantRole" />
         </extension>
         <strength value="example" />
-        <description value="Indicate a role of diagnostic report performer" />
+        <description value="Indicates specific responsibility of an individual within the care team, such as &quot;Primary physician&quot;, &quot;Team coordinator&quot;, &quot;Caregiver&quot;, etc." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/performer-role" />
+          <reference value="http://hl7.org/fhir/ValueSet/participant-role" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -2171,30 +2657,49 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.performer.role" />
+        <map value="Request.performerType" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="PRT-8 (where this PRT-4-Participation = &quot;PO&quot;)" />
+        <map value="PRT" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value=".functionCode" />
+        <map value=".participation[typeCode=PRF].role[scoper.determinerCode=KIND].code" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="who.actor" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.performer.actor">
-      <path value="DiagnosticReport.performer.actor" />
-      <short value="Practitioner or Organization  participant" />
-      <definition value="The reference to the  practitioner or organization involved in producing the report. For example, the diagnostic service that is responsible for issuing the report." />
-      <comment value="This is not necessarily the source of the atomic data items. It is the entity that takes responsibility for the clinical report." />
-      <requirements value="Need to know whom to contact if there are queries about the results. Also may need to track the source of reports for secondary data analysis." />
+    <element id="ProcedureRequest.performer">
+      <path value="ProcedureRequest.performer" />
+      <short value="Requested perfomer" />
+      <definition value="The desired perfomer for doing the diagnostic testing.  For example, the surgeon, dermatopathologist, endoscopist, etc." />
+      <comment value="If needed, use an [extension](extensibility.html) for listing alternative performers and/or roles and/or preference." />
       <min value="1" />
       <max value="1" />
       <base>
-        <path value="DiagnosticReport.performer.actor" />
-        <min value="1" />
+        <path value="ProcedureRequest.performer" />
+        <min value="0" />
         <max value="1" />
       </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
@@ -2229,33 +2734,107 @@
       </mapping>
       <mapping>
         <identity value="workflow" />
-        <map value="Event.performer.actor" />
+        <map value="Request.Performer" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="PRT-8 (where this PRT-4-Participation = &quot;PO&quot;)" />
+        <map value="PRT" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value=".role" />
+        <map value=".participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="who.actor" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.specimen">
-      <path value="DiagnosticReport.specimen" />
-      <short value="Specimens this report is based on" />
-      <definition value="Details about the specimens on which this diagnostic report is based." />
-      <comment value="If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group." />
-      <requirements value="Need to be able to report information about the collected specimens on which the report is based." />
+    <element id="ProcedureRequest.reasonCode">
+      <path value="ProcedureRequest.reasonCode" />
+      <short value="Explanation/Justification for test" />
+      <definition value="An explanation or justification for why this diagnostic investigation is being requested in coded or textual form.   This is often for billing purposes.  May relate to the resources referred to in supportingInformation." />
+      <comment value="This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.   Use CodeableConcept text element if the data is free (uncoded) text as shown in the [CT Scan example](procedurerequest-example-di.html)." />
       <min value="0" />
       <max value="*" />
       <base>
-        <path value="DiagnosticReport.specimen" />
+        <path value="ProcedureRequest.reasonCode" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ProcedureRequestReason" />
+        </extension>
+        <strength value="example" />
+        <description value="Diagnosis or problem codes justifying the reason for requesting the procedure or diagnostic investigation." />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/procedure-reason" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="CE/CNE/CWE" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="CD" />
+      </mapping>
+      <mapping>
+        <identity value="orim" />
+        <map value="fhir:CodeableConcept rdfs:subClassOf dt:CD" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.reasonCod" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="ORC.16" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".reasonCode" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="why" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.reasonReference">
+      <path value="ProcedureRequest.reasonReference" />
+      <short value="Explanation/Justification for test" />
+      <definition value="Indicates another resource that provides a justification for why this diagnostic investigation is being requested.   May relate to the resources referred to in supportingInformation." />
+      <comment value="This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.   Use CodeableConcept text element if the data is free (uncoded) text as shown in the [CT Scan example](procedurerequest-example-di.html)." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="ProcedureRequest.reasonReference" />
         <min value="0" />
         <max value="*" />
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Specimen-1" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2272,6 +2851,7 @@
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
+      <isSummary value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -2281,32 +2861,33 @@
         <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
       </mapping>
       <mapping>
+        <identity value="workflow" />
+        <map value="Request.reasonReference" />
+      </mapping>
+      <mapping>
         <identity value="v2" />
-        <map value="SPM" />
+        <map value="ORC.16" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="participation[typeCode=SBJ]" />
+        <map value=".outboundRelationship[typeCode=RSON].target" />
+      </mapping>
+      <mapping>
+        <identity value="w5" />
+        <map value="why" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.result">
-      <path value="DiagnosticReport.result" />
-      <short value="Observations - simple, or complex nested groups" />
-      <definition value="Observations that are part of this diagnostic report. Observations can be simple name/value pairs (e.g. &quot;atomic&quot; results), or they can be grouping observations that include references to other members of the group (e.g. &quot;panels&quot;)." />
+    <element id="ProcedureRequest.supportingInfo">
+      <path value="ProcedureRequest.supportingInfo" />
+      <short value="Pre-requisites for test" />
+      <definition value="Additional clinical information about the patient or specimen that may influence the procedure or diagnostics or their interpretations.     This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as &quot;ask at order entry questions (AOEs)&quot;.  This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example,  reporting the amount of inspired oxygen for blood gas measurements." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
-      <requirements value="Need to support individual results, or report groups of results, where the result grouping is arbitrary, but meaningful. This structure is recursive - observations can contain observations." />
-      <alias value="Data" />
-      <alias value="Atomic Value" />
-      <alias value="Result" />
-      <alias value="Atomic result" />
-      <alias value="Test" />
-      <alias value="Analyte" />
-      <alias value="Battery" />
-      <alias value="Organizer" />
+      <alias value="Ask at order entry question" />
+      <alias value="AOE" />
       <min value="0" />
       <max value="*" />
       <base>
-        <path value="DiagnosticReport.result" />
+        <path value="ProcedureRequest.supportingInfo" />
         <min value="0" />
         <max value="*" />
       </base>
@@ -2338,272 +2919,33 @@
         <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
       </mapping>
       <mapping>
-        <identity value="v2" />
-        <map value="OBXs" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="outboundRelationship[typeCode=COMP].target" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.imagingStudy">
-      <path value="DiagnosticReport.imagingStudy" />
-      <short value="Reference to full details of imaging associated with the diagnostic report" />
-      <definition value="One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images." />
-      <comment value="ImagingStudy and ImageManifest and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However each caters to different types of displays for different types of purposes. Neither, either, or both may be provided." />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="DiagnosticReport.imagingStudy" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingManifest" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ref-1" />
-        <severity value="error" />
-        <human value="SHALL have a contained resource if a local reference is provided" />
-        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
-        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="outboundRelationship[typeCode=COMP].target[classsCode=DGIMG, moodCode=EVN]" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.image">
-      <path value="DiagnosticReport.image" />
-      <short value="Key images associated with this report" />
-      <definition value="A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)." />
-      <requirements value="Many diagnostic services include images in the report as part of their service." />
-      <alias value="DICOM" />
-      <alias value="Slides" />
-      <alias value="Scans" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="DiagnosticReport.image" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="BackboneElement" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
+        <identity value="workflow" />
+        <map value="Request.supportingInformation" />
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="OBX?" />
+        <map value="Accompanying segments" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="outboundRelationship[typeCode=COMP].target" />
+        <map value=".outboundRelationship[typeCode=PERT].target" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.image.id">
-      <path value="DiagnosticReport.image.id" />
-      <representation value="xmlAttr" />
-      <short value="xml:id (or equivalent in JSON)" />
-      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
-      <comment value="Note that FHIR strings may not exceed 1MB in size" />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="Element.id" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.image.extension">
-      <path value="DiagnosticReport.image.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <description value="Extensions are always sliced by (at least) url" />
-        <rules value="open" />
-      </slicing>
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
+    <element id="ProcedureRequest.specimen">
+      <path value="ProcedureRequest.specimen" />
+      <short value="Procedure Samples" />
+      <definition value="One or more specimens that the laboratory procedure will use." />
+      <comment value="Many diagnostic procedures need a specimen, but the request itself is not actually about the specimen. This element is for when the diagnostic is requested on already existing specimens and the request points to the specimen it applies to.    Conversely, If the request is entered first with an unknown specimen, The [Specimen](specimen.html) resource references to the ProcedureRequest." />
       <min value="0" />
       <max value="*" />
       <base>
-        <path value="Element.extension" />
+        <path value="ProcedureRequest.specimen" />
         <min value="0" />
         <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.image.modifierExtension">
-      <path value="DiagnosticReport.image.modifierExtension" />
-      <short value="Extensions that cannot be ignored" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions." />
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
-      <alias value="extensions" />
-      <alias value="user content" />
-      <alias value="modifiers" />
-      <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="BackboneElement.modifierExtension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Extension" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <isModifier value="true" />
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.image.comment">
-      <path value="DiagnosticReport.image.comment" />
-      <short value="Comment about the image (e.g. explanation)" />
-      <definition value="A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features." />
-      <comment value="The comment should be displayed with the image. It would be common for the report to include additional discussion of the image contents in other sections such as the conclusion." />
-      <requirements value="The provider of the report should make a comment about each image included in the report." />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="DiagnosticReport.image.comment" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value=".inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.image.link">
-      <path value="DiagnosticReport.image.link" />
-      <short value="Reference to the image source" />
-      <definition value="Reference to the image source." />
-      <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
-      <min value="1" />
-      <max value="1" />
-      <base>
-        <path value="DiagnosticReport.image.link" />
-        <min value="1" />
-        <max value="1" />
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2630,57 +2972,25 @@
         <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
       </mapping>
       <mapping>
-        <identity value="rim" />
-        <map value=".value.reference" />
-      </mapping>
-    </element>
-    <element id="DiagnosticReport.conclusion">
-      <path value="DiagnosticReport.conclusion" />
-      <short value="Clinical Interpretation of test results" />
-      <definition value="Concise and clinically contextualized impression / summary of the diagnostic report." />
-      <comment value="Note that FHIR strings may not exceed 1MB in size" />
-      <requirements value="Need to be able to provide a conclusion that is not lost among the basic result data." />
-      <alias value="Report" />
-      <min value="0" />
-      <max value="1" />
-      <base>
-        <path value="DiagnosticReport.conclusion" />
-        <min value="0" />
-        <max value="1" />
-      </base>
-      <type>
-        <code value="string" />
-      </type>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() | (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
         <identity value="v2" />
-        <map value="OBX" />
+        <map value="SPM" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="inboundRelationship[typeCode=&quot;SPRT&quot;].source[classCode=OBS, moodCode=EVN, code=LOINC:48767-8].value (type=ST)" />
+        <map value=".participation[typeCode=SPC].role" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.codedDiagnosis">
-      <path value="DiagnosticReport.codedDiagnosis" />
-      <short value="Codes for the conclusion" />
-      <definition value="Codes for the conclusion." />
-      <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+    <element id="ProcedureRequest.bodySite">
+      <path value="ProcedureRequest.bodySite" />
+      <short value="Location on Body" />
+      <definition value="Anatomic location where the procedure should be performed. This is the target site." />
+      <comment value="Only used if not implicit in the code found in ProcedureRequest.type.  If the use case requires BodySite to be handled as a separate resource instead of an inline coded element (e.g. to identify and track separately)  then use the standard extension [procedurerequest-targetBodySite](extension-procedurerequest-targetbodysite.html)." />
+      <requirements value="Knowing where the procedure is performed is important for tracking if multiple sites are possible." />
+      <alias value="location" />
       <min value="0" />
       <max value="*" />
       <base>
-        <path value="DiagnosticReport.codedDiagnosis" />
+        <path value="ProcedureRequest.bodySite" />
         <min value="0" />
         <max value="*" />
       </base>
@@ -2695,14 +3005,15 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <isSummary value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="AdjunctDiagnosis" />
+          <valueString value="BodySite" />
         </extension>
         <strength value="example" />
-        <description value="Diagnosis codes provided as adjuncts to the report." />
+        <description value="Codes describing anatomical locations. May include laterality." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/clinical-findings" />
+          <reference value="http://hl7.org/fhir/ValueSet/body-site" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -2723,28 +3034,84 @@
       </mapping>
       <mapping>
         <identity value="v2" />
-        <map value="OBX" />
+        <map value="SPM" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="inboundRelationship[typeCode=SPRT].source[classCode=OBS, moodCode=EVN, code=LOINC:54531-9].value (type=CD)" />
+        <map value="targetSiteCode" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="Procedure.targetBodySite" />
       </mapping>
     </element>
-    <element id="DiagnosticReport.presentedForm">
-      <path value="DiagnosticReport.presentedForm" />
-      <short value="Entire report as issued" />
-      <definition value="Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent." />
-      <comment value="&quot;application/pdf&quot; is recommended as the most reliable and interoperable in this context." />
-      <requirements value="Gives laboratory the ability to provide its own fully formatted report for clinical fidelity." />
+    <element id="ProcedureRequest.note">
+      <path value="ProcedureRequest.note" />
+      <short value="Comments" />
+      <definition value="Any other notes and comments made about the service request. For example, letting provider know that &quot;patient hates needles&quot; or other provider instructions." />
+      <comment value="For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate &quot;modifying&quot; information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible)." />
       <min value="0" />
       <max value="*" />
       <base>
-        <path value="DiagnosticReport.presentedForm" />
+        <path value="ProcedureRequest.note" />
         <min value="0" />
         <max value="*" />
       </base>
       <type>
-        <code value="Attachment" />
+        <code value="Annotation" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="N/A" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="Act" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.note" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="NTE" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value=".inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]" />
+      </mapping>
+      <mapping>
+        <identity value="quick" />
+        <map value="ClinicalStatement.additionalText" />
+      </mapping>
+    </element>
+    <element id="ProcedureRequest.relevantHistory">
+      <path value="ProcedureRequest.relevantHistory" />
+      <short value="Request provenance" />
+      <definition value="Key events in the history of the request." />
+      <comment value="This may not include provenances for all versions of the request – only those deemed “relevant” or important.&#xD;This SHALL NOT include the Provenance associated with this current version of the resource.  (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update.  Until then, it can be queried directly as the Provenance that points to this version using _revinclude&#xD;All Provenances should have some historical version of this Request as their subject." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="ProcedureRequest.relevantHistory" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Provenance" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2755,52 +3122,45 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
-        <key value="att-1" />
+        <key value="ref-1" />
         <severity value="error" />
-        <human value="It the Attachment has data, it SHALL have a contentType" />
-        <expression value="data.empty() or contentType.exists()" />
-        <xpath value="not(exists(f:data)) or exists(f:contentType)" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))" />
+        <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
       </constraint>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
       </mapping>
       <mapping>
+        <identity value="rim" />
+        <map value="The target of a resource reference is a RIM entry point (Act, Role, or Entity)" />
+      </mapping>
+      <mapping>
+        <identity value="workflow" />
+        <map value="Request.relevantHistory" />
+      </mapping>
+      <mapping>
         <identity value="v2" />
-        <map value="ED/RP" />
+        <map value="N/A" />
       </mapping>
       <mapping>
         <identity value="rim" />
-        <map value="ED" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="OBX" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="text (type=ED)" />
+        <map value=".inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]" />
       </mapping>
     </element>
   </snapshot>
   <differential>
-    <element id="DiagnosticReport.basedOn">
-      <path value="DiagnosticReport.basedOn" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
-      </type>
-    </element>
-    <element id="DiagnosticReport.subject">
-      <path value="DiagnosticReport.subject" />
+    <element id="ProcedureRequest.identifier">
+      <path value="ProcedureRequest.identifier" />
       <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="ProcedureRequest.subject">
+      <path value="ProcedureRequest.subject" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
       </type>
       <type>
         <code value="Reference" />
@@ -2808,15 +3168,47 @@
       </type>
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
       </type>
     </element>
-    <element id="DiagnosticReport.effective[x]">
-      <path value="DiagnosticReport.effective[x]" />
-      <min value="1" />
+    <element id="ProcedureRequest.requester.agent">
+      <path value="ProcedureRequest.requester.agent" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
     </element>
-    <element id="DiagnosticReport.performer.actor">
-      <path value="DiagnosticReport.performer.actor" />
+    <element id="ProcedureRequest.performer">
+      <path value="ProcedureRequest.performer" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
@@ -2826,15 +3218,9 @@
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
     </element>
-    <element id="DiagnosticReport.specimen">
-      <path value="DiagnosticReport.specimen" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Specimen-1" />
-      </type>
-    </element>
-    <element id="DiagnosticReport.result">
-      <path value="DiagnosticReport.result" />
+    <element id="ProcedureRequest.supportingInfo">
+      <path value="ProcedureRequest.supportingInfo" />
+      <short value="Pre-requisites for test" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
