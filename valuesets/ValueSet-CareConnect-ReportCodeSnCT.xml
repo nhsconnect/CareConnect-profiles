@@ -15,7 +15,7 @@
 			<filter>
 				<property value="constraint"/>
 				<op value="="/>
-				<value value="(&lt;&lt;371525003 | Report of procedure)"/>
+				<value value="(&lt;&lt;371525003 | Clinical procedure report (record artifact))"/>
 			</filter>
 		</include>
 	</compose>
