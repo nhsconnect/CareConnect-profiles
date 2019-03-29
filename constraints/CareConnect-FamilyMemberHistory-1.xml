@@ -7,21 +7,21 @@
     <valueCode value="pc" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1" />
-  <version value="0.0.2" />
+  <version value="1.0.0" />
   <name value="CareConnect-FamilyMemberHistory-1" />
   <status value="draft" />
   <date value="2017-07-12T15:03:45.0156449+01:00" />
-  <publisher value="HL7 UK" />
+  <publisher value="NHS Digital" />
   <contact>
-    <name value="INTEROPen" />
+    <name value="Interoperability Team" />
     <telecom>
       <system value="email" />
-      <value value="admin@interopen.org" />
+      <value value="interoperabilityteam@nhs.net" />
       <use value="work" />
     </telecom>
   </contact>
   <description value="Significant health events and conditions for a person related to the patient relevant in the context of care for the patient." />
-  <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/" />
+  <purpose value="[NOT CURATED BY INTEROPEN see: http://www.interopen.org/careconnect-curation-methodology/] Initial development for the Digital Maternity programme" />
   <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -3622,7 +3622,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -4984,10 +4984,6 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-      </type>
-      <type>
         <code value="string" />
       </type>
       <type>
@@ -4997,6 +4993,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5966,7 +5966,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -6884,7 +6884,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="0" />
+      <max value="1" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -7292,10 +7292,6 @@
         <max value="1" />
       </base>
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-      </type>
-      <type>
         <code value="string" />
       </type>
       <type>
@@ -7305,6 +7301,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -7502,10 +7502,6 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="FamilyMemberHistory.relationship.coding:snomedCT.version">
-      <path value="FamilyMemberHistory.relationship.coding.version" />
-      <max value="0" />
-    </element>
     <element id="FamilyMemberHistory.relationship.coding:snomedCT.code">
       <path value="FamilyMemberHistory.relationship.coding.code" />
       <min value="1" />
@@ -7554,10 +7550,6 @@
     <element id="FamilyMemberHistory.note.author[x]">
       <path value="FamilyMemberHistory.note.author[x]" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-      </type>
-      <type>
         <code value="string" />
       </type>
       <type>
@@ -7567,6 +7559,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
       </type>
     </element>
     <element id="FamilyMemberHistory.condition.code.coding">
@@ -7607,10 +7603,6 @@
       <path value="FamilyMemberHistory.condition.code.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="FamilyMemberHistory.condition.code.coding:snomedCT.version">
-      <path value="FamilyMemberHistory.condition.code.coding.version" />
-      <max value="0" />
     </element>
     <element id="FamilyMemberHistory.condition.code.coding:snomedCT.code">
       <path value="FamilyMemberHistory.condition.code.coding.code" />
@@ -7662,10 +7654,6 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.version">
-      <path value="FamilyMemberHistory.condition.outcome.coding.version" />
-      <max value="0" />
-    </element>
     <element id="FamilyMemberHistory.condition.outcome.coding:snomedCT.code">
       <path value="FamilyMemberHistory.condition.outcome.coding.code" />
       <min value="1" />
@@ -7680,10 +7668,6 @@
     <element id="FamilyMemberHistory.condition.note.author[x]">
       <path value="FamilyMemberHistory.condition.note.author[x]" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-      </type>
-      <type>
         <code value="string" />
       </type>
       <type>
@@ -7693,6 +7677,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
       </type>
     </element>
   </differential>
