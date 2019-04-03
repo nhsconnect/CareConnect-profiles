@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-InspiredOxygen-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-InspiredOxygen-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Inspired Oxygen"/>
+	<status value="draft"/>
+	<date value="2018-10-19T00:00:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A code from the SNOMED Clinical Terminology UK coding system which describes whether a patient requires oxygen or is breathing room air."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<filter>
+				<property value="constraint"/>
+				<op value="="/>
+				<value value="(722742002 |Breathing room air| OR 371825009 |Patient on oxygen|)"/>
+			</filter>
+		</include>
+	</compose>
+</ValueSet>
