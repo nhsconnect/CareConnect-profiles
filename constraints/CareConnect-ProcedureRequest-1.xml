@@ -14,7 +14,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Procedure Request" />
+  <description value="Deatails provided by a healthcare provider regarding any a procedure that has been requested, for example a full blood count (FBC) for a patient." />
   <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/" />
   <copyright value="Copyright © 2019 HL7 UK&#xD; &#xD;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD; &#xD;http://www.apache.org/licenses/LICENSE-2.0&#xD; &#xD;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD; &#xD;HL7® FHIR® standard Copyright © 2011+ HL7&#xD; &#xD;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD; &#xD;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
@@ -1990,7 +1990,7 @@
     <element id="ProcedureRequest.category.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="ProcedureRequest.category.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -2634,7 +2634,7 @@
     <element id="ProcedureRequest.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="ProcedureRequest.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -4002,7 +4002,7 @@
     <element id="ProcedureRequest.reasonCode.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="ProcedureRequest.reasonCode.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -4804,7 +4804,7 @@
     <element id="ProcedureRequest.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="ProcedureRequest.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
