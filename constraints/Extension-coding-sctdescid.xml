@@ -4,7 +4,7 @@
     <lastUpdated value="2018-02-26T10:48:04.064+00:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="Extension-coding-sctdescid" />
   <status value="draft" />
   <date value="2018-11-05" />
@@ -34,6 +34,10 @@
   <context value="MedicationStatement" />
   <context value="Procedure" />
   <context value="Medication" />
+  <context value="DiagnosticReport" />
+  <context value="Specimen" />
+  <context value="ProcedureRequest" />
+  <context value="MedicationAdministration" />
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
