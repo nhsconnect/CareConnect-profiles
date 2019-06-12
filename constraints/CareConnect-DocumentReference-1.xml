@@ -3519,7 +3519,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -3538,7 +3538,7 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <description value="SNOMED CT Document Type" />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DocumentType-1" />
@@ -9732,7 +9732,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -9751,7 +9751,7 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <description value="Correspondence care setting type" />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1" />
@@ -12100,8 +12100,9 @@
     <element id="DocumentReference.type.coding:snomedCT">
       <path value="DocumentReference.type.coding" />
       <sliceName value="snomedCT" />
+      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <description value="SNOMED CT Document Type" />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DocumentType-1" />
@@ -12234,8 +12235,9 @@
     <element id="DocumentReference.context.practiceSetting.coding:snomedCT">
       <path value="DocumentReference.context.practiceSetting.coding" />
       <sliceName value="snomedCT" />
+      <max value="1" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <description value="Correspondence care setting type" />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1" />
