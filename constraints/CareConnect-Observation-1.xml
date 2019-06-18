@@ -7,10 +7,10 @@
     <valueCode value="oo" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-  <version value="1.1.0" />
+  <version value="1.2.0" />
   <name value="CareConnect-Observation-1" />
   <status value="draft" />
-  <date value="2019-04-03" />
+  <date value="2019-06-17" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -2710,7 +2710,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -2726,15 +2726,15 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ReferralRequest" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1" />
       </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationRequest-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4783,7 +4783,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -5128,7 +5128,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -6732,7 +6732,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -7105,6 +7105,13 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="preferred" />
+        <description value=" A code from the SNOMED Clinical Terminology UK with the expression (&lt;&lt;442083009 |anatomical or acquired body structure|)." />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-BodySite-1 " />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -7655,7 +7662,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -8457,7 +8464,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Specimen-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14461,7 +14468,7 @@
       <short value="Fulfills plan, proposal or order." />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -14477,15 +14484,15 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ReferralRequest" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1" />
       </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationRequest-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
       </type>
     </element>
     <element id="Observation.code.coding">
@@ -14572,7 +14579,7 @@
       <path value="Observation.context" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -14583,7 +14590,7 @@
       <path value="Observation.performer" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -14643,7 +14650,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -14653,6 +14660,13 @@
       <path value="Observation.bodySite.coding" />
       <sliceName value="snomedCT" />
       <max value="1" />
+      <binding>
+        <strength value="preferred" />
+        <description value=" A code from the SNOMED Clinical Terminology UK with the expression (&lt;&lt;442083009 |anatomical or acquired body structure|)." />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-BodySite-1 " />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.bodySite.coding:snomedCT.extension">
       <path value="Observation.bodySite.coding.extension" />
@@ -14697,7 +14711,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code" />
+          <path value="system" />
         </discriminator>
         <ordered value="false" />
         <rules value="open" />
@@ -14752,6 +14766,13 @@
       </extension>
       <path value="Observation.method.coding.display" />
       <min value="1" />
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Specimen-1" />
+      </type>
     </element>
     <element id="Observation.related.target">
       <path value="Observation.related.target" />
