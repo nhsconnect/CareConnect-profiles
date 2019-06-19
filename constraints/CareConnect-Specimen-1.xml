@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Specimen-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-Specimen-1" />
   <status value="draft" />
-  <date value="2019-02-19T09:49:34.736+00:00" />
+  <date value="2019-06-19" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -384,7 +384,7 @@
       <short value="External Identifier" />
       <definition value="Id for specimen." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="Specimen.identifier" />
         <min value="0" />
@@ -627,7 +627,7 @@
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Identifier.system" />
@@ -672,7 +672,7 @@
       <short value="The value that is unique" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html)." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Identifier.value" />
@@ -1660,7 +1660,7 @@
     <element id="Specimen.type.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Specimen.type.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -1716,6 +1716,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://snomed.info/sct" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1748,7 +1749,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -2277,7 +2278,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Element.extension" />
         <min value="0" />
@@ -2774,7 +2775,7 @@
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -2909,7 +2910,7 @@
     <element id="Specimen.collection.bodySite.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Specimen.collection.bodySite.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -2965,6 +2966,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://snomed.info/sct" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -2997,7 +2999,7 @@
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
       <comment value="Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="Coding.version" />
         <min value="0" />
@@ -4642,9 +4644,13 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Specimen.identifier">
-      <path value="Specimen.identifier" />
-      <max value="1" />
+    <element id="Specimen.identifier.system">
+      <path value="Specimen.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Specimen.identifier.value">
+      <path value="Specimen.identifier.value" />
+      <min value="1" />
     </element>
     <element id="Specimen.identifier.assigner">
       <path value="Specimen.identifier.assigner" />
@@ -4702,6 +4708,11 @@
     <element id="Specimen.type.coding:snomedCT.system">
       <path value="Specimen.type.coding.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Specimen.type.coding:snomedCT.version">
+      <path value="Specimen.type.coding.version" />
+      <max value="0" />
     </element>
     <element id="Specimen.type.coding:snomedCT.code">
       <path value="Specimen.type.coding.code" />
@@ -4760,6 +4771,7 @@
     <element id="Specimen.collection.extension:fastingStatus">
       <path value="Specimen.collection.extension" />
       <sliceName value="fastingStatus" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-FastingStatus-1" />
@@ -4785,6 +4797,7 @@
     <element id="Specimen.collection.bodySite.coding:snomedCT">
       <path value="Specimen.collection.bodySite.coding" />
       <sliceName value="snomedCT" />
+      <max value="1" />
       <binding>
         <strength value="extensible" />
         <description value="A code from the SNOMED Clinical Terminology UK" />
@@ -4814,6 +4827,11 @@
     <element id="Specimen.collection.bodySite.coding:snomedCT.system">
       <path value="Specimen.collection.bodySite.coding.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Specimen.collection.bodySite.coding:snomedCT.version">
+      <path value="Specimen.collection.bodySite.coding.version" />
+      <max value="0" />
     </element>
     <element id="Specimen.collection.bodySite.coding:snomedCT.code">
       <path value="Specimen.collection.bodySite.coding.code" />
