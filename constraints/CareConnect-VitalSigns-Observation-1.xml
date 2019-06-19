@@ -13683,6 +13683,13 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -16052,10 +16059,6 @@
     <element id="Observation.method.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="Observation.method.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display." />
-      <definition value="The SNOMED CT Description ID for the display." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid" />
@@ -16155,6 +16158,13 @@
     <element id="Observation.component.code.coding:loinc.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.component.code.coding:snomedCT">
       <path value="Observation.component.code.coding" />
