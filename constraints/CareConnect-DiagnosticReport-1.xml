@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DiagnosticReport-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-DiagnosticReport-1" />
   <status value="draft" />
-  <date value="2019-02-18T16:31:05.839+00:00" />
+  <date value="2019-06-18" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -14,7 +14,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A test report for National Pathology that contains data on the pathology tests performed on patients specimens populated by the performing orgnaisation. " />
+  <description value="A test report for National Pathology that contains data on the pathology tests performed on patients specimens populated by the performing organisation. " />
   <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/" />
   <copyright value="Copyright © 2019 HL7 UK&#xD; &#xD;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD; &#xD;http://www.apache.org/licenses/LICENSE-2.0&#xD; &#xD;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD; &#xD;HL7® FHIR® standard Copyright © 2011+ HL7&#xD; &#xD;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD; &#xD;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
@@ -2135,7 +2135,7 @@
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Identifier.system" />
@@ -2180,7 +2180,7 @@
       <short value="The value that is unique" />
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
       <comment value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html)." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Identifier.value" />
@@ -2445,7 +2445,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2691,6 +2691,18 @@
         <min value="0" />
         <max value="*" />
       </base>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationRequest-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1" />
+      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
@@ -3613,7 +3625,7 @@
     <element id="DiagnosticReport.category.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="DiagnosticReport.category.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -4551,7 +4563,7 @@
     <element id="DiagnosticReport.code.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="DiagnosticReport.code.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -8248,7 +8260,7 @@
     <element id="DiagnosticReport.codedDiagnosis.coding:snomedCT.extension:snomedCTDescriptionID">
       <path value="DiagnosticReport.codedDiagnosis.coding.extension" />
       <sliceName value="snomedCTDescriptionID" />
-      <short value="The SNOMED CT Description ID for the display" />
+      <short value="The SNOMED CT Description ID for the display." />
       <definition value="The SNOMED CT Description ID for the display." />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
@@ -9008,8 +9020,35 @@
     </element>
   </snapshot>
   <differential>
+    <element id="DiagnosticReport.identifier.system">
+      <path value="DiagnosticReport.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier.value">
+      <path value="DiagnosticReport.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="DiagnosticReport.identifier.assigner">
+      <path value="DiagnosticReport.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+      </type>
+    </element>
     <element id="DiagnosticReport.basedOn">
       <path value="DiagnosticReport.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationRequest-1" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1" />
+      </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1" />
