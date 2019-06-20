@@ -8315,10 +8315,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ObservationCode" />
         </extension>
-        <strength value="example" />
-        <description value="Codes identifying names of simple observations." />
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/observation-codes" />
+          <reference value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -10375,6 +10375,19 @@
     <element id="Observation.component:diastolicComponent">
       <path value="Observation.component" />
       <sliceName value="diastolicComponent" />
+    </element>
+    <element id="Observation.component:diastolicComponent.code">
+      <path value="Observation.component.code" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationCode" />
+        </extension>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.component:diastolicComponent.code.coding">
       <path value="Observation.component.code.coding" />
