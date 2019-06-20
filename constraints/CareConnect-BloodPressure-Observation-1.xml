@@ -6855,6 +6855,13 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+        </valueSetReference>
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -8512,6 +8519,11 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetUri value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -10258,6 +10270,13 @@
       <short value="Systolic Blood Pressure" />
       <min value="1" />
       <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.component:systolicComponent.code.coding:loinc.system">
       <path value="Observation.component.code.coding.system" />
@@ -10373,6 +10392,11 @@
       <short value="Diastolic Blood Pressure" />
       <min value="1" />
       <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="This value set indicates the allowed vital sign result types" />
+        <valueSetUri value="http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html" />
+      </binding>
     </element>
     <element id="Observation.component:diastolicComponent.code.coding:loinc.system">
       <path value="Observation.component.code.coding.system" />
