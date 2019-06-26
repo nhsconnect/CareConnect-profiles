@@ -4,10 +4,10 @@
     <lastUpdated value="2018-05-10T14:14:34.695+01:00" />
   </meta>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1" />
-  <version value="1.2.0" />
+  <version value="1.3.0" />
   <name value="CareConnect-List-1" />
   <status value="draft" />
-  <date value="2018-11-05" />
+  <date value="2019-06-26" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -403,7 +403,7 @@
       <alias value="extensions" />
       <alias value="user content" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
