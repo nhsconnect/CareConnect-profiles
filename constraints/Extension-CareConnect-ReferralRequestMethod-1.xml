@@ -4,7 +4,7 @@
   <version value="1.0.0" />
   <name value="Extension-CareConnect-ReferralRequestMethod-1" />
   <status value="draft" />
-  <date value="2019-07-16T16:19:24.537+01:00" />
+  <date value="2019-07-17" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -28,7 +28,7 @@
   <snapshot>
     <element id="Extension">
       <path value="Extension" />
-      <short value="The method used to send or receive a Referral Request " />
+      <short value="The method used to communicate the referral such as fax, NHS e-Referral Service, secure email, etc..." />
       <definition value="The method used to send or receive a Referral Request." />
       <min value="0" />
       <max value="*" />
@@ -173,7 +173,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <short value="Value of extension" />
@@ -289,7 +289,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding">
       <path value="Extension.valueCodeableConcept.coding" />
       <short value="Code defined by a terminology system" />
       <definition value="A reference to a code defined by a terminology system." />
@@ -428,7 +428,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding.system">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding.system">
       <path value="Extension.valueCodeableConcept.coding.system" />
       <short value="Identity of the terminology system" />
       <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
@@ -471,7 +471,7 @@
         <map value="fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding.version">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding.version">
       <path value="Extension.valueCodeableConcept.coding.version" />
       <short value="Version of the system - if relevant" />
       <definition value="The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged." />
@@ -599,7 +599,7 @@
         <map value="fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" />
       </mapping>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding.userSelected">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding.userSelected">
       <path value="Extension.valueCodeableConcept.coding.userSelected" />
       <short value="If this coding was chosen directly by the user" />
       <definition value="Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays)." />
@@ -690,14 +690,14 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="The method used to send or receive a Referral Request " />
+      <short value="The method used to communicate the referral such as fax, NHS e-Referral Service, secure email, etc..." />
       <definition value="The method used to send or receive a Referral Request." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReferralRequestMethod-1" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <min value="1" />
@@ -710,7 +710,7 @@
         <valueSetUri value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReferralRequestMethod-1" />
       </binding>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding">
       <path value="Extension.valueCodeableConcept.coding" />
       <max value="1" />
       <binding>
@@ -721,15 +721,15 @@
         </valueSetReference>
       </binding>
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding.system">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding.system">
       <path value="Extension.valueCodeableConcept.coding.system" />
       <fixedUri value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ReferralRequestMethod-1" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding.version">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding.version">
       <path value="Extension.valueCodeableConcept.coding.version" />
       <max value="0" />
     </element>
-    <element id="Extension.value[x]:valueCodeableConcept.coding.userSelected">
+    <element id="Extension.valueCodeableConcept:valueCodeableConcept.coding.userSelected">
       <path value="Extension.valueCodeableConcept.coding.userSelected" />
       <max value="0" />
     </element>
