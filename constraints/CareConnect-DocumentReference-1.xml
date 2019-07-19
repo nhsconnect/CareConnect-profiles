@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="CareConnect-DocumentReference-1" />
   <status value="draft" />
-  <date value="2019-06-12T10:13:16.699+01:00" />
+  <date value="2019-07-19" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -14,8 +14,9 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The DocumentReference resource is used to describe a document that is made available to a healthcare system. Note: this profile has not been curated or technically reviewed by INTEROPen." />
-  <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
+  <description value="The DocumentReference resource is used to describe a document that is made available to a healthcare system." />
+  <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/ on the 5th July 2019." />
+  <copyright value="Copyright © 2019 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -3016,7 +3017,7 @@
     </element>
     <element id="DocumentReference.type">
       <path value="DocumentReference.type" />
-      <short value="Kind of document " />
+      <short value="Type of document " />
       <definition value="Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced." />
       <comment value="Key metadata element describing the document, used in searching/filtering." />
       <min value="1" />
@@ -4346,7 +4347,7 @@
     <element id="DocumentReference.created">
       <path value="DocumentReference.created" />
       <short value="Document creation time" />
-      <definition value="When the document was created." />
+      <definition value="When the document was created. Creation/Edit datetime of the document - event date" />
       <comment value="Creation time is used for tracking, organizing versions and searching. This is the creation time of the document, not the source material on which it is based." />
       <min value="0" />
       <max value="1" />
@@ -11282,7 +11283,7 @@
     </element>
     <element id="DocumentReference.type">
       <path value="DocumentReference.type" />
-      <short value="Kind of document " />
+      <short value="Type of document " />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DocumentC80Type" />
@@ -11332,6 +11333,10 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
       </type>
+    </element>
+    <element id="DocumentReference.created">
+      <path value="DocumentReference.created" />
+      <definition value="When the document was created. Creation/Edit datetime of the document - event date" />
     </element>
     <element id="DocumentReference.author">
       <path value="DocumentReference.author" />
