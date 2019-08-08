@@ -4,7 +4,7 @@
   <version value="1.1.0" />
   <name value="CareConnect-DocumentReference-1" />
   <status value="draft" />
-  <date value="2019-07-19" />
+  <date value="2019-08-07" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -3308,7 +3308,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://snomed.info/sct" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -9118,7 +9117,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://snomed.info/sct" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -11298,7 +11296,6 @@
     <element id="DocumentReference.type.coding.system">
       <path value="DocumentReference.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="DocumentReference.type.coding.version">
       <path value="DocumentReference.type.coding.version" />
@@ -11405,10 +11402,6 @@
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1" />
         </valueSetReference>
       </binding>
-    </element>
-    <element id="DocumentReference.context.practiceSetting.coding.system">
-      <path value="DocumentReference.context.practiceSetting.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="DocumentReference.context.sourcePatientInfo">
       <path value="DocumentReference.context.sourcePatientInfo" />
