@@ -7,7 +7,7 @@
 	<status value="draft"/>
 	<date value="2019-09-04T14:30:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="A ValueSet that identifies the kind of relationship that exists with a target condition."/>
+	<description value="A ValueSet that identifies the kind of relationship that exists with a target condition or problem.."/>
 	<copyright value="Copyright © 2016 HL7 UK"/>
 	<compose>
 		<include>
