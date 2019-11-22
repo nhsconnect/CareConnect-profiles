@@ -7,7 +7,7 @@
   <version value="1.2.0" />
   <name value="Extension-CareConnect-MedicationRepeatInformation-1" />
   <status value="draft" />
-  <date value="2019-11-21" />
+  <date value="2019-11-22" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -296,7 +296,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:numberOfRepeatPrescriptionsAllowed.value[x]:valueUnsignedInt">
+    <element id="Extension.extension:numberOfRepeatPrescriptionsAllowed.valueUnsignedInt:valueUnsignedInt">
       <path value="Extension.extension.valueUnsignedInt" />
       <sliceName value="valueUnsignedInt" />
       <short value="Number of issues authorised" />
@@ -483,7 +483,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Extension.extension:numberOfRepeatPrescriptionsIssued.value[x]:valueUnsignedInt">
+    <element id="Extension.extension:numberOfRepeatPrescriptionsIssued.valueUnsignedInt:valueUnsignedInt">
       <path value="Extension.extension.valueUnsignedInt" />
       <sliceName value="valueUnsignedInt" />
       <short value="Number of issues issued" />
@@ -909,7 +909,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="numberOfRepeatPrescriptionsAllowed" />
     </element>
-    <element id="Extension.extension:numberOfRepeatPrescriptionsAllowed.value[x]:valueUnsignedInt">
+    <element id="Extension.extension:numberOfRepeatPrescriptionsAllowed.valueUnsignedInt:valueUnsignedInt">
       <path value="Extension.extension.valueUnsignedInt" />
       <sliceName value="valueUnsignedInt" />
       <short value="Number of issues authorised" />
@@ -930,7 +930,7 @@
       <path value="Extension.extension.url" />
       <fixedUri value="numberOfRepeatPrescriptionsIssued" />
     </element>
-    <element id="Extension.extension:numberOfRepeatPrescriptionsIssued.value[x]:valueUnsignedInt">
+    <element id="Extension.extension:numberOfRepeatPrescriptionsIssued.valueUnsignedInt:valueUnsignedInt">
       <path value="Extension.extension.valueUnsignedInt" />
       <sliceName value="valueUnsignedInt" />
       <short value="Number of issues issued" />

@@ -5,7 +5,7 @@
 	<version value="1.0.0"/>
 	<name value="Care Connect Reason Immunization Not Administered"/>
 	<status value="draft"/>
-	<date value="2019-11-22T14:17:00+00:00"/>
+	<date value="2019-11-22T17:17:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A ValueSet to identify the reason why an immunization was not administered."/>
 	<copyright value="Copyright © 2019 HL7 UK"/>
