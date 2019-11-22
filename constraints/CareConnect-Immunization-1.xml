@@ -7,10 +7,10 @@
     <valueCode value="pher" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1" />
-  <version value="1.3.0" />
+  <version value="1.4.0" />
   <name value="CareConnect-Immunization-1" />
   <status value="draft" />
-  <date value="2018-11-05" />
+  <date value="2019-11-22" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -22,7 +22,7 @@
   </contact>
   <description value="This Immunization Resource describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed." />
   <purpose value="CURATED BY INTEROPen see: http://www.interopen.org/careconnect-curation-methodology/ " />
-  <copyright value="Copyright © 2016 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
+  <copyright value="Copyright © 2019 HL7 UK&#xD;&#xA;&#xD;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at&#xD;&#xA;&#xD;&#xA;http://www.apache.org/licenses/LICENSE-2.0&#xD;&#xA;&#xD;&#xA;Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.&#xD;&#xA;&#xD;&#xA;HL7® FHIR® standard Copyright © 2011+ HL7&#xD;&#xA;&#xD;&#xA;The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at&#xD;&#xA;&#xD;&#xA;https://www.hl7.org/fhir/license.html" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -8198,10 +8198,10 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="NoImmunizationReason" />
         </extension>
-        <strength value="example" />
+        <strength value="extensible" />
         <description value="The reason why a vaccine was not administered" />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/no-immunization-reason" />
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReasonImmunizationNotAdministered-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -11894,6 +11894,18 @@
         <strength value="example" />
         <valueSetReference>
           <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-2" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Immunization.explanation.reasonNotGiven">
+      <path value="Immunization.explanation.reasonNotGiven" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NoImmunizationReason" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReasonImmunizationNotAdministered-1" />
         </valueSetReference>
       </binding>
     </element>
