@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-ReasonImmunizationNotAdministered-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReasonImmunizationNotAdministered-1"/>
+	<version value="1.0.0"/>
+	<name value="Care Connect Reason Immunization Not Administered"/>
+	<status value="draft"/>
+	<date value="2019-11-22T14:17:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A ValueSet to identify the reason why an immunization was not administered."/>
+	<copyright value="Copyright © 2019 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="201741000000102"/>
+				<display value="Did not attend child immunisation (finding)"/>
+			</concept>
+			<concept>
+				<code value="281399006"/>
+				<display value="Did not attend (finding)"/>
+			</concept>
+			<concept>
+				<code value="213257006"/>
+				<display value="Generally unwell (finding)"/>
+			</concept>
+			<concept>
+				<code value="266758009"/>
+				<display value="Immunization contraindicated (situation)"/>
+			</concept>
+			<concept>
+				<code value="310376006"/>
+				<display value="Immunization consent not given (finding)"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>
