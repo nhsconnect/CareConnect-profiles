@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="CareConnect-DeliveryChannel-1"/>
+	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DeliveryChannel-1"/>
+	<version value="1.0.0"/>
+	<name value="CareConnect-DeliveryChannel-1"/>
+	<status value="draft"/>
+	<date value="2019-12-02T11:08:00+00:00"/>
+	<publisher value="HL7 UK"/>
+	<description value="A ValueSet that identifies the delivery channel of an appointment."/>
+	<copyright value="Copyright © 2019 HL7 UK"/>
+	<compose>
+		<include>
+			<system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-DeliveryChannel-1"/>
+		</include>
+	</compose>
+</ValueSet>
