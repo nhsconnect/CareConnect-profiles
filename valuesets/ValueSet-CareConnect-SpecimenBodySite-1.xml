@@ -5,7 +5,7 @@
 	<version value="2.2.0"/>
 	<name value="Care Connect Specimen Body Site"/>
 	<status value="draft"/>
-	<date value="2020-01-30T14:44:00+00:00"/>
+	<date value="2020-04-28T18:26:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A code from the SNOMED Clinical Terminology UK coding system to record a specimen body site."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
