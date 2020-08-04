@@ -2,13 +2,13 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-ListCode-1"/>
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1"/>
-	<version value="1.6.0"/>
+	<version value="1.7.0"/>
 	<name value="Care Connect List Code"/>
 	<status value="draft"/>
-	<date value="2019-11-22T17:18:00+00:00"/>
+	<date value="2020-06-19T17:18:00+00:00"/>
 	<publisher value="HL7 UK"/>
 	<description value="A ValueSet to identify the purpose of a list."/>
-	<copyright value="Copyright © 2019 HL7 UK"/>
+	<copyright value="Copyright © 2020 HL7 UK"/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>
@@ -75,7 +75,11 @@
 			<concept>
 				<code value="1149501000000101"/>
 				<display value="List of consultations"/>
-			</concept>			
+			</concept>
+			<concept>
+				<code value="225390008"/>
+				<display value="Triage"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>
