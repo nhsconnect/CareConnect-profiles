@@ -2,12 +2,12 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="CareConnect-VaccinationProcedure-1"/>
 	<url value="https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-VaccinationProcedure-1"/>
-	<version value="1.1.0"/>
+	<version value="1.2.0"/>
 	<name value="Care Connect Vaccination Procedure"/>
 	<status value="draft"/>
-	<date value="2018-11-01T00:00:00+00:00"/>
+	<date value="2020-11-25T00:00:00+00:00"/>
 	<publisher value="HL7 UK"/>
-	<description value="A code from the SNOMED Clinical Terminology UK coding system to record a vaccination procedure."/>
+	<description value="A code from the SNOMED Clinical Terminology UK coding system, to record a vaccination procedure that is either given or not given. There are 3 separate statements that cover immunisation procedures performed; immunisation procedure situations (vaccinations given, mostly by third parties) and immunisation procedures not done situations."/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."/>
 	<compose>
 		<include>
@@ -15,7 +15,23 @@
 			<filter>
 				<property value="constraint"/>
 				<op value="="/>
-				<value value="(&lt;&lt;33879002 OR &lt;&lt;713404003 OR &lt;&lt;955641000000103 OR &lt;&lt;955691000000108 OR &lt;&lt;955701000000108 OR &lt;&lt;957581000000102 OR &lt;&lt;957751000000103 OR &lt;&lt;1066171000000108 OR &lt;&lt;140611000119104 OR &lt;&lt;15483003 OR &lt;&lt;39343008 OR &lt;&lt;34631000 OR &lt;&lt;72093006 OR &lt;&lt;425897001 OR &lt;&lt;8605003 OR &lt;&lt;428502009 OR &lt;&lt;283451000000105 OR &lt;&lt;308753004 OR &lt;&lt;572481000119103 OR &lt;&lt;965851000000105 OR &lt;&lt;761841000 OR &lt;&lt;16300531000119107 OR &lt;&lt;14747002 OR &lt;&lt;283431000000103 OR &lt;&lt;427633002) MINUS (&lt;&lt;304250009 OR &lt;&lt;51116004 OR &lt;&lt;296811004 OR &lt;&lt;294631000 OR &lt;&lt;425457005 OR &lt;&lt;291705006 OR &lt;&lt;417451006 OR &lt;&lt;47988006 OR &lt;&lt;293095001 OR &lt;&lt;601000000100 OR &lt;&lt;123471000119103 OR &lt;&lt;266758009 OR &lt;&lt;223464006 OR &lt;&lt;185324002 OR &lt;&lt;416064006 OR &lt;&lt;428119001 OR &lt;&lt;308433002 OR &lt;&lt;183944003 OR &lt;&lt;408864009 OR &lt;&lt;202111000000106 OR &lt;&lt;708538000 OR &lt;&lt;418019003 OR &lt;&lt;416237000 OR &lt;&lt;400999005 OR &lt;&lt;309370004)"/>
+				<value value="&lt;&lt;33879002 OR 868241000000109 OR 572421000119102 OR 626071000119103 OR 16298561000119108 OR 571611000119101 OR 170415002 OR 170408005 OR 412743000 OR 7141001 OR 270898008 OR 170399005 OR 14747002 OR 170412004 OR 170405008 OR 170400003 OR 170395004 OR 313188000 OR 51572002 OR 8605003 OR 39568006 OR 275849001 OR 390892002 OR 281040003 OR 275841003 OR 777611000000100 OR 1240491000000103 OR 170413009 OR 170406009 OR 170401004 OR 170396003 OR 313189008 OR 308753004 OR 170409002 OR 170414003 OR 170407000 OR 170402006 OR 170397007 OR 412742005 OR 170425007 OR 170427004 OR 170426008 OR 312867004 OR 570001 OR 787438002 OR 428570002"/>
+			</filter>
+		</include>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<filter>
+				<property value="constraint"/>
+				<op value="="/>
+				<value value="&lt;&lt;882761000000103 OR &lt;&lt;1037211000000101 OR &lt;&lt;1037251000000102 OR &lt;&lt;380741000000101 OR &lt;&lt;868511000000106 OR &lt;&lt;908671000000105 OR &lt;&lt;310578008 OR &lt;&lt;382551000000109 OR &lt;&lt;868671000000100 OR &lt;&lt;1066171000000108 OR &lt;&lt;1037231000000109 OR &lt;&lt;1037271000000106 OR &lt;&lt;380771000000107 OR &lt;&lt;713404003"/>
+			</filter>
+		</include>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<filter>
+				<property value="constraint"/>
+				<op value="="/>
+				<value value="&lt;&lt;1240681000000103 OR &lt;&lt;90351000119108"/>
 			</filter>
 		</include>
 	</compose>
