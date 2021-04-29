@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
     <lastUpdated value="2017-08-25T14:06:37.813+01:00" />
@@ -7,10 +7,10 @@
     <valueCode value="oo" />
   </extension>
   <url value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-  <version value="0.0.2" />
+  <version value="0.0.3" />
   <name value="CareConnect-Observation-1" />
   <status value="draft" />
-  <date value="2017-07-11T14:34:25.8488438+01:00" />
+  <date value="2021-04-27" />
   <publisher value="HL7 UK" />
   <contact>
     <name value="INTEROPen" />
@@ -5453,7 +5453,7 @@
         <strength value="extensible" />
         <description value="Codes identifying interpretations of observations." />
         <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/observation-interpretation" />
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-ObservationInterpretation-1" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -14030,6 +14030,18 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
       </type>
+    </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationInterpretation" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="https://fhir.nhs.uk/STU3/ValueSet/CareConnect-ObservationInterpretation-1" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Observation.bodySite.coding">
       <path value="Observation.bodySite.coding" />
